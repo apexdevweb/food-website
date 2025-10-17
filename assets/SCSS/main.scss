@@ -1,0 +1,329 @@
+@use "base/typo";
+@use "components/variables";
+@use "components/placeholders";
+@use "components/mixins";
+@use "layout/grid";
+@use "abstract/keyframes";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  & .vid__container {
+    @extend %globale-size, %reset-marg-pad;
+    &__myvid {
+      @extend %globale-size, %reset-marg-pad;
+      position: fixed;
+      z-index: -99;
+    }
+    &__banner {
+      @extend %displayed-column-center, %reset-marg-pad;
+      height: 25vh;
+      width: 100%;
+      position: fixed;
+      padding: 0;
+      top: 40%;
+      left: 0;
+      opacity: 0.4;
+      z-index: -98;
+      transform: rotate(-8deg);
+      // background-color: red;
+      & .container__banner__itemA,
+      & .container__banner__itemB,
+      & .container__banner__itemC,
+      & .container__banner__itemD {
+        @extend %reset-marg-pad;
+        line-height: 27px;
+        color: variables.$typo-color-gold;
+      }
+      & .container__banner__itemA {
+        @include mixins.typo_config_xeta;
+      }
+      & .container__banner__itemB {
+        @include mixins.typo_config_omega;
+        letter-spacing: 10px;
+      }
+      & .container__banner__itemC {
+        @include mixins.typo_config_delta;
+        word-spacing: 10px;
+      }
+      & .container__banner__itemD {
+        @include mixins.typo_config_delta;
+        letter-spacing: 4px;
+      }
+      & .banner__title {
+        @extend %reset-marg-pad;
+        @include mixins.typo_config_beta;
+        letter-spacing: 8px;
+        line-height: 120px;
+        color: variables.$typo-color-gold;
+      }
+    }
+  }
+  & header {
+    min-height: 80vh;
+    width: 100%;
+    color: variables.$typo-color-white;
+    & .primary__title {
+      @extend %reset-marg-pad;
+      @include mixins.typo_config_alpha;
+      letter-spacing: -15px;
+      width: 15ch;
+      opacity: 0.9;
+    }
+    & .navbar {
+      @extend %globale-size;
+      & .mobile__container {
+        @extend %displayed-column-start, %reset-marg-pad;
+        position: absolute;
+        padding: 0;
+        top: 2px;
+        right: 0;
+        min-height: 30vh;
+        width: 15vw;
+        @include mixins.breakpoint(medium) {
+        }
+        @include mixins.breakpoint(large) {
+        }
+        & .mobile__barre {
+          @include mixins.typo_config_xeta;
+          @extend %text-gradient-A, %reset-marg-pad;
+          position: fixed;
+          z-index: 99;
+          mix-blend-mode: difference;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        & .timer__container {
+          @extend %globale-size, %displayed-row-center;
+          transform: rotate(90deg);
+          margin-top: 15vh;
+          margin-left: 5.5vw;
+          & span {
+            font-family: variables.$typo-family-small;
+            font-size: variables.$typo-size-small;
+            letter-spacing: 3px;
+            font-weight: lighter;
+          }
+        }
+        &__sub {
+          height: 20vh;
+          width: 15vw;
+          @extend %displayed-column-start, %reset-marg-pad;
+          position: fixed;
+          top: 23%;
+          left: 81.2vw;
+          z-index: 99;
+          transform: rotate(90deg);
+          & .mobile__item__sub {
+            font-family: variables.$typo-family-small;
+            font-size: variables.$typo-size-small;
+            letter-spacing: 5px;
+            font-weight: lighter;
+            border: none;
+            height: auto;
+            width: auto;
+            & a {
+            color: variables.$typo-color-white;
+              text-decoration: none;
+            }
+            &:hover {
+              color: variables.$typo-color-white;
+              text-shadow: 0px 0px 8px #fff;
+              transition: text-shadow, transform 0.2s ease-in-out;
+              cursor: pointer;
+              transform: translateX(15px);
+            }
+          }
+        }
+      }
+      &__container {
+        @extend %reset-marg-pad;
+        top: 0;
+        position: fixed;
+        visibility: hidden;
+        height: 100vh;
+        width: 100%;
+        z-index: 98;
+        @include mixins.breakpoint(medium) {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: flex-start;
+          justify-content: flex-start;
+          backdrop-filter: blur(8px);
+        }
+        @include mixins.breakpoint(large) {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: flex-start;
+          justify-content: flex-start;
+          backdrop-filter: blur(8px);
+        }
+        &.view {
+          visibility: visible;
+          animation: backdropAnime 2s ease 0s 1 normal forwards;
+          transition: background-color 1s ease;
+          background-color: rgba(0, 0, 0, 0.871);
+        }
+      }
+      & .navbar__itemA,
+      .navbar__itemB {
+        @extend %reset-marg-pad;
+        @include mixins.typo_config_alpha;
+        height: auto;
+        max-width: 60vw;
+        list-style-type: none;
+        text-align: start;
+        line-height: 135px;
+        overflow: hidden;
+        & .link__item {
+          width: 100%;
+          color: variables.$typo-color-white;
+          text-decoration: none;
+          letter-spacing: -6px;
+          &:hover {
+            color: variables.$typo-color-gold;
+          }
+        }
+        &:hover {
+          filter: drop-shadow(0px 0px 5px #fff);
+          transition: 0.3s ease-in-out;
+          transform: translateX(150px);
+          mix-blend-mode: difference;
+        }
+      }
+    }
+  }
+  main {
+    #about {
+      @extend %reset-marg-pad, %displayed-row-wrapevenly;
+      & .about__container {
+        @extend %displayed-column-start;
+        margin-left: 5vw;
+        min-height: 55vh;
+        max-width: 38vw;
+        background: url("../image/") no-repeat 50% 50%, linear-gradient(to right, #efefbb, #d4d3dd);
+        padding: 0 0 5vw 0;
+        overflow: hidden;
+        & .about__title__container {
+          @extend %displayed-column-start, %reset-marg-pad;
+          margin-top: 0;
+          margin-left: 0;
+          min-height: 15vh;
+          min-width: 25vw;
+          @include mixins.typo_config_xeta;
+          & h2 {
+            line-height: 50px;
+            width: 8ch;
+            font-weight: lighter;
+          }
+        }
+        & .big__letters {
+          height: 13vh;
+          float: left;
+          shape-outside: margin-box;
+          font-size: 10rem;
+          z-index: 0;
+          line-height: 140px;
+          margin-right: 35px;
+          font-family: variables.$typo-family-secondary;
+          font-weight: lighter;
+          color: variables.$typo-color-gold;
+          filter: drop-shadow(0px 0px 3px#000);
+        }
+        & .about__description__container {
+          position: relative;
+          min-height: 25vh;
+          width: 35ch;
+          text-align: left;
+          font-size: variables.$typo-size-small;
+          @extend %reset-marg-pad;
+          @include mixins.typo_config_omega;
+        }
+        & .about__img__container {
+          @extend %globale-size, %displayed-column-center, %reset-marg-pad;
+          & img {
+            height: 30vh;
+            width: auto;
+          }
+          & figcaption {
+            text-align: right;
+            margin-top: 15px;
+            margin-left: 8vw;
+            @extend %displayed-column-end, %reset-marg-pad;
+            font-size: variables.$typo-size-medium;
+            width: 8ch;
+            font-family: variables.$typo-family-secondary;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+    & .small__banner {
+      @extend %displayed-row-around, %reset-marg-pad;
+      position: relative;
+      top: 90%;
+      left: 72%;
+      height: 5vh;
+      width: 50vw;
+      overflow: hidden;
+      border-radius: 10px;
+      transform: rotate(90deg);
+      z-index: 99;
+      text-align: center;
+      &__item {
+        @extend %displayed-row-around;
+        font-size: 1rem;
+        width: 20ch;
+        font-family: variables.$typo-family-small;
+        color: variables.$typo-color-white;
+        font-weight: lighter;
+        animation: smallBannerAnime 8s linear infinite;
+        white-space: nowrap;
+        & img {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+    #galerie {
+      @extend %globale-size, %reset-marg-pad;
+      & .galerie__title {
+        text-align: center;
+        font-family: variables.$typo-family-small;
+        color: variables.$typo-color-white;
+        @include mixins.typo_config_alpha;
+        letter-spacing: -15px;
+      }
+      & .image__container {
+        @extend %reset-marg-pad, %displayed-row-wrapevenly;
+        min-height: 100vh;
+        width: 100%;
+        z-index: 0;
+        &__item {
+          height: 15vw;
+          width: 25vw;
+          background-color: #fff;
+          z-index: 0;
+        }
+      }
+    }
+    & .contact__container {
+      min-height: 100vh;
+      width: 100%;
+      @extend %displayed-column-center, %reset-marg-pad;
+      &__sub {
+        @extend %globale-size, %displayed-row-center, %reset-marg-pad;
+      }
+      & form {
+        min-height: 35vh;
+        width: 100%;
+        @extend %displayed-column-evenly, %reset-marg-pad;
+        & .form__sub__container {
+          @extend %globale-size, %displayed-row-center, %reset-marg-pad;
+        }
+      }
+    }
+  }
+}

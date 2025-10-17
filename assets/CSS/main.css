@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Gideon+Roman&family=Lavishly+Yours&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container__sub, body main .contact__container form .form__sub__container {
+  height: auto;
+  width: 100%;
+}
+
+body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
+body header .navbar .navbar__itemB, body main #about, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main .contact__container, body main .contact__container__sub, body main .contact__container form, body main .contact__container form .form__sub__container {
+  margin: 0;
+  padding: 0;
+}
+
+body main .contact__container form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+body .vid__container__banner, body main #about .about__container .about__img__container, body main .contact__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+body header .navbar .mobile__container, body header .navbar .mobile__container__sub, body main #about .about__container, body main #about .about__container .about__title__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+body main #about .about__container .about__img__container figcaption {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+body header .navbar .mobile__container .timer__container, body main .contact__container__sub, body main .contact__container form .form__sub__container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+body main .small__banner, body main .small__banner__item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body main #about, body main #galerie .image__container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+body header .navbar .mobile__container .mobile__barre {
+  background: linear-gradient(to right, #ffefba, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes backdropAnime {
+  from {
+    backdrop-filter: blur(0px);
+  }
+  to {
+    backdrop-filter: blur(6px);
+  }
+}
+@keyframes smallBannerAnime {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body .vid__container__myvid {
+  position: fixed;
+  z-index: -99;
+}
+body .vid__container__banner {
+  height: 25vh;
+  width: 100%;
+  position: fixed;
+  padding: 0;
+  top: 40%;
+  left: 0;
+  opacity: 0.4;
+  z-index: -98;
+  transform: rotate(-8deg);
+}
+body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD {
+  line-height: 27px;
+  color: #dccd8e;
+}
+body .vid__container__banner .container__banner__itemA {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+body .vid__container__banner .container__banner__itemB {
+  font-family: "Gideon Roman", serif;
+  font-size: 2.2rem;
+  font-weight: lighter;
+  letter-spacing: 10px;
+}
+body .vid__container__banner .container__banner__itemC {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  word-spacing: 10px;
+}
+body .vid__container__banner .container__banner__itemD {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  letter-spacing: 4px;
+}
+body .vid__container__banner .banner__title {
+  font-family: "Lavishly Yours", cursive;
+  font-size: 9rem;
+  font-weight: lighter;
+  letter-spacing: 8px;
+  line-height: 120px;
+  color: #dccd8e;
+}
+body header {
+  min-height: 80vh;
+  width: 100%;
+  color: #fff;
+}
+body header .primary__title {
+  font-size: 9rem;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: lighter;
+  letter-spacing: -15px;
+  width: 15ch;
+  opacity: 0.9;
+}
+body header .navbar .mobile__container {
+  position: absolute;
+  padding: 0;
+  top: 2px;
+  right: 0;
+  min-height: 30vh;
+  width: 15vw;
+}
+body header .navbar .mobile__container .mobile__barre {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3rem;
+  font-weight: lighter;
+  position: fixed;
+  z-index: 99;
+  mix-blend-mode: difference;
+}
+body header .navbar .mobile__container .mobile__barre:hover {
+  cursor: pointer;
+}
+body header .navbar .mobile__container .timer__container {
+  transform: rotate(90deg);
+  margin-top: 15vh;
+  margin-left: 5.5vw;
+}
+body header .navbar .mobile__container .timer__container span {
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-weight: lighter;
+}
+body header .navbar .mobile__container__sub {
+  height: 20vh;
+  width: 15vw;
+  position: fixed;
+  top: 23%;
+  left: 81.2vw;
+  z-index: 99;
+  transform: rotate(90deg);
+}
+body header .navbar .mobile__container__sub .mobile__item__sub {
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  font-weight: lighter;
+  border: none;
+  height: auto;
+  width: auto;
+}
+body header .navbar .mobile__container__sub .mobile__item__sub a {
+  color: #fff;
+  text-decoration: none;
+}
+body header .navbar .mobile__container__sub .mobile__item__sub:hover {
+  color: #fff;
+  text-shadow: 0px 0px 8px #fff;
+  transition: text-shadow, transform 0.2s ease-in-out;
+  cursor: pointer;
+  transform: translateX(15px);
+}
+body header .navbar__container {
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+  height: 100vh;
+  width: 100%;
+  z-index: 98;
+}
+@media (min-width: 600px) {
+  body header .navbar__container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(8px);
+  }
+}
+@media (min-width: 1200px) {
+  body header .navbar__container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(8px);
+  }
+}
+body header .navbar__container.view {
+  visibility: visible;
+  animation: backdropAnime 2s ease 0s 1 normal forwards;
+  transition: background-color 1s ease;
+  background-color: rgba(0, 0, 0, 0.871);
+}
+body header .navbar .navbar__itemA,
+body header .navbar .navbar__itemB {
+  font-size: 9rem;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: lighter;
+  height: auto;
+  max-width: 60vw;
+  list-style-type: none;
+  text-align: start;
+  line-height: 135px;
+  overflow: hidden;
+}
+body header .navbar .navbar__itemA .link__item,
+body header .navbar .navbar__itemB .link__item {
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -6px;
+}
+body header .navbar .navbar__itemA .link__item:hover,
+body header .navbar .navbar__itemB .link__item:hover {
+  color: #dccd8e;
+}
+body header .navbar .navbar__itemA:hover,
+body header .navbar .navbar__itemB:hover {
+  filter: drop-shadow(0px 0px 5px #fff);
+  transition: 0.3s ease-in-out;
+  transform: translateX(150px);
+  mix-blend-mode: difference;
+}
+body main #about .about__container {
+  margin-left: 5vw;
+  min-height: 55vh;
+  max-width: 38vw;
+  background: url("../image/") no-repeat 50% 50%, linear-gradient(to right, #efefbb, #d4d3dd);
+  padding: 0 0 5vw 0;
+  overflow: hidden;
+}
+body main #about .about__container .about__title__container {
+  margin-top: 0;
+  margin-left: 0;
+  min-height: 15vh;
+  min-width: 25vw;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+body main #about .about__container .about__title__container h2 {
+  line-height: 50px;
+  width: 8ch;
+  font-weight: lighter;
+}
+body main #about .about__container .big__letters {
+  height: 13vh;
+  float: left;
+  shape-outside: margin-box;
+  font-size: 10rem;
+  z-index: 0;
+  line-height: 140px;
+  margin-right: 35px;
+  font-family: "Lavishly Yours", cursive;
+  font-weight: lighter;
+  color: #dccd8e;
+  filter: drop-shadow(0px 0px 3px #000);
+}
+body main #about .about__container .about__description__container {
+  position: relative;
+  min-height: 25vh;
+  width: 35ch;
+  text-align: left;
+  font-size: 1.2rem;
+  font-family: "Gideon Roman", serif;
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+body main #about .about__container .about__img__container img {
+  height: 30vh;
+  width: auto;
+}
+body main #about .about__container .about__img__container figcaption {
+  text-align: right;
+  margin-top: 15px;
+  margin-left: 8vw;
+  font-size: 3rem;
+  width: 8ch;
+  font-family: "Lavishly Yours", cursive;
+  line-height: 35px;
+}
+body main .small__banner {
+  position: relative;
+  top: 90%;
+  left: 72%;
+  height: 5vh;
+  width: 50vw;
+  overflow: hidden;
+  border-radius: 10px;
+  transform: rotate(90deg);
+  z-index: 99;
+  text-align: center;
+}
+body main .small__banner__item {
+  font-size: 1rem;
+  width: 20ch;
+  font-family: "Saira", sans-serif;
+  color: #fff;
+  font-weight: lighter;
+  animation: smallBannerAnime 8s linear infinite;
+  white-space: nowrap;
+}
+body main .small__banner__item img {
+  height: 25px;
+  width: 25px;
+}
+body main #galerie .galerie__title {
+  text-align: center;
+  font-family: "Saira", sans-serif;
+  color: #fff;
+  font-size: 9rem;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: lighter;
+  letter-spacing: -15px;
+}
+body main #galerie .image__container {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+body main #galerie .image__container__item {
+  height: 15vw;
+  width: 25vw;
+  background-color: #fff;
+  z-index: 0;
+}
+body main .contact__container {
+  min-height: 100vh;
+  width: 100%;
+}
+body main .contact__container form {
+  min-height: 35vh;
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

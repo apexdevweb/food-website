@@ -1,0 +1,41 @@
+@use "placeholders";
+@use "variables";
+
+@mixin breakpoint($point) {
+  @if $point == medium {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+  @if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin typo_config_alpha {
+  font-size: variables.$typo-size-big;
+  font-family: variables.$typo-family-primary;
+  font-weight: lighter;
+}
+@mixin typo_config_beta {
+  font-family: variables.$typo-family-secondary;
+  font-size: variables.$typo-size-big;
+  font-weight: lighter;
+}
+@mixin typo_config_delta {
+  font-family: variables.$typo-family-primary;
+  font-size: variables.$typo-size-small;
+  font-weight: lighter;
+}
+@mixin typo_config_xeta {
+  font-family: variables.$typo-family-primary;
+  font-size: variables.$typo-size-medium;
+  font-weight: lighter;
+}
+@mixin typo_config_omega {
+  font-family: variables.$typo-family-tertiary;
+  font-size: variables.$typo-size-Smedium;
+  font-weight: lighter;
+}

@@ -1,0 +1,68 @@
+%globale-size {
+  height: auto;
+  width: 100%;
+}
+%reset-marg-pad {
+  margin: 0;
+  padding: 0;
+}
+//display column
+%displayed-column-evenly {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+%displayed-column-center {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+%displayed-column-start {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+%displayed-column-end {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+//display row
+%displayed-row-center {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+%displayed-row-around {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+%displayed-row-wrapevenly {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+//gradient
+%text-gradient-A {
+  background: linear-gradient(to right, #ffefba, #ffffff);
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;
+  color: transparent;
+}
+%text-gradient-B {
+  background: linear-gradient(to right, #efefbb, #d4d3dd);
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;
+  color: transparent;
+}
+
