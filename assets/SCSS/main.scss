@@ -9,13 +9,46 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  & .cursor__effect {
+    @extend %globale-size, %reset-marg-pad, %displayed-column-center;
+    height: 5vh;
+    width: 120px;
+    position: fixed;
+    pointer-events: none;
+    background-color: #333;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-out;
+    mix-blend-mode: difference;
+    z-index: 96;
+    text-align: center;
+    border-radius: 15px;
+
+    &.add__flash__cursor {
+      transition: animation 0.3s ease;
+      animation: flashOverEl 0.5s linear forwards;
+    }
+
+    & small {
+      @extend %globale-size, %reset-marg-pad;
+      transition: 0.3s ease-in-out;
+      color: variables.$typo-color-white;
+      font-family: variables.$typo-family-small;
+      letter-spacing: 3px;
+      font-size: variables.$typo-size-Smedium;
+      font-weight: lighter;
+    }
+  }
+
   & .vid__container {
     @extend %globale-size, %reset-marg-pad;
+
     &__myvid {
       @extend %globale-size, %reset-marg-pad;
       position: fixed;
       z-index: -99;
     }
+
     &__banner {
       @extend %displayed-column-center, %reset-marg-pad;
       height: 25vh;
@@ -27,6 +60,7 @@ body {
       opacity: 0.4;
       z-index: -98;
       transform: rotate(-8deg);
+
       // background-color: red;
       & .container__banner__itemA,
       & .container__banner__itemB,
@@ -36,21 +70,26 @@ body {
         line-height: 27px;
         color: variables.$typo-color-gold;
       }
+
       & .container__banner__itemA {
         @include mixins.typo_config_xeta;
       }
+
       & .container__banner__itemB {
         @include mixins.typo_config_omega;
         letter-spacing: 10px;
       }
+
       & .container__banner__itemC {
         @include mixins.typo_config_delta;
         word-spacing: 10px;
       }
+
       & .container__banner__itemD {
         @include mixins.typo_config_delta;
         letter-spacing: 4px;
       }
+
       & .banner__title {
         @extend %reset-marg-pad;
         @include mixins.typo_config_beta;
@@ -60,10 +99,12 @@ body {
       }
     }
   }
+
   & header {
     min-height: 80vh;
     width: 100%;
     color: variables.$typo-color-white;
+
     & .primary__title {
       @extend %reset-marg-pad;
       @include mixins.typo_config_alpha;
@@ -71,8 +112,27 @@ body {
       width: 15ch;
       opacity: 0.9;
     }
+
+    & .primary__separate {
+      visibility: hidden;
+      margin-left: 10%;
+      @extend %reset-marg-pad;
+      height: 5px;
+      background-color: variables.$typo-color-white;
+      animation: separateAnime 1s ease 5.3s 1 normal forwards;
+    }
+
+    & .secondary__title {
+      @extend %reset-marg-pad;
+      @include mixins.typo_config_alpha;
+      letter-spacing: -15px;
+      width: 15ch;
+      opacity: 0.9;
+    }
+
     & .navbar {
       @extend %globale-size;
+
       & .mobile__container {
         @extend %displayed-column-start, %reset-marg-pad;
         position: absolute;
@@ -81,25 +141,34 @@ body {
         right: 0;
         min-height: 30vh;
         width: 15vw;
+
         @include mixins.breakpoint(medium) {
         }
+
         @include mixins.breakpoint(large) {
         }
+
         & .mobile__barre {
           @include mixins.typo_config_xeta;
           @extend %text-gradient-A, %reset-marg-pad;
           position: fixed;
           z-index: 99;
           mix-blend-mode: difference;
+          letter-spacing: 8px;
+
           &:hover {
             cursor: pointer;
+            transition: animation 0.3s ease;
+            animation: flashOverTxt 0.8s linear forwards;
           }
         }
+
         & .timer__container {
           @extend %globale-size, %displayed-row-center;
           transform: rotate(90deg);
           margin-top: 15vh;
           margin-left: 5.5vw;
+
           & span {
             font-family: variables.$typo-family-small;
             font-size: variables.$typo-size-small;
@@ -107,15 +176,17 @@ body {
             font-weight: lighter;
           }
         }
+
         &__sub {
           height: 20vh;
           width: 15vw;
           @extend %displayed-column-start, %reset-marg-pad;
           position: fixed;
           top: 23%;
-          left: 81.2vw;
+          left: 81.5vw;
           z-index: 99;
           transform: rotate(90deg);
+
           & .mobile__item__sub {
             font-family: variables.$typo-family-small;
             font-size: variables.$typo-size-small;
@@ -124,10 +195,13 @@ body {
             border: none;
             height: auto;
             width: auto;
+            z-index: 99;
+
             & a {
-            color: variables.$typo-color-white;
+              color: variables.$typo-color-white;
               text-decoration: none;
             }
+
             &:hover {
               color: variables.$typo-color-white;
               text-shadow: 0px 0px 8px #fff;
@@ -138,6 +212,7 @@ body {
           }
         }
       }
+
       &__container {
         @extend %reset-marg-pad;
         top: 0;
@@ -145,7 +220,8 @@ body {
         visibility: hidden;
         height: 100vh;
         width: 100%;
-        z-index: 98;
+        z-index: 95;
+
         @include mixins.breakpoint(medium) {
           display: flex;
           flex-flow: column nowrap;
@@ -153,6 +229,7 @@ body {
           justify-content: flex-start;
           backdrop-filter: blur(8px);
         }
+
         @include mixins.breakpoint(large) {
           display: flex;
           flex-flow: column nowrap;
@@ -160,6 +237,7 @@ body {
           justify-content: flex-start;
           backdrop-filter: blur(8px);
         }
+
         &.view {
           visibility: visible;
           animation: backdropAnime 2s ease 0s 1 normal forwards;
@@ -167,6 +245,7 @@ body {
           background-color: rgba(0, 0, 0, 0.871);
         }
       }
+
       & .navbar__itemA,
       .navbar__itemB {
         @extend %reset-marg-pad;
@@ -177,15 +256,18 @@ body {
         text-align: start;
         line-height: 135px;
         overflow: hidden;
+
         & .link__item {
           width: 100%;
           color: variables.$typo-color-white;
           text-decoration: none;
           letter-spacing: -6px;
+
           &:hover {
             color: variables.$typo-color-gold;
           }
         }
+
         &:hover {
           filter: drop-shadow(0px 0px 5px #fff);
           transition: 0.3s ease-in-out;
@@ -193,19 +275,75 @@ body {
           mix-blend-mode: difference;
         }
       }
+
+      & .navbar__papper {
+        @extend %reset-marg-pad, %displayed-column-center;
+        top: 0;
+        left: 33%;
+        position: absolute;
+        height: 100%;
+        width: 25vw;
+        z-index: -1;
+        overflow: hidden;
+
+        .navbar__papper__item {
+          width: auto;
+
+          &:nth-child(1) {
+            height: 11vh;
+            margin-top: -140px;
+            margin-left: -11vw;
+          }
+
+          &:nth-child(2) {
+            margin-top: -140px;
+            height: 25vh;
+          }
+
+          &:nth-child(3) {
+            margin-top: -120px;
+            height: 30vh;
+          }
+
+          &:nth-child(4) {
+            margin-top: -100px;
+            height: 25vh;
+          }
+
+          &:nth-child(5) {
+            margin-top: -125px;
+            height: 25vh;
+          }
+
+          &:nth-child(6) {
+            margin-top: -163px;
+            height: 25vh;
+            margin-left: 3vw;
+          }
+        }
+
+        &:hover {
+          transition: animation 0.3s ease;
+          animation: flashOverEl 0.5s linear forwards;
+        }
+      }
     }
   }
+
   main {
     #about {
       @extend %reset-marg-pad, %displayed-row-wrapevenly;
+
       & .about__container {
         @extend %displayed-column-start;
         margin-left: 5vw;
         min-height: 55vh;
         max-width: 38vw;
-        background: url("../image/") no-repeat 50% 50%, linear-gradient(to right, #efefbb, #d4d3dd);
+        background: url("../image/") no-repeat 50% 50%,
+          linear-gradient(to right, #efefbb, #d4d3dd);
         padding: 0 0 5vw 0;
         overflow: hidden;
+
         & .about__title__container {
           @extend %displayed-column-start, %reset-marg-pad;
           margin-top: 0;
@@ -213,12 +351,14 @@ body {
           min-height: 15vh;
           min-width: 25vw;
           @include mixins.typo_config_xeta;
+
           & h2 {
             line-height: 50px;
             width: 8ch;
             font-weight: lighter;
           }
         }
+
         & .big__letters {
           height: 13vh;
           float: left;
@@ -232,6 +372,7 @@ body {
           color: variables.$typo-color-gold;
           filter: drop-shadow(0px 0px 3px#000);
         }
+
         & .about__description__container {
           position: relative;
           min-height: 25vh;
@@ -241,12 +382,20 @@ body {
           @extend %reset-marg-pad;
           @include mixins.typo_config_omega;
         }
+
         & .about__img__container {
           @extend %globale-size, %displayed-column-center, %reset-marg-pad;
+
           & img {
             height: 30vh;
             width: auto;
+
+            &:hover {
+              transition: animation 0.3s ease;
+              animation: flashOverEl 0.5s linear forwards;
+            }
           }
+
           & figcaption {
             text-align: right;
             margin-top: 15px;
@@ -260,6 +409,7 @@ body {
         }
       }
     }
+
     & .small__banner {
       @extend %displayed-row-around, %reset-marg-pad;
       position: relative;
@@ -272,6 +422,7 @@ body {
       transform: rotate(90deg);
       z-index: 99;
       text-align: center;
+
       &__item {
         @extend %displayed-row-around;
         font-size: 1rem;
@@ -281,14 +432,17 @@ body {
         font-weight: lighter;
         animation: smallBannerAnime 8s linear infinite;
         white-space: nowrap;
+
         & img {
           height: 25px;
           width: 25px;
         }
       }
     }
+
     #galerie {
       @extend %globale-size, %reset-marg-pad;
+
       & .galerie__title {
         text-align: center;
         font-family: variables.$typo-family-small;
@@ -296,30 +450,60 @@ body {
         @include mixins.typo_config_alpha;
         letter-spacing: -15px;
       }
+
       & .image__container {
+        position: relative;
         @extend %reset-marg-pad, %displayed-row-wrapevenly;
         min-height: 100vh;
         width: 100%;
         z-index: 0;
-        &__item {
-          height: 15vw;
-          width: 25vw;
-          background-color: #fff;
+        overflow: hidden;
+
+        & .image__container__item {
+          @extend %reset-marg-pad, %displayed-row-center;
+          position: absolute;
+          width: 90%;
+          height: 90%;
+          object-fit: cover; // pour conserver le crop
+          opacity: 0;
+          transform: scale(0.95);
           z-index: 0;
+          text-align: right;
+          & .descript__img {
+            width: 50ch;
+            color: variables.$typo-color-white;
+            font-size: variables.$typo-size-medium;
+            font-family: variables.$typo-family-small;
+            font-weight: lighter;
+          }
+          & img {
+            width: 80vw;
+            height: 80vh;
+            margin-top: 120px;
+            margin-left: 250px;
+            &:hover {
+              transition: animation 0.3s ease;
+              animation: flashOverEl 0.5s linear forwards;
+            }
+          }  
         }
       }
     }
+
     & .contact__container {
       min-height: 100vh;
       width: 100%;
       @extend %displayed-column-center, %reset-marg-pad;
+
       &__sub {
         @extend %globale-size, %displayed-row-center, %reset-marg-pad;
       }
+
       & form {
         min-height: 35vh;
         width: 100%;
         @extend %displayed-column-evenly, %reset-marg-pad;
+
         & .form__sub__container {
           @extend %globale-size, %displayed-row-center, %reset-marg-pad;
         }

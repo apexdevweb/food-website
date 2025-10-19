@@ -31,6 +31,12 @@
   align-items: flex-end;
   justify-content: space-evenly;
 }
+%displayed-column-stretch {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: stretch;
+}
 //display row
 %displayed-row-center {
   display: flex;
@@ -50,6 +56,12 @@
   align-items: center;
   justify-content: space-evenly;
 }
+%displayed-row-nowrapevenly {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
 //gradient
 %text-gradient-A {
   background: linear-gradient(to right, #ffefba, #ffffff);
@@ -65,4 +77,3 @@
   background-clip: text;
   color: transparent;
 }
-

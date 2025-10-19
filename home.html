@@ -15,6 +15,7 @@
     <video autoplay loop muted class="vid__container__myvid">
       <source src="assets/video/space_1920.mp4" type="video/mp4" />
     </video>
+    <div class="cursor__effect"><small class="cursor__txt"></small></div>
     <div class="vid__container__banner">
       <span
         class="container__banner__itemA"><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small></span>
@@ -33,8 +34,8 @@
     <div id="smooth-content">
       <header>
         <h1 class="primary__title">La table de solline</h1>
-        <div class="primary__border"></div>
-        <h2>Gastronomie</h2>
+        <div class="primary__separate"></div>
+        <h2 class="secondary__title">Gastronomie</h2>
         <nav class="navbar">
           <div class="mobile__container">
             <p class="mobile__barre" id="btntrigg">menu</p>
@@ -43,7 +44,7 @@
             </div>
           </div>
           <ul class="navbar__container">
-            <li class="navbar__itemA"><a href="#about" class="link__item">About</a></li>
+            <li class="navbar__itemA"><a href="#about" class="link__item">A propos</a></li>
             <li class="navbar__itemB"><a href="#galerie" class="link__item">Entree</a></li>
             <li class="navbar__itemA"><a href="#contact" class="link__item">Plats</a></li>
             <li class="navbar__itemB"><a href="#contact" class="link__item">Dessert</a></li>
@@ -56,12 +57,20 @@
               <p class="mobile__item__sub">Avis</p>
               <p class="mobile__item__sub"><a href="index.html">Exit</a></p>
             </div>
+            <div class="navbar__papper">
+              <img src="assets/image/Fichier 1hdpi.png" alt="bgnav" class="navbar__papper__item">
+              <img src="assets/image/Fichier 2hdpi.png" alt="bgnav" class="navbar__papper__item">
+              <img src="assets/image/Fichier 3hdpi.png" alt="bgnav" class="navbar__papper__item">
+              <img src="assets/image/Fichier 4hdpi.png" alt="bgnav" class="navbar__papper__item">
+              <img src="assets/image/Fichier 5hdpi.png" alt="bgnav" class="navbar__papper__item">
+              <img src="assets/image/Fichier 6hdpi.png" alt="bgnav" class="navbar__papper__item">
+            </div>
           </ul>
         </nav>
       </header>
       <main>
         <section id="about">
-          <article class="about__container" data-speed="2" id="ctnr1">
+          <article class="about__container" id="ctnr1">
             <hgroup class="about__title__container">
               <h2 class="title__container__item" id="t1">A propos de nous...</h2>
             </hgroup>
@@ -80,11 +89,11 @@
               se rencontrent.
               Dans un cadre raffiné et intemporel.</p>
             <figure class="about__img__container">
-              <img src="assets/image/banner2.jpg" alt="myImg">
-              <figcaption>Un décor à la hauteur (2025)</figcaption>
+              <img src="assets/image/banner2.jpg" alt="myImg" id="aboutImg1">
+              <figcaption id="aboutCaption1">Un décor à la hauteur (2025)</figcaption>
             </figure>
           </article>
-          <article class="about__container" data-speed="1">
+          <article class="about__container">
             <hgroup class="about__title__container">
               <h2 class="title__container__item" id="t2">Entrées</h2>
             </hgroup>
@@ -98,7 +107,7 @@
               <figcaption>Une entrée à ne pas rater (2025)</figcaption>
             </figure>
           </article>
-          <article class="about__container" data-speed="0.5">
+          <article class="about__container">
             <hgroup class="about__title__container">
               <h2 class="title__container__item" id="t3">Plats</h2>
             </hgroup>
@@ -140,14 +149,32 @@
           <p class="small__banner__item">solline@gmail.com</p>
         </div>
         <section id="galerie">
-          <h3 class="galerie__title">Le restaurant</h3>
+          <h3 class="galerie__title">Un bref aperçus</h3>
           <div class="image__container">
-            <img src="assets/image/devanture.jpg" alt="img" class="image__container__item">
-            <img src="assets/image/banner2.jpg" alt="img" class="image__container__item">
-            <img src="assets/image/Bannière2.jpg" alt="img" class="image__container__item">
-            <img src="assets/image/bar.jpg" alt="img" class="image__container__item">
-            <img src="assets/image/salle.jpg" alt="img" class="image__container__item">
-            <img src="assets/image/salle2.jpg" alt="img" class="image__container__item">
+            <div class="image__container__item">
+              <strong class="descript__img">Lorem, ipsum dolor.</strong>
+              <img src="assets/image/devanture.jpg" alt="img">
+            </div>
+            <div class="image__container__item">
+              <strong class="descript__img">Lorem, ipsum dolor.</strong>
+              <img src="assets/image/banner2.jpg" alt="img">
+            </div>
+            <div class="image__container__item">
+              <strong class="descript__img">Lorem, ipsum dolor.</strong>
+              <img src="assets/image/Bannière2.jpg" alt="img">
+            </div>
+            <div class="image__container__item">
+              <strong class="descript__img">Lorem, ipsum dolor.</strong>
+              <img src="assets/image/bar.jpg" alt="img">
+            </div>
+            <div class="image__container__item">
+              <strong class="descript__img">Lorem, ipsum dolor.</strong>
+              <img src="assets/image/salle.jpg" alt="img">
+            </div>
+            <div class="image__container__item">
+              <strong class="descript__img">Lorem, ipsum dolor.</strong>
+              <img src="assets/image/salle2.jpg" alt="img">
+            </div>
           </div>
         </section>
         <section id="contact">

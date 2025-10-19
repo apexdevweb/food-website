@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Gideon+Roman&family=Lavishly+Yours&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
-body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container__sub, body main .contact__container form .form__sub__container {
+body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container__sub, body main .contact__container form .form__sub__container {
   height: auto;
   width: 100%;
 }
 
-body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
-body header .navbar .navbar__itemB, body main #about, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main .contact__container, body main .contact__container__sub, body main .contact__container form, body main .contact__container form .form__sub__container {
+body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .primary__separate, body header .secondary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
+body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body main #about, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container__sub, body main .contact__container form, body main .contact__container form .form__sub__container {
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,7 @@ body main .contact__container form {
   justify-content: space-evenly;
 }
 
-body .vid__container__banner, body main #about .about__container .about__img__container, body main .contact__container {
+body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body main #about .about__container .about__img__container, body main .contact__container {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -38,7 +38,7 @@ body main #about .about__container .about__img__container figcaption {
   justify-content: space-evenly;
 }
 
-body header .navbar .mobile__container .timer__container, body main .contact__container__sub, body main .contact__container form .form__sub__container {
+body header .navbar .mobile__container .timer__container, body main #galerie .image__container .image__container__item, body main .contact__container__sub, body main .contact__container form .form__sub__container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -83,10 +83,64 @@ body header .navbar .mobile__container .mobile__barre {
     transform: translateX(-100%);
   }
 }
+@keyframes separateAnime {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    width: 35vw;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes flashOverEl {
+  from {
+    filter: drop-shadow(0px 0px 15px #fff);
+    mix-blend-mode: color;
+  }
+  to {
+    mix-blend-mode: normal;
+  }
+}
+@keyframes flashOverTxt {
+  from {
+    text-shadow: 4px 4px 25px #fff;
+    mix-blend-mode: color-dodge;
+  }
+  to {
+    mix-blend-mode: normal;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body .cursor__effect {
+  height: 5vh;
+  width: 120px;
+  position: fixed;
+  pointer-events: none;
+  background-color: #333;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out;
+  mix-blend-mode: difference;
+  z-index: 96;
+  text-align: center;
+  border-radius: 15px;
+}
+body .cursor__effect.add__flash__cursor {
+  transition: animation 0.3s ease;
+  animation: flashOverEl 0.5s linear forwards;
+}
+body .cursor__effect small {
+  transition: 0.3s ease-in-out;
+  color: #fff;
+  font-family: "Saira", sans-serif;
+  letter-spacing: 3px;
+  font-size: 2.2rem;
+  font-weight: lighter;
 }
 body .vid__container__myvid {
   position: fixed;
@@ -151,6 +205,21 @@ body header .primary__title {
   width: 15ch;
   opacity: 0.9;
 }
+body header .primary__separate {
+  visibility: hidden;
+  margin-left: 10%;
+  height: 5px;
+  background-color: #fff;
+  animation: separateAnime 1s ease 5.3s 1 normal forwards;
+}
+body header .secondary__title {
+  font-size: 9rem;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: lighter;
+  letter-spacing: -15px;
+  width: 15ch;
+  opacity: 0.9;
+}
 body header .navbar .mobile__container {
   position: absolute;
   padding: 0;
@@ -166,9 +235,12 @@ body header .navbar .mobile__container .mobile__barre {
   position: fixed;
   z-index: 99;
   mix-blend-mode: difference;
+  letter-spacing: 8px;
 }
 body header .navbar .mobile__container .mobile__barre:hover {
   cursor: pointer;
+  transition: animation 0.3s ease;
+  animation: flashOverTxt 0.8s linear forwards;
 }
 body header .navbar .mobile__container .timer__container {
   transform: rotate(90deg);
@@ -186,7 +258,7 @@ body header .navbar .mobile__container__sub {
   width: 15vw;
   position: fixed;
   top: 23%;
-  left: 81.2vw;
+  left: 81.5vw;
   z-index: 99;
   transform: rotate(90deg);
 }
@@ -198,6 +270,7 @@ body header .navbar .mobile__container__sub .mobile__item__sub {
   border: none;
   height: auto;
   width: auto;
+  z-index: 99;
 }
 body header .navbar .mobile__container__sub .mobile__item__sub a {
   color: #fff;
@@ -216,7 +289,7 @@ body header .navbar__container {
   visibility: hidden;
   height: 100vh;
   width: 100%;
-  z-index: 98;
+  z-index: 95;
 }
 @media (min-width: 600px) {
   body header .navbar__container {
@@ -272,6 +345,48 @@ body header .navbar .navbar__itemB:hover {
   transform: translateX(150px);
   mix-blend-mode: difference;
 }
+body header .navbar .navbar__papper {
+  top: 0;
+  left: 33%;
+  position: absolute;
+  height: 100%;
+  width: 25vw;
+  z-index: -1;
+  overflow: hidden;
+}
+body header .navbar .navbar__papper .navbar__papper__item {
+  width: auto;
+}
+body header .navbar .navbar__papper .navbar__papper__item:nth-child(1) {
+  height: 11vh;
+  margin-top: -140px;
+  margin-left: -11vw;
+}
+body header .navbar .navbar__papper .navbar__papper__item:nth-child(2) {
+  margin-top: -140px;
+  height: 25vh;
+}
+body header .navbar .navbar__papper .navbar__papper__item:nth-child(3) {
+  margin-top: -120px;
+  height: 30vh;
+}
+body header .navbar .navbar__papper .navbar__papper__item:nth-child(4) {
+  margin-top: -100px;
+  height: 25vh;
+}
+body header .navbar .navbar__papper .navbar__papper__item:nth-child(5) {
+  margin-top: -125px;
+  height: 25vh;
+}
+body header .navbar .navbar__papper .navbar__papper__item:nth-child(6) {
+  margin-top: -163px;
+  height: 25vh;
+  margin-left: 3vw;
+}
+body header .navbar .navbar__papper:hover {
+  transition: animation 0.3s ease;
+  animation: flashOverEl 0.5s linear forwards;
+}
 body main #about .about__container {
   margin-left: 5vw;
   min-height: 55vh;
@@ -321,6 +436,10 @@ body main #about .about__container .about__img__container img {
   height: 30vh;
   width: auto;
 }
+body main #about .about__container .about__img__container img:hover {
+  transition: animation 0.3s ease;
+  animation: flashOverEl 0.5s linear forwards;
+}
 body main #about .about__container .about__img__container figcaption {
   text-align: right;
   margin-top: 15px;
@@ -365,15 +484,38 @@ body main #galerie .galerie__title {
   letter-spacing: -15px;
 }
 body main #galerie .image__container {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   z-index: 0;
+  overflow: hidden;
 }
-body main #galerie .image__container__item {
-  height: 15vw;
-  width: 25vw;
-  background-color: #fff;
+body main #galerie .image__container .image__container__item {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(0.95);
   z-index: 0;
+  text-align: right;
+}
+body main #galerie .image__container .image__container__item .descript__img {
+  width: 50ch;
+  color: #fff;
+  font-size: 3rem;
+  font-family: "Saira", sans-serif;
+  font-weight: lighter;
+}
+body main #galerie .image__container .image__container__item img {
+  width: 80vw;
+  height: 80vh;
+  margin-top: 120px;
+  margin-left: 250px;
+}
+body main #galerie .image__container .image__container__item img:hover {
+  transition: animation 0.3s ease;
+  animation: flashOverEl 0.5s linear forwards;
 }
 body main .contact__container {
   min-height: 100vh;

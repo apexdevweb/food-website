@@ -14,4 +14,32 @@
     transform: translateX(-100%);
   }
 }
-
+@keyframes separateAnime {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    width: 35vw;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes flashOverEl {
+  from {
+    filter: drop-shadow(0px 0px 15px #fff);
+    mix-blend-mode: color;
+  }
+  to {
+    mix-blend-mode: normal;
+  }
+}
+@keyframes flashOverTxt {
+  from {
+    text-shadow: 4px 4px 25px #fff;
+    mix-blend-mode: color-dodge;
+  }
+  to {
+    mix-blend-mode: normal;
+  }
+}
