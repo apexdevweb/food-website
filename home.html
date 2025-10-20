@@ -15,7 +15,9 @@
     <video autoplay loop muted class="vid__container__myvid">
       <source src="assets/video/space_1920.mp4" type="video/mp4" />
     </video>
-    <div class="cursor__effect"><small class="cursor__txt"></small></div>
+    <div class="cursor__effect">
+      <small class="cursor__txt"></small>
+    </div>
     <div class="vid__container__banner">
       <span
         class="container__banner__itemA"><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small></span>
@@ -39,23 +41,24 @@
         <nav class="navbar">
           <div class="mobile__container">
             <p class="mobile__barre" id="btntrigg">menu</p>
+            <span class="back__to__top"><a href="#"><i class="fa-solid fa-chevron-up"></i></a></span>
             <div class="timer__container">
               <span>Bxl-</span><span id="clock"></span>
             </div>
           </div>
           <ul class="navbar__container">
-            <li class="navbar__itemA"><a href="#about" class="link__item">A propos</a></li>
-            <li class="navbar__itemB"><a href="#galerie" class="link__item">Entree</a></li>
-            <li class="navbar__itemA"><a href="#contact" class="link__item">Plats</a></li>
-            <li class="navbar__itemB"><a href="#contact" class="link__item">Dessert</a></li>
-            <li class="navbar__itemA"><a href="#contact" class="link__item">Soft</a></li>
-            <li class="navbar__itemB"><a href="#contact" class="link__item">Vins</a></li>
-            <li class="navbar__itemA"><a href="#contact" class="link__item">Champagnes</a></li>
+            <li class="navbar__itemA"><a href="#about" class="link__item lnk">A propos</a></li>
+            <li class="navbar__itemB"><a href="#galerie" class="link__item lnk">Entree</a></li>
+            <li class="navbar__itemA"><a href="#contact" class="link__item lnk">Plats</a></li>
+            <li class="navbar__itemB"><a href="#contact" class="link__item lnk">Dessert</a></li>
+            <li class="navbar__itemA"><a href="#contact" class="link__item lnk">Soft</a></li>
+            <li class="navbar__itemB"><a href="#contact" class="link__item lnk">Vins</a></li>
+            <li class="navbar__itemA"><a href="#contact" class="link__item lnk">Champagnes</a></li>
             <div class="mobile__container__sub">
-              <p class="mobile__item__sub">Reservation</p>
-              <p class="mobile__item__sub">Evenement</p>
-              <p class="mobile__item__sub">Avis</p>
-              <p class="mobile__item__sub"><a href="index.html">Exit</a></p>
+              <p class="mobile__item__sub lnk">Reservation</p>
+              <p class="mobile__item__sub lnk">Evenement</p>
+              <p class="mobile__item__sub lnk">Avis</p>
+              <p class="mobile__item__sub lnk"><a href="index.html">Exit</a></p>
             </div>
             <div class="navbar__papper">
               <img src="assets/image/Fichier 1hdpi.png" alt="bgnav" class="navbar__papper__item">
@@ -149,7 +152,7 @@
           <p class="small__banner__item">solline@gmail.com</p>
         </div>
         <section id="galerie">
-          <h3 class="galerie__title">Un bref aperçus</h3>
+          <h3 class="galerie__title" id="t5">Un bref aperçus</h3>
           <div class="image__container">
             <div class="image__container__item">
               <strong class="descript__img">Lorem, ipsum dolor.</strong>
@@ -180,34 +183,34 @@
         <section id="contact">
           <div class="contact__container">
             <div class="contact__title__container">
-              <h4>Contact</h4>
+              <h4 class="contact__title" id="t6">Contac<span>t</span></h4>
               <div class="contact__container__separate"></div>
-              <h4>Reservation</h4>
+              <h4 class="contact__title" id="t7"><span>R</span>eservation</h4>
             </div>
             <div class="contact__container__sub">
-              <form method="post">
-                <input type="text" placeholder="Nom" maxlength="25" required>
-                <input type="text" placeholder="Prenom" maxlength="25" required>
-                <input type="email" placeholder="E-mail" required>
-                <input type="tel" placeholder="tel" maxlength="20">
-                <textarea cols="30" rows="10" placeholder="Message" required></textarea>
-                <input type="submit" value="Envoyer">
+              <div class="arrow__container">
+                <i class="fa-solid fa-angles-left" id="arrowA"></i>
+                <i class="fa-solid fa-angles-right" id="arrowB"></i>
+              </div>
+              <form method="post" class="form__A">
+                <input class="form__A__item" type="text" placeholder="Nom" maxlength="25" required>
+                <input class="form__A__item" type="text" placeholder="Prenom" maxlength="25" required>
+                <input class="form__A__item" type="email" placeholder="E-mail" required>
+                <input class="form__A__item" type="tel" placeholder="tel" maxlength="20">
+                <textarea class="form__A__item" cols="30" rows="10" placeholder="Message" required></textarea>
+                <input class="form__A__item" type="submit" value="Envoyer">
               </form>
-              <form method="post">
+              <form method="post" class="form__B">
                 <input type="text" placeholder="Nom" maxlength="25" required>
                 <input type="text" placeholder="Prenom" maxlength="25" required>
                 <input type="email" placeholder="E-mail" required>
                 <input type="tel" placeholder="tel" maxlength="20" required>
                 <input type="number" placeholder="nombre de personne" required>
-                <div class="form__sub__container">
-                  <label for="child_verif">Enfants</label>
-                  <input type="checkbox" name="child_verif">
-                </div>
                 <label for="date_verif">Date</label>
                 <input type="date" name="date_verif" required>
                 <label for="time_verif">Heure</label>
                 <input type="time" name="time_verif" required>
-                <textarea cols="30" rows="10" placeholder="Informations complémentaire" required></textarea>
+                <textarea cols="20" rows="10" placeholder="Informations complémentaire" required></textarea>
                 <input type="submit" value="Reserver">
               </form>
             </div>

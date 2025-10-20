@@ -43,3 +43,19 @@
     mix-blend-mode: normal;
   }
 }
+@keyframes formAnime {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    width: 25vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-15vw,-180px);
+  }
+}

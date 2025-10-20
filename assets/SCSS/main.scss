@@ -9,30 +9,23 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   & .cursor__effect {
     @extend %globale-size, %reset-marg-pad, %displayed-column-center;
-    height: 5vh;
-    width: 120px;
+    height: 4vh;
+    width: 110px;
     position: fixed;
     pointer-events: none;
-    background-color: #333;
+    background: linear-gradient(to right, #ffefba, #ffffff);
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease-out;
     mix-blend-mode: difference;
     z-index: 96;
     text-align: center;
     border-radius: 15px;
-
-    &.add__flash__cursor {
-      transition: animation 0.3s ease;
-      animation: flashOverEl 0.5s linear forwards;
-    }
-
     & small {
       @extend %globale-size, %reset-marg-pad;
       transition: 0.3s ease-in-out;
-      color: variables.$typo-color-white;
+      color: variables.$typo-color-black;
       font-family: variables.$typo-family-small;
       letter-spacing: 3px;
       font-size: variables.$typo-size-Smedium;
@@ -329,14 +322,12 @@ body {
       }
     }
   }
-
   main {
     #about {
       @extend %reset-marg-pad, %displayed-row-wrapevenly;
-
       & .about__container {
         @extend %displayed-column-start;
-        margin-left: 5vw;
+        margin: 15px;
         min-height: 55vh;
         max-width: 38vw;
         background: url("../image/") no-repeat 50% 50%,
@@ -468,9 +459,9 @@ body {
           opacity: 0;
           transform: scale(0.95);
           z-index: 0;
-          text-align: right;
           & .descript__img {
-            width: 50ch;
+            margin-left: 8vw;
+            width: 10ch;
             color: variables.$typo-color-white;
             font-size: variables.$typo-size-medium;
             font-family: variables.$typo-family-small;
@@ -480,12 +471,12 @@ body {
             width: 80vw;
             height: 80vh;
             margin-top: 120px;
-            margin-left: 250px;
+            margin-left: 0;
             &:hover {
               transition: animation 0.3s ease;
               animation: flashOverEl 0.5s linear forwards;
             }
-          }  
+          }
         }
       }
     }
@@ -494,20 +485,109 @@ body {
       min-height: 100vh;
       width: 100%;
       @extend %displayed-column-center, %reset-marg-pad;
-
-      &__sub {
+      & .contact__title__container {
         @extend %globale-size, %displayed-row-center, %reset-marg-pad;
+        & .contact__container__separate {
+          margin: 15px;
+          height: 20vh;
+          width: 3px;
+          border: none;
+          background-color: variables.$typo-color-white;
+        }
+        & .contact__title {
+          @extend %displayed-column-center;
+          color: variables.$typo-color-white;
+          @include mixins.typo_config_xeta;
+          & span {
+            font-size: variables.$typo-size-big;
+          }
+        }
       }
-
-      & form {
-        min-height: 35vh;
-        width: 100%;
-        @extend %displayed-column-evenly, %reset-marg-pad;
-
-        & .form__sub__container {
+      &__sub {
+        @extend %globale-size, %displayed-column-center, %reset-marg-pad;
+        & .arrow__container {
           @extend %globale-size, %displayed-row-center, %reset-marg-pad;
+          & i {
+            text-align: center;
+            font-size: 12rem;
+            @extend %text-gradient-B;
+            &:hover{
+              cursor: pointer;
+            }
+            &.arrow__mov__A {
+              transform: translateX(-28vw) rotate(-90deg);
+              transition: transform 0.3s ease-out;
+              animation: flashOverTxt 0.6s linear 0.6s forwards;
+              
+            }
+          }
+        }
+        & .form__A {
+          visibility: hidden;
+          min-height: 60vh;
+          width: 100%;
+          & input[type="text"],
+          input[type="email"],
+          input[type="tel"] {
+            height: 3vh;
+            width: 20vh;
+            border: none;
+            border-bottom: 2px solid #efefbb;
+            background: none;
+            font-family: variables.$typo-family-small;
+            font-size: variables.$typo-size-small;
+          }
+          & textarea {
+            height: 10vh;
+            resize: none;
+            border: none;
+            border-bottom: 2px solid #efefbb;
+            background: none;
+            font-family: variables.$typo-family-small;
+            font-size: variables.$typo-size-small;
+          }
+          & input[type="submit"]{
+            height: 4vh;
+            width: 8vw;
+            font-family: variables.$typo-family-small;
+            font-size: variables.$typo-size-small;
+            background: linear-gradient(to right, #efefbb, #d4d3dd);
+            border: none;
+            border-radius: 5px;
+            &:hover{
+              animation: flashOverEl 0.6s linear 0.6s forwards;
+            }
+          }
+          &.deploy__form {
+            animation: formAnime 1s ease 0.5s 1 normal forwards;
+          }
+          // & .form__A__item{
+
+          // }
+        }
+        & .form__B {
+          display: none;
         }
       }
     }
+  }
+  & .back__to__top {
+    margin-top: 0;
+    margin-left: 80%;
+    position: fixed;
+    height: 6vh;
+    width: 8vw;
+    font-size: variables.$typo-size-small;
+    background: linear-gradient(to right, #efefbb, #d4d3dd);
+    & a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  footer {
+    position: relative;
+    min-height: 15vh;
+    width: 100%;
+    bottom: 0;
   }
 }

@@ -1,23 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Gideon+Roman&family=Lavishly+Yours&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
-body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container__sub, body main .contact__container form .form__sub__container {
+body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container {
   height: auto;
   width: 100%;
 }
 
 body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .primary__separate, body header .secondary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
-body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body main #about, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container__sub, body main .contact__container form, body main .contact__container form .form__sub__container {
+body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body main #about, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container {
   margin: 0;
   padding: 0;
 }
 
-body main .contact__container form {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body main #about .about__container .about__img__container, body main .contact__container {
+body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -38,7 +31,7 @@ body main #about .about__container .about__img__container figcaption {
   justify-content: space-evenly;
 }
 
-body header .navbar .mobile__container .timer__container, body main #galerie .image__container .image__container__item, body main .contact__container__sub, body main .contact__container form .form__sub__container {
+body header .navbar .mobile__container .timer__container, body main #galerie .image__container .image__container__item, body main .contact__container .contact__title__container, body main .contact__container__sub .arrow__container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -61,6 +54,14 @@ body main #about, body main #galerie .image__container {
 
 body header .navbar .mobile__container .mobile__barre {
   background: linear-gradient(to right, #ffefba, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+body main .contact__container__sub .arrow__container i {
+  background: linear-gradient(to right, #efefbb, #d4d3dd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -112,17 +113,33 @@ body header .navbar .mobile__container .mobile__barre {
     mix-blend-mode: normal;
   }
 }
+@keyframes formAnime {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    width: 25vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-15vw, -180px);
+  }
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body .cursor__effect {
-  height: 5vh;
-  width: 120px;
+  height: 4vh;
+  width: 110px;
   position: fixed;
   pointer-events: none;
-  background-color: #333;
+  background: linear-gradient(to right, #ffefba, #ffffff);
   transform: translate(-50%, -50%);
   transition: transform 0.3s ease-out;
   mix-blend-mode: difference;
@@ -130,13 +147,9 @@ body .cursor__effect {
   text-align: center;
   border-radius: 15px;
 }
-body .cursor__effect.add__flash__cursor {
-  transition: animation 0.3s ease;
-  animation: flashOverEl 0.5s linear forwards;
-}
 body .cursor__effect small {
   transition: 0.3s ease-in-out;
-  color: #fff;
+  color: #000;
   font-family: "Saira", sans-serif;
   letter-spacing: 3px;
   font-size: 2.2rem;
@@ -388,7 +401,7 @@ body header .navbar .navbar__papper:hover {
   animation: flashOverEl 0.5s linear forwards;
 }
 body main #about .about__container {
-  margin-left: 5vw;
+  margin: 15px;
   min-height: 55vh;
   max-width: 38vw;
   background: url("../image/") no-repeat 50% 50%, linear-gradient(to right, #efefbb, #d4d3dd);
@@ -498,10 +511,10 @@ body main #galerie .image__container .image__container__item {
   opacity: 0;
   transform: scale(0.95);
   z-index: 0;
-  text-align: right;
 }
 body main #galerie .image__container .image__container__item .descript__img {
-  width: 50ch;
+  margin-left: 8vw;
+  width: 10ch;
   color: #fff;
   font-size: 3rem;
   font-family: "Saira", sans-serif;
@@ -511,7 +524,7 @@ body main #galerie .image__container .image__container__item img {
   width: 80vw;
   height: 80vh;
   margin-top: 120px;
-  margin-left: 250px;
+  margin-left: 0;
 }
 body main #galerie .image__container .image__container__item img:hover {
   transition: animation 0.3s ease;
@@ -521,9 +534,95 @@ body main .contact__container {
   min-height: 100vh;
   width: 100%;
 }
-body main .contact__container form {
-  min-height: 35vh;
+body main .contact__container .contact__title__container .contact__container__separate {
+  margin: 15px;
+  height: 20vh;
+  width: 3px;
+  border: none;
+  background-color: #fff;
+}
+body main .contact__container .contact__title__container .contact__title {
+  color: #fff;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+body main .contact__container .contact__title__container .contact__title span {
+  font-size: 9rem;
+}
+body main .contact__container__sub .arrow__container i {
+  text-align: center;
+  font-size: 12rem;
+}
+body main .contact__container__sub .arrow__container i:hover {
+  cursor: pointer;
+}
+body main .contact__container__sub .arrow__container i.arrow__mov__A {
+  transform: translateX(-28vw) rotate(-90deg);
+  transition: transform 0.3s ease-out;
+  animation: flashOverTxt 0.6s linear 0.6s forwards;
+}
+body main .contact__container__sub .form__A {
+  visibility: hidden;
+  min-height: 60vh;
   width: 100%;
+}
+body main .contact__container__sub .form__A input[type=text],
+body main .contact__container__sub .form__A input[type=email],
+body main .contact__container__sub .form__A input[type=tel] {
+  height: 3vh;
+  width: 20vh;
+  border: none;
+  border-bottom: 2px solid #efefbb;
+  background: none;
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+}
+body main .contact__container__sub .form__A textarea {
+  height: 10vh;
+  resize: none;
+  border: none;
+  border-bottom: 2px solid #efefbb;
+  background: none;
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+}
+body main .contact__container__sub .form__A input[type=submit] {
+  height: 4vh;
+  width: 8vw;
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+  background: linear-gradient(to right, #efefbb, #d4d3dd);
+  border: none;
+  border-radius: 5px;
+}
+body main .contact__container__sub .form__A input[type=submit]:hover {
+  animation: flashOverEl 0.6s linear 0.6s forwards;
+}
+body main .contact__container__sub .form__A.deploy__form {
+  animation: formAnime 1s ease 0.5s 1 normal forwards;
+}
+body main .contact__container__sub .form__B {
+  display: none;
+}
+body .back__to__top {
+  margin-top: 0;
+  margin-left: 80%;
+  position: fixed;
+  height: 6vh;
+  width: 8vw;
+  font-size: 1.2rem;
+  background: linear-gradient(to right, #efefbb, #d4d3dd);
+}
+body .back__to__top a {
+  color: #000;
+  text-decoration: none;
+}
+body footer {
+  position: relative;
+  min-height: 15vh;
+  width: 100%;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
