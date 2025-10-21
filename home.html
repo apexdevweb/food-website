@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/CSS/main.css">
   <title>La table de solline</title>
 </head>
@@ -41,19 +40,18 @@
         <nav class="navbar">
           <div class="mobile__container">
             <p class="mobile__barre" id="btntrigg">menu</p>
-            <span class="back__to__top"><a href="#"><i class="fa-solid fa-chevron-up"></i></a></span>
             <div class="timer__container">
               <span>Bxl-</span><span id="clock"></span>
             </div>
           </div>
           <ul class="navbar__container">
             <li class="navbar__itemA"><a href="#about" class="link__item lnk">A propos</a></li>
-            <li class="navbar__itemB"><a href="#galerie" class="link__item lnk">Entree</a></li>
-            <li class="navbar__itemA"><a href="#contact" class="link__item lnk">Plats</a></li>
-            <li class="navbar__itemB"><a href="#contact" class="link__item lnk">Dessert</a></li>
-            <li class="navbar__itemA"><a href="#contact" class="link__item lnk">Soft</a></li>
-            <li class="navbar__itemB"><a href="#contact" class="link__item lnk">Vins</a></li>
-            <li class="navbar__itemA"><a href="#contact" class="link__item lnk">Champagnes</a></li>
+            <li class="navbar__itemB"><a href="#" class="link__item lnk">Entree</a></li>
+            <li class="navbar__itemA"><a href="#" class="link__item lnk">Plats</a></li>
+            <li class="navbar__itemB"><a href="#" class="link__item lnk">Dessert</a></li>
+            <li class="navbar__itemA"><a href="#" class="link__item lnk">Soft</a></li>
+            <li class="navbar__itemB"><a href="#" class="link__item lnk">Vins</a></li>
+            <li class="navbar__itemA"><a href="#" class="link__item lnk">Champagnes</a></li>
             <div class="mobile__container__sub">
               <p class="mobile__item__sub lnk">Reservation</p>
               <p class="mobile__item__sub lnk">Evenement</p>
@@ -192,41 +190,60 @@
                 <i class="fa-solid fa-angles-left" id="arrowA"></i>
                 <i class="fa-solid fa-angles-right" id="arrowB"></i>
               </div>
-              <form method="post" class="form__A">
-                <input class="form__A__item" type="text" placeholder="Nom" maxlength="25" required>
-                <input class="form__A__item" type="text" placeholder="Prenom" maxlength="25" required>
-                <input class="form__A__item" type="email" placeholder="E-mail" required>
-                <input class="form__A__item" type="tel" placeholder="tel" maxlength="20">
-                <textarea class="form__A__item" cols="30" rows="10" placeholder="Message" required></textarea>
-                <input class="form__A__item" type="submit" value="Envoyer">
-              </form>
-              <form method="post" class="form__B">
-                <input type="text" placeholder="Nom" maxlength="25" required>
-                <input type="text" placeholder="Prenom" maxlength="25" required>
-                <input type="email" placeholder="E-mail" required>
-                <input type="tel" placeholder="tel" maxlength="20" required>
-                <input type="number" placeholder="nombre de personne" required>
-                <label for="date_verif">Date</label>
-                <input type="date" name="date_verif" required>
-                <label for="time_verif">Heure</label>
-                <input type="time" name="time_verif" required>
-                <textarea cols="20" rows="10" placeholder="Informations complémentaire" required></textarea>
-                <input type="submit" value="Reserver">
-              </form>
+              <div class="form__container">
+                <form method="post" class="form__A">
+                  <input class="form__A__item" type="text" placeholder="Nom" maxlength="25" required>
+                  <input class="form__A__item" type="text" placeholder="Prenom" maxlength="25" required>
+                  <input class="form__A__item" type="email" placeholder="E-mail" required>
+                  <input class="form__A__item" type="tel" placeholder="tel" maxlength="20">
+                  <textarea class="form__A__item" cols="30" rows="10" placeholder="Message" required></textarea>
+                  <input class="form__A__item" type="submit" value="Envoyer">
+                </form>
+                <form method="post" class="form__B">
+                  <input class="form__B__item" type="text" placeholder="Nom" maxlength="25" required>
+                  <input class="form__B__item" type="text" placeholder="Prenom" maxlength="25" required>
+                  <input class="form__B__item" type="email" placeholder="E-mail" required>
+                  <input class="form__B__item" type="tel" placeholder="tel" maxlength="20" required>
+                  <input class="form__B__item" type="number" placeholder="nombre de personne" required>
+                  <label class="form__A__item" for="date_verif">Date</label>
+                  <input class="form__B__item" type="date" name="date_verif" required>
+                  <label class="form__A__item" for="time_verif">Heure</label>
+                  <input class="form__B__item" type="time" name="time_verif" required>
+                  <textarea class="form__A__item" cols="20" rows="10" placeholder="Informations complémentaire"
+                    required></textarea>
+                  <input class="form__A__item" type="submit" value="Reserver">
+                </form>
+              </div>
             </div>
             <aside>
+              <div class="barrets__container">
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+              </div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80598.46456881132!2d4.293016672354125!3d50.85520206078587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a4ed73c76867%3A0xc18b3a66787302a7!2sBruxelles!5e0!3m2!1sfr!2sbe!4v1760414315019!5m2!1sfr!2sbe"
                 width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </aside>
+            <div class="AI__ctnr">
+              <img class="AI__ctnr__img" src="assets/image/aicone.png" alt="Icône IA">
+              <p class="AI__ctnr__reponse" id="response"></p>
+              <form id="ai-form">
+                <input id="question" type="text" placeholder="Pose ta question à Solline..." required />
+                <input type="submit"></input>
+              </form>
+            </div>
           </div>
         </section>
       </main>
     </div>
   </div>
   <footer>
-    <small>©by Script'enjoyer</small>
+    <small class="foot__signature">©by Script'enjoyer</small>
   </footer>
   <script src="https://kit.fontawesome.com/268e7a0888.js" crossorigin="anonymous"></script>
   <script src="assets/js/mobile_menu.js"></script>

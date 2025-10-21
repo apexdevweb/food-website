@@ -43,19 +43,33 @@
     mix-blend-mode: normal;
   }
 }
-@keyframes formAnime {
+@keyframes formAnimeA {
   from {
     opacity: 0;
     width: 0;
   }
   to {
-    width: 25vw;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-evenly;
     opacity: 1;
     visibility: visible;
-    transform: translate(-15vw,-180px);
+    transform: translateX(-4vw);
+  }
+}
+@keyframes formAnimeB {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(4vw);
   }
 }

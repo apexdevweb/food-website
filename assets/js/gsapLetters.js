@@ -357,23 +357,44 @@ const arrowContact = document.getElementById("arrowA");
 const contactCtnr = document.querySelector(".form__A");
 const contactCtnrItem = document.querySelectorAll(".form__A__item");
 const arrowReserve = document.getElementById("arrowB");
-const reservCtnr = document.querySelectorAll(".form__B");
-
+const reservCtnr = document.querySelector(".form__B");
+const reservCtnrItem = document.querySelectorAll(".form__B input, textarea");
 arrowContact.addEventListener("click", () => {
   arrowContact.classList.toggle("arrow__mov__A");
-  contactCtnr.classList.toggle("deploy__form");
-  contactCtnrItem.forEach((inputItem) => {
-    tl.from(inputItem, {
-      y: -50,
-      rotate: 25,
+  if (arrowContact.classList.contains("")) {
+  } else {
+  }
+  if (contactCtnr.classList.contains("deploy__formA")) {
+    contactCtnr.classList.remove("deploy__formA");
+  } else {
+    contactCtnr.classList.add("deploy__formA");
+    tl.from(contactCtnrItem, {
+      x: -50,
+      transformOrigin: "left",
       scale: 0,
       opacity: 0,
-      duration: 0.3,
+      duration: 2,
       filter: "blur(10px)",
-      stagger: 0.01,
-      ease: "power5.out",
+      stagger: 0.1,
+      ease: "power3.out",
     });
-  });
+  }
 });
-
-// arrowReserve.addEventListener("click", () => {});
+arrowReserve.addEventListener("click", () => {
+  arrowReserve.classList.toggle("arrow__mov__B");
+  if (reservCtnr.classList.contains("deploy__formB")) {
+    reservCtnr.classList.remove("deploy__formB");
+  } else {
+    reservCtnr.classList.add("deploy__formB");
+    gsap.from(reservCtnrItem, {
+      x: 50,
+      transformOrigin: "right",
+      scale: 0,
+      opacity: 0,
+      duration: 2,
+      filter: "blur(10px)",
+      stagger: 0.1,
+      ease: "power3.out",
+    });
+  }
+});

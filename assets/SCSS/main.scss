@@ -511,83 +511,158 @@ body {
             text-align: center;
             font-size: 12rem;
             @extend %text-gradient-B;
-            &:hover{
+            &:hover {
               cursor: pointer;
             }
             &.arrow__mov__A {
-              transform: translateX(-28vw) rotate(-90deg);
-              transition: transform 0.3s ease-out;
+              transform: translateX(-29vw) rotate(-90deg);
+              transition: transform 0.4s ease-out;
               animation: flashOverTxt 0.6s linear 0.6s forwards;
-              
+            }
+            &.arrow__mov__B {
+              transform: translateX(29vw) rotate(90deg);
+              transition: transform 0.4s ease-out;
+              animation: flashOverTxt 0.6s linear 0.6s forwards;
             }
           }
         }
-        & .form__A {
-          visibility: hidden;
+        & .form__container {
+          @extend %displayed-row-center, %reset-marg-pad;
           min-height: 60vh;
-          width: 100%;
-          & input[type="text"],
-          input[type="email"],
-          input[type="tel"] {
-            height: 3vh;
-            width: 20vh;
-            border: none;
-            border-bottom: 2px solid #efefbb;
-            background: none;
-            font-family: variables.$typo-family-small;
-            font-size: variables.$typo-size-small;
-          }
-          & textarea {
-            height: 10vh;
-            resize: none;
-            border: none;
-            border-bottom: 2px solid #efefbb;
-            background: none;
-            font-family: variables.$typo-family-small;
-            font-size: variables.$typo-size-small;
-          }
-          & input[type="submit"]{
-            height: 4vh;
-            width: 8vw;
-            font-family: variables.$typo-family-small;
-            font-size: variables.$typo-size-small;
-            background: linear-gradient(to right, #efefbb, #d4d3dd);
-            border: none;
-            border-radius: 5px;
-            &:hover{
-              animation: flashOverEl 0.6s linear 0.6s forwards;
+          width: 50vw;
+          & .form__A {
+            margin-top: -500px;
+            background-color: rgba(0, 0, 0, 0.834);
+            border-radius: 15px;
+            visibility: hidden;
+            min-height: 60vh;
+            width: 100%;
+            & input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+              height: 3vh;
+              width: 20vh;
+              border: none;
+              border-bottom: 2px solid #efefbb;
+              background: none;
+              font-family: variables.$typo-family-small;
+              font-size: variables.$typo-size-small;
+              color: variables.$typo-color-white;
+            }
+            & textarea {
+              height: 10vh;
+              resize: none;
+              border: none;
+              border-bottom: 2px solid #efefbb;
+              background: none;
+              font-family: variables.$typo-family-small;
+              font-size: variables.$typo-size-small;
+              color: variables.$typo-color-white;
+            }
+            & input[type="submit"] {
+              height: 4vh;
+              width: 8vw;
+              font-family: variables.$typo-family-small;
+              font-size: variables.$typo-size-small;
+              background: linear-gradient(to right, #efefbb, #d4d3dd);
+              border: none;
+              border-radius: 5px;
+              &:hover {
+                animation: flashOverEl 0.6s linear 0.6s forwards;
+              }
+            }
+            &.deploy__formA {
+              animation: formAnimeA 1s ease 0.5s 1 normal forwards;
             }
           }
-          &.deploy__form {
-            animation: formAnime 1s ease 0.5s 1 normal forwards;
+          & .form__B {
+            margin-top: -500px;
+            background-color: rgba(0, 0, 0, 0.834);
+            border-radius: 15px;
+            visibility: hidden;
+            min-height: 60vh;
+            width: 100%;
+            & input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="number"],
+            input[type="date"],
+            input[type="time"] {
+              height: 3vh;
+              width: 20vh;
+              border: none;
+              border-bottom: 2px solid #efefbb;
+              background: none;
+              color: variables.$typo-color-white;
+              font-family: variables.$typo-family-small;
+              font-size: variables.$typo-size-small;
+            }
+            & textarea {
+              height: 10vh;
+              resize: none;
+              border: none;
+              border-bottom: 2px solid #efefbb;
+              background: none;
+              font-family: variables.$typo-family-small;
+              font-size: variables.$typo-size-small;
+              color: variables.$typo-color-white;
+            }
+            & label {
+              letter-spacing: 3px;
+              font-family: variables.$typo-family-small;
+              font-size: variables.$typo-size-small;
+              color: variables.$typo-color-white;
+              font-weight: lighter;
+            }
+            & input[type="submit"] {
+              height: 4vh;
+              width: 8vw;
+              font-family: variables.$typo-family-small;
+              font-size: variables.$typo-size-small;
+              background: linear-gradient(to right, #efefbb, #d4d3dd);
+              border: none;
+              border-radius: 5px;
+              &:hover {
+                animation: flashOverEl 0.6s linear 0.6s forwards;
+              }
+            }
+            &.deploy__formB {
+              animation: formAnimeB 1s ease 0.5s 1 normal forwards;
+            }
           }
-          // & .form__A__item{
-
-          // }
         }
-        & .form__B {
-          display: none;
+      }
+      & aside {
+        @extend %globale-size, %displayed-column-center, %reset-marg-pad;
+        & .barrets__container {
+          @extend %displayed-column-evenly, %reset-marg-pad;
+          min-height: 50vh;
+          width: 100%;
+          overflow: hidden;
+          & .barrets__container__item {
+            height: 15px;
+            width: 100%;
+            background: linear-gradient(to right, #efefbb, #d4d3dd);
+            transform: rotate(50deg);
+          }
+        }
+        & iframe {
+          position: absolute;
         }
       }
     }
   }
-  & .back__to__top {
-    margin-top: 0;
-    margin-left: 80%;
-    position: fixed;
-    height: 6vh;
-    width: 8vw;
-    font-size: variables.$typo-size-small;
-    background: linear-gradient(to right, #efefbb, #d4d3dd);
-    & a {
-      color: #000;
-      text-decoration: none;
-    }
-  }
   footer {
+    @extend %displayed-column-center, %reset-marg-pad;
     position: relative;
     min-height: 15vh;
     width: 100%;
     bottom: 0;
+    & .foot__signature {
+      font-family: variables.$typo-family-small;
+      font-size: variables.$typo-size-small;
+      color: variables.$typo-color-gold;
+      font-weight: lighter;
+    }
   }
 }

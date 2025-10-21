@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Gideon+Roman&family=Lavishly+Yours&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
-body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container {
+body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container aside {
   height: auto;
   width: 100%;
 }
 
 body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .primary__separate, body header .secondary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
-body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body main #about, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container {
+body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body main #about, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container, body main .contact__container aside, body main .contact__container aside .barrets__container, body footer {
   margin: 0;
   padding: 0;
 }
 
-body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub {
+body main .contact__container aside .barrets__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub, body main .contact__container aside, body footer {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -31,7 +38,7 @@ body main #about .about__container .about__img__container figcaption {
   justify-content: space-evenly;
 }
 
-body header .navbar .mobile__container .timer__container, body main #galerie .image__container .image__container__item, body main .contact__container .contact__title__container, body main .contact__container__sub .arrow__container {
+body header .navbar .mobile__container .timer__container, body main #galerie .image__container .image__container__item, body main .contact__container .contact__title__container, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -113,20 +120,34 @@ body main .contact__container__sub .arrow__container i {
     mix-blend-mode: normal;
   }
 }
-@keyframes formAnime {
+@keyframes formAnimeA {
   from {
     opacity: 0;
     width: 0;
   }
   to {
-    width: 25vw;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-evenly;
     opacity: 1;
     visibility: visible;
-    transform: translate(-15vw, -180px);
+    transform: translateX(-4vw);
+  }
+}
+@keyframes formAnimeB {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(4vw);
   }
 }
 body {
@@ -558,18 +579,30 @@ body main .contact__container__sub .arrow__container i:hover {
   cursor: pointer;
 }
 body main .contact__container__sub .arrow__container i.arrow__mov__A {
-  transform: translateX(-28vw) rotate(-90deg);
-  transition: transform 0.3s ease-out;
+  transform: translateX(-29vw) rotate(-90deg);
+  transition: transform 0.4s ease-out;
   animation: flashOverTxt 0.6s linear 0.6s forwards;
 }
-body main .contact__container__sub .form__A {
+body main .contact__container__sub .arrow__container i.arrow__mov__B {
+  transform: translateX(29vw) rotate(90deg);
+  transition: transform 0.4s ease-out;
+  animation: flashOverTxt 0.6s linear 0.6s forwards;
+}
+body main .contact__container__sub .form__container {
+  min-height: 60vh;
+  width: 50vw;
+}
+body main .contact__container__sub .form__container .form__A {
+  margin-top: -500px;
+  background-color: rgba(0, 0, 0, 0.834);
+  border-radius: 15px;
   visibility: hidden;
   min-height: 60vh;
   width: 100%;
 }
-body main .contact__container__sub .form__A input[type=text],
-body main .contact__container__sub .form__A input[type=email],
-body main .contact__container__sub .form__A input[type=tel] {
+body main .contact__container__sub .form__container .form__A input[type=text],
+body main .contact__container__sub .form__container .form__A input[type=email],
+body main .contact__container__sub .form__container .form__A input[type=tel] {
   height: 3vh;
   width: 20vh;
   border: none;
@@ -577,8 +610,9 @@ body main .contact__container__sub .form__A input[type=tel] {
   background: none;
   font-family: "Saira", sans-serif;
   font-size: 1.2rem;
+  color: #fff;
 }
-body main .contact__container__sub .form__A textarea {
+body main .contact__container__sub .form__container .form__A textarea {
   height: 10vh;
   resize: none;
   border: none;
@@ -586,8 +620,9 @@ body main .contact__container__sub .form__A textarea {
   background: none;
   font-family: "Saira", sans-serif;
   font-size: 1.2rem;
+  color: #fff;
 }
-body main .contact__container__sub .form__A input[type=submit] {
+body main .contact__container__sub .form__container .form__A input[type=submit] {
   height: 4vh;
   width: 8vw;
   font-family: "Saira", sans-serif;
@@ -596,33 +631,92 @@ body main .contact__container__sub .form__A input[type=submit] {
   border: none;
   border-radius: 5px;
 }
-body main .contact__container__sub .form__A input[type=submit]:hover {
+body main .contact__container__sub .form__container .form__A input[type=submit]:hover {
   animation: flashOverEl 0.6s linear 0.6s forwards;
 }
-body main .contact__container__sub .form__A.deploy__form {
-  animation: formAnime 1s ease 0.5s 1 normal forwards;
+body main .contact__container__sub .form__container .form__A.deploy__formA {
+  animation: formAnimeA 1s ease 0.5s 1 normal forwards;
 }
-body main .contact__container__sub .form__B {
-  display: none;
+body main .contact__container__sub .form__container .form__B {
+  margin-top: -500px;
+  background-color: rgba(0, 0, 0, 0.834);
+  border-radius: 15px;
+  visibility: hidden;
+  min-height: 60vh;
+  width: 100%;
 }
-body .back__to__top {
-  margin-top: 0;
-  margin-left: 80%;
-  position: fixed;
-  height: 6vh;
+body main .contact__container__sub .form__container .form__B input[type=text],
+body main .contact__container__sub .form__container .form__B input[type=email],
+body main .contact__container__sub .form__container .form__B input[type=tel],
+body main .contact__container__sub .form__container .form__B input[type=number],
+body main .contact__container__sub .form__container .form__B input[type=date],
+body main .contact__container__sub .form__container .form__B input[type=time] {
+  height: 3vh;
+  width: 20vh;
+  border: none;
+  border-bottom: 2px solid #efefbb;
+  background: none;
+  color: #fff;
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+}
+body main .contact__container__sub .form__container .form__B textarea {
+  height: 10vh;
+  resize: none;
+  border: none;
+  border-bottom: 2px solid #efefbb;
+  background: none;
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+}
+body main .contact__container__sub .form__container .form__B label {
+  letter-spacing: 3px;
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: lighter;
+}
+body main .contact__container__sub .form__container .form__B input[type=submit] {
+  height: 4vh;
   width: 8vw;
+  font-family: "Saira", sans-serif;
   font-size: 1.2rem;
   background: linear-gradient(to right, #efefbb, #d4d3dd);
+  border: none;
+  border-radius: 5px;
 }
-body .back__to__top a {
-  color: #000;
-  text-decoration: none;
+body main .contact__container__sub .form__container .form__B input[type=submit]:hover {
+  animation: flashOverEl 0.6s linear 0.6s forwards;
+}
+body main .contact__container__sub .form__container .form__B.deploy__formB {
+  animation: formAnimeB 1s ease 0.5s 1 normal forwards;
+}
+body main .contact__container aside .barrets__container {
+  min-height: 50vh;
+  width: 100%;
+  overflow: hidden;
+}
+body main .contact__container aside .barrets__container .barrets__container__item {
+  height: 15px;
+  width: 100%;
+  background: linear-gradient(to right, #efefbb, #d4d3dd);
+  transform: rotate(50deg);
+}
+body main .contact__container aside iframe {
+  position: absolute;
 }
 body footer {
   position: relative;
   min-height: 15vh;
   width: 100%;
   bottom: 0;
+}
+body footer .foot__signature {
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+  color: #dccd8e;
+  font-weight: lighter;
 }
 
 /*# sourceMappingURL=main.css.map */
