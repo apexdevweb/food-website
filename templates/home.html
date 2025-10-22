@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/CSS/main.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
   <title>La table de solline</title>
 </head>
 
 <body>
   <div class="vid__container">
     <video autoplay loop muted class="vid__container__myvid">
-      <source src="assets/video/space_1920.mp4" type="video/mp4" />
+      <source src="{{ url_for('static', filename='video/space_1920.mp4') }}" type="video/mp4" />
     </video>
     <div class="cursor__effect">
       <small class="cursor__txt"></small>
@@ -56,16 +56,22 @@
               <p class="mobile__item__sub lnk">Reservation</p>
               <p class="mobile__item__sub lnk">Evenement</p>
               <p class="mobile__item__sub lnk">Avis</p>
-              <p class="mobile__item__sub lnk"><a href="index.html">Exit</a></p>
+              <p class="mobile__item__sub lnk"><a href="{{ url_for('recettes.index') }}">Exit</a></p>
             </div>
             <div class="navbar__papper">
-              <img src="assets/image/Fichier 1hdpi.png" alt="bgnav" class="navbar__papper__item">
-              <img src="assets/image/Fichier 2hdpi.png" alt="bgnav" class="navbar__papper__item">
-              <img src="assets/image/Fichier 3hdpi.png" alt="bgnav" class="navbar__papper__item">
-              <img src="assets/image/Fichier 4hdpi.png" alt="bgnav" class="navbar__papper__item">
-              <img src="assets/image/Fichier 5hdpi.png" alt="bgnav" class="navbar__papper__item">
-              <img src="assets/image/Fichier 6hdpi.png" alt="bgnav" class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 1hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 2hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 3hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 4hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 5hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 6hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
             </div>
+            <div class="Ai__wrapper">
+              <h2 id="intro_texte" class="Ai__intro__txt"></h2>
+              <ul id="Ai_response" class="Ai__reponse"></ul>
+            <input type="text" id="user_question" placeholder="Poser votre question" />
+            <button onclick="envoyerQuestion()" class="Ai__btn__question lnk">Demander à Solline</button>
+          </div>
           </ul>
         </nav>
       </header>
@@ -90,7 +96,7 @@
               se rencontrent.
               Dans un cadre raffiné et intemporel.</p>
             <figure class="about__img__container">
-              <img src="assets/image/banner2.jpg" alt="myImg" id="aboutImg1">
+              <img src="{{ url_for('static', filename='image/banner2.jpg') }}" alt="myImg" id="aboutImg1">
               <figcaption id="aboutCaption1">Un décor à la hauteur (2025)</figcaption>
             </figure>
           </article>
@@ -104,7 +110,7 @@
               Chaque création marie textures et parfums dans un équilibre harmonieux, mettant à l’honneur des produits
               d’exception soigneusement sélectionnés.</p>
             <figure class="about__img__container">
-              <img src="assets/image/salade2.jpg" alt="myImg">
+              <img src="{{ url_for('static', filename='image/salade2.jpg') }}" alt="myImg">
               <figcaption>Une entrée à ne pas rater (2025)</figcaption>
             </figure>
           </article>
@@ -119,7 +125,7 @@
               Viandes maturées, poissons délicatement rôtis, légumes de saison sublimés… tout est pensé pour offrir une
               expérience gustative d’une rare intensité.</p>
             <figure class="about__img__container">
-              <img src="assets/image/viande.jpg" alt="myImg">
+              <img src="{{ url_for('static', filename='image/viande.jpg') }}" alt="myImg">
               <figcaption>Soigneusement préparer (2025)</figcaption>
             </figure>
           </article>
@@ -132,7 +138,7 @@
               Chacune de nos créations conjugue texture, douceur et subtilité des saveurs, sublimant des produits
               d’exception dans une composition harmonieuse.</p>
             <figure class="about__img__container">
-              <img src="assets/image/dessert5.jpg" alt="myImg">
+              <img src="{{ url_for('static', filename='image/dessert5.jpg') }}" alt="myImg">
               <figcaption>Soigneusement préparer (2025)</figcaption>
             </figure>
           </article>
@@ -141,40 +147,43 @@
           <p class="small__banner__item">Merci de votre visite</p>
           <p class="small__banner__item">2025</p>
           <p class="small__banner__item"><i class="fa-solid fa-mobile-screen-button"></i>: +320000000</p>
-          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> <img
-              src="assets/image/fbIcone.png" alt="fb">-</p>
-          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> <img
-              src="assets/image/instaIcone.png" alt="insta">-</p>
-          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> <img
-              src="assets/image/xIcone.png" alt="X">-</p>
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> 
+              <img src="{{ url_for('static', filename='image/fbIcone.png') }}" alt="fb">-
+          </p>
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> 
+              <img src="{{ url_for('static', filename='image/instaIcone.png') }}" alt="insta">-
+          </p>
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> 
+              <img src="{{ url_for('static', filename='image/xIcone.png') }}" alt="X">-
+          </p>
           <p class="small__banner__item">solline@gmail.com</p>
-        </div>
+      </div>
         <section id="galerie">
           <h3 class="galerie__title" id="t5">Un bref aperçus</h3>
           <div class="image__container">
             <div class="image__container__item">
               <strong class="descript__img">Lorem, ipsum dolor.</strong>
-              <img src="assets/image/devanture.jpg" alt="img">
+              <img src="{{ url_for('static', filename='image/devanture.jpg') }}" alt="img">
             </div>
             <div class="image__container__item">
               <strong class="descript__img">Lorem, ipsum dolor.</strong>
-              <img src="assets/image/banner2.jpg" alt="img">
+              <img src="{{ url_for('static', filename='image/banner2.jpg') }}" alt="img">
             </div>
             <div class="image__container__item">
               <strong class="descript__img">Lorem, ipsum dolor.</strong>
-              <img src="assets/image/Bannière2.jpg" alt="img">
+              <img src="{{ url_for('static', filename='image/Bannière2.jpg') }}" alt="img">
             </div>
             <div class="image__container__item">
               <strong class="descript__img">Lorem, ipsum dolor.</strong>
-              <img src="assets/image/bar.jpg" alt="img">
+              <img src="{{ url_for('static', filename='image/bar.jpg') }}" alt="img">
             </div>
             <div class="image__container__item">
               <strong class="descript__img">Lorem, ipsum dolor.</strong>
-              <img src="assets/image/salle.jpg" alt="img">
+              <img src="{{ url_for('static', filename='image/salle.jpg') }}" alt="img">
             </div>
             <div class="image__container__item">
               <strong class="descript__img">Lorem, ipsum dolor.</strong>
-              <img src="assets/image/salle2.jpg" alt="img">
+              <img src="{{ url_for('static', filename='image/salle2.jpg') }}" alt="img">
             </div>
           </div>
         </section>
@@ -187,8 +196,8 @@
             </div>
             <div class="contact__container__sub">
               <div class="arrow__container">
-                <i class="fa-solid fa-angles-left" id="arrowA"></i>
-                <i class="fa-solid fa-angles-right" id="arrowB"></i>
+                <i class="fa-solid fa-angles-left lnk" id="arrowA"></i>
+                <i class="fa-solid fa-angles-right lnk" id="arrowB"></i>
               </div>
               <div class="form__container">
                 <form method="post" class="form__A">
@@ -229,14 +238,6 @@
                 width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </aside>
-            <div class="AI__ctnr">
-              <img class="AI__ctnr__img" src="assets/image/aicone.png" alt="Icône IA">
-              <p class="AI__ctnr__reponse" id="response"></p>
-              <form id="ai-form">
-                <input id="question" type="text" placeholder="Pose ta question à Solline..." required />
-                <input type="submit"></input>
-              </form>
-            </div>
           </div>
         </section>
       </main>
@@ -246,14 +247,15 @@
     <small class="foot__signature">©by Script'enjoyer</small>
   </footer>
   <script src="https://kit.fontawesome.com/268e7a0888.js" crossorigin="anonymous"></script>
-  <script src="assets/js/mobile_menu.js"></script>
-  <script src="assets/js/currentTime.js" defer></script>
+  <script src="{{ url_for('static', filename='js/mobile_menu.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/currentTime.js') }}" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-  <script src="assets/js/gsapSmoother.js"></script>
-  <script src="assets/js/gsapLetters.js"></script>
+  <script src="{{ url_for('static', filename='js/gsapSmoother.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/gsapLetters.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
 </body>
 
 </html>

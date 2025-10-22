@@ -5,7 +5,7 @@ body .cursor__effect, body .cursor__effect small, body .vid__container, body .vi
 }
 
 body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .primary__separate, body header .secondary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
-body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body main #about, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container, body main .contact__container aside, body main .contact__container aside .barrets__container, body footer {
+body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container, body main .contact__container aside, body main .contact__container aside .barrets__container, body footer {
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,7 @@ body main .contact__container aside .barrets__container {
   justify-content: space-evenly;
 }
 
-body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub, body main .contact__container aside, body footer {
+body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub, body main .contact__container aside, body footer {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -148,6 +148,16 @@ body main .contact__container__sub .arrow__container i {
     opacity: 1;
     visibility: visible;
     transform: translateX(4vw);
+  }
+}
+@keyframes txtIntroAi {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 body {
@@ -358,7 +368,7 @@ body header .navbar .navbar__itemB {
   max-width: 60vw;
   list-style-type: none;
   text-align: start;
-  line-height: 135px;
+  line-height: 150px;
   overflow: hidden;
 }
 body header .navbar .navbar__itemA .link__item,
@@ -397,29 +407,94 @@ body header .navbar .navbar__papper .navbar__papper__item:nth-child(1) {
   margin-left: -11vw;
 }
 body header .navbar .navbar__papper .navbar__papper__item:nth-child(2) {
-  margin-top: -140px;
+  margin-top: -155px;
   height: 25vh;
 }
 body header .navbar .navbar__papper .navbar__papper__item:nth-child(3) {
-  margin-top: -120px;
+  margin-top: -130px;
   height: 30vh;
 }
 body header .navbar .navbar__papper .navbar__papper__item:nth-child(4) {
-  margin-top: -100px;
+  margin-top: -110px;
   height: 25vh;
 }
 body header .navbar .navbar__papper .navbar__papper__item:nth-child(5) {
-  margin-top: -125px;
+  margin-top: -140px;
   height: 25vh;
 }
 body header .navbar .navbar__papper .navbar__papper__item:nth-child(6) {
-  margin-top: -163px;
+  margin-top: -180px;
   height: 25vh;
   margin-left: 3vw;
 }
 body header .navbar .navbar__papper:hover {
   transition: animation 0.3s ease;
   animation: flashOverEl 0.5s linear forwards;
+}
+body header .navbar .Ai__wrapper {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  min-height: 50vh;
+  width: 25vw;
+  overflow: hidden;
+  border: 1px solid #fff;
+  border-radius: 15px;
+}
+body header .navbar .Ai__wrapper .Ai__intro__txt {
+  height: 10vh;
+  text-align: center;
+  margin-top: 0;
+  font-family: "Saira", sans-serif;
+  font-weight: lighter;
+  animation: txtIntroAi 3s ease;
+}
+body header .navbar .Ai__wrapper .Ai__reponse {
+  margin-top: 10px;
+}
+body header .navbar .Ai__wrapper .Ai__reponse .Ai__reponse__item {
+  font-family: "Saira", sans-serif;
+  margin: 8px auto;
+  padding: 10px;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease;
+  white-space: pre-wrap;
+  list-style-type: none;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+body header .navbar .Ai__wrapper input[type=text] {
+  height: 4vh;
+  width: 80%;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+body header .navbar .Ai__wrapper .Ai__btn__question {
+  margin-top: 5vh;
+  height: 6vh;
+  width: 28%;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+body header .navbar .Ai__wrapper .Ai__btn__question:hover {
+  cursor: pointer;
+  transition: animation 0.3s ease;
+  animation: flashOverEl 0.5s linear forwards;
+}
+body main #about {
+  height: auto;
+  width: 95vw;
+  margin: auto;
+  padding: 0;
 }
 body main #about .about__container {
   margin: 15px;

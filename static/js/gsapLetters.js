@@ -361,9 +361,6 @@ const reservCtnr = document.querySelector(".form__B");
 const reservCtnrItem = document.querySelectorAll(".form__B input, textarea");
 arrowContact.addEventListener("click", () => {
   arrowContact.classList.toggle("arrow__mov__A");
-  if (arrowContact.classList.contains("")) {
-  } else {
-  }
   if (contactCtnr.classList.contains("deploy__formA")) {
     contactCtnr.classList.remove("deploy__formA");
   } else {
