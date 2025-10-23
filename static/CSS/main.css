@@ -162,11 +162,13 @@ body main .contact__container__sub .arrow__container i {
 }
 @keyframes avatarAnimeAi {
   from {
+    visibility: hidden;
     opacity: 0;
   }
   to {
     opacity: 1;
     filter: drop-shadow(0px 0px 12px #fff);
+    visibility: visible;
   }
 }
 body {
@@ -442,7 +444,7 @@ body header .navbar .navbar__papper:hover {
 }
 body header .navbar .Ai__wrapper {
   position: absolute;
-  top: 20%;
+  top: 24%;
   left: 70%;
   min-height: 50vh;
   width: 25vw;
@@ -450,9 +452,12 @@ body header .navbar .Ai__wrapper {
   border-radius: 15px;
 }
 body header .navbar .Ai__wrapper .Ai__avatar {
-  height: 30vh;
+  visibility: hidden;
+  height: 25vh;
   width: auto;
-  animation: avatarAnimeAi 5s linear 4s forwards;
+}
+body header .navbar .Ai__wrapper .Ai__add__anim {
+  animation: avatarAnimeAi 5s linear 0.5s forwards;
 }
 body header .navbar .Ai__wrapper .Ai__intro__txt {
   height: 10vh;
@@ -463,6 +468,7 @@ body header .navbar .Ai__wrapper .Ai__intro__txt {
   transition: animation 0.4s ease;
   animation: txtIntroAi 4s ease;
   letter-spacing: 3px;
+  text-shadow: 0px 0px 5px #fff;
 }
 body header .navbar .Ai__wrapper .Ai__reponse {
   margin-top: 0px;
@@ -478,6 +484,7 @@ body header .navbar .Ai__wrapper .Ai__reponse .Ai__reponse__item {
   list-style-type: none;
   font-weight: lighter;
   font-size: 1.2rem;
+  letter-spacing: 2px;
 }
 body header .navbar .Ai__wrapper input[type=text] {
   height: 4vh;

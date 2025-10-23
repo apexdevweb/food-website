@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const triggerMenu = document.getElementById("btntrigg");
+    const avatarAi = document.querySelector(".Ai__avatar");
     triggerMenu.addEventListener("click", async () => {
+      if (avatarAi.classList.contains("Ai__add__anim")) {
+        avatarAi.classList.remove("Ai__add__anim");
+      } else {
+        avatarAi.classList.add("Ai__add__anim");
+      }
       const texteIntro = "Bonjour, je suis Solline, l'intelligence artificielle du restaurant.";
       const elementIntro = document.getElementById("intro_texte");
       // Petite pause avant de commencer à écrire (1.5s)
