@@ -1,11 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const triggerMenu = document.getElementById("btntrigg");
     const avatarAi = document.querySelector(".Ai__avatar");
+    const inputAi = document.getElementById("user_question");
+    const btnUserAi = document.getElementById("user_btn");
+//ajout des effets au click
     triggerMenu.addEventListener("click", async () => {
       if (avatarAi.classList.contains("Ai__add__anim")) {
         avatarAi.classList.remove("Ai__add__anim");
       } else {
         avatarAi.classList.add("Ai__add__anim");
+      }
+      if (inputAi.classList.contains("Ai__input__anime")) {
+       inputAi.classList.remove("Ai__input__anime");
+       btnUserAi.classList.remove("Ai__input__anime");
+      } else {
+        inputAi.classList.add("Ai__input__anime");
+        btnUserAi.classList.add("Ai__input__anime");
       }
       const texteIntro = "Bonjour, je suis Solline, l'intelligence artificielle du restaurant.";
       const elementIntro = document.getElementById("intro_texte");

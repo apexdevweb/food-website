@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
   & .cursor__effect {
     @extend %globale-size, %reset-marg-pad, %displayed-column-center;
     height: 4vh;
@@ -74,8 +75,9 @@ body {
       }
 
       & .container__banner__itemC {
+       margin-left: 0;
         @include mixins.typo_config_delta;
-        word-spacing: 10px;
+        word-spacing: 5px;
       }
 
       & .container__banner__itemD {
@@ -365,6 +367,7 @@ body {
           }
         }
         & input[type="text"] {
+          visibility: hidden;
           height: 4vh;
           width: 80%;
           border: 1px solid #fff;
@@ -374,6 +377,7 @@ body {
           font-size: variables.$typo-size-small;
         }
         & .Ai__btn__question {
+          visibility: hidden;
           margin-top: 5vh;
           height: 6vh;
           width: 28%;
@@ -383,11 +387,15 @@ body {
           color: variables.$typo-color-white;
           font-size: variables.$typo-size-small;
           font-weight: lighter;
+          letter-spacing: 3px;
           &:hover {
             cursor: pointer;
-            transition: animation 0.3s ease;
-            animation: flashOverEl 0.5s linear forwards;
+            transition: 0.3s ease;
+            box-shadow: 0px 0px 8px #fff;
           }
+        }
+        & .Ai__input__anime {
+          animation: inputAnimeAi 3s linear 8s forwards;
         }
       }
     }
@@ -507,15 +515,15 @@ body {
 
     #galerie {
       @extend %globale-size, %reset-marg-pad;
-
       & .galerie__title {
+        white-space: nowrap;
         text-align: center;
+        width: 100%;
         font-family: variables.$typo-family-small;
         color: variables.$typo-color-white;
         @include mixins.typo_config_alpha;
         letter-spacing: -15px;
       }
-
       & .image__container {
         position: relative;
         @extend %reset-marg-pad, %displayed-row-wrapevenly;

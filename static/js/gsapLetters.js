@@ -160,14 +160,36 @@ btnTrigg.addEventListener("click", () => {
 ///////////#######################################################################################/////////
 ///////////#######################################################################################/////////
 //scrollTrigger
+const galerieTitle = new SplitText("#t5", { types: "chars" });
+//####______ARTICLE-1_____########//
 const mainCtnrA = document.getElementById("ctnr1");
-const artclTitle = new SplitText("#t1", { type: "chars" });
-const lettrine = document.getElementById("letters");
-const bigLetterine = document.getElementById("big1");
+const artclTitleA = new SplitText("#t1", { type: "chars" });
+const lettrineA = document.getElementById("letters1");
+const bigLetterineA = document.getElementById("big1");
 const aboutImgA = document.getElementById("aboutImg1");
 const aboutCaptionA = document.getElementById("aboutCaption1");
-const galerieTitle = new SplitText("#t5", { type: "chars" });
-
+//####______ARTICLE-2_____########//
+const mainCtnrB = document.getElementById("ctnr2");
+const artclTitleB = new SplitText("#t2", { type: "chars" });
+const lettrineB = document.getElementById("letters2");
+const bigLetterineB = document.getElementById("big2");
+const aboutImgB = document.getElementById("aboutImg2");
+const aboutCaptionB = document.getElementById("aboutCaption2");
+//####______ARTICLE-3_____########//
+const mainCtnrC = document.getElementById("ctnr3");
+const artclTitleC = new SplitText("#t3", { type: "chars" });
+const lettrineC = document.getElementById("letters3");
+const bigLetterineC = document.getElementById("big3");
+const aboutImgC = document.getElementById("aboutImg3");
+const aboutCaptionC = document.getElementById("aboutCaption3");
+//####______ARTICLE-4_____########//
+const mainCtnrD = document.getElementById("ctnr4");
+const artclTitleD = new SplitText("#t4", { type: "chars" });
+const lettrineD = document.getElementById("letters4");
+const bigLetterineD = document.getElementById("big4");
+const aboutImgD = document.getElementById("aboutImg4");
+const aboutCaptionD = document.getElementById("aboutCaption4");
+//####___EFFECT___ARTICLE-1_____########//
 tl.from(mainCtnrA, {
   x: -50,
   opacity: 0,
@@ -181,8 +203,8 @@ tl.from(mainCtnrA, {
   },
   ease: "power2.inOut",
 });
-tl.from(artclTitle.chars, {
-  x: -150,
+tl.from(artclTitleA.chars, {
+  x: 150,
   scale: 0,
   opacity: 0,
   duration: 8,
@@ -200,7 +222,7 @@ tl.from(artclTitle.chars, {
   },
   ease: "power2.inOut",
 });
-tl.from(lettrine, {
+tl.from(lettrineA, {
   x: 50,
   transformOrigin: "right",
   opacity: 0,
@@ -211,7 +233,7 @@ tl.from(lettrine, {
     from: "right",
   },
   scrollTrigger: {
-    trigger: "#letters",
+    trigger: "#letters1",
     start: "top center",
     end: "80% 80%",
     scrub: 5,
@@ -219,7 +241,7 @@ tl.from(lettrine, {
   },
   ease: "power2.inOut",
 });
-tl.from(bigLetterine, {
+tl.from(bigLetterineA, {
   x: 50,
   transformOrigin: "right",
   opacity: 0,
@@ -275,20 +297,90 @@ tl.from(aboutCaptionA, {
   },
   ease: "power2.inOut",
 });
-//galerie image
-tl.from(galerieTitle.chars, {
-  x: -50,
-  transformOrigin: "left",
+//######################################//
+//####___EFFECT___ARTICLE-2_____########//
+//######################################//
+tl.from(mainCtnrB, {
+  x: 50,
+  opacity: 0,
+  duration: 2,
+  scrollTrigger: {
+    trigger: "#ctnr2",
+    start: "10% center",
+    end: "30% bottom",
+    scrub: 4,
+    // markers: true,
+  },
+  ease: "power2.inOut",
+});
+tl.from(artclTitleB.chars, {
+  x: -150,
   scale: 0,
   opacity: 0,
   duration: 8,
   filter: "blur(25px)",
   stagger: {
-    amount: 6,
+    amount: 5,
     from: "random",
   },
   scrollTrigger: {
-    trigger: "#t5",
+    trigger: "#t2",
+    start: "10% center",
+    end: "35% bottom",
+    scrub: 4,
+    // markers: true,
+  },
+  ease: "power2.inOut",
+});
+tl.from(lettrineB, {
+  x: -50,
+  transformOrigin: "right",
+  opacity: 0,
+  duration: 2,
+  filter: "blur(25px)",
+  stagger: {
+    amount: 5,
+    from: "right",
+  },
+  scrollTrigger: {
+    trigger: "#letters2",
+    start: "30% center",
+    end: "80% 80%",
+    scrub: 5,
+    // markers: true,
+  },
+  ease: "power2.inOut",
+});
+tl.from(bigLetterineB, {
+  y: 50,
+  transformOrigin: "right",
+  opacity: 1,
+  duration: 3,
+  stagger: {
+    amount: 1,
+    from: "righ",
+  },
+  scrollTrigger: {
+    trigger: "#big2",
+    start: "25% 20%",
+    end: "bottom bottom",
+    scrub: 2,
+    // markers: true,
+  },
+  ease: "power2.inOut",
+});
+tl.from(aboutImgB, {
+  y: 150,
+  transformOrigin: "bottom",
+  opacity: 0,
+  duration: 9,
+  filter: "blur(25px)",
+  stagger: {
+    amount: 1,
+    from: "bottom",
+  },
+  scrollTrigger: {
+    trigger: "#aboutImg2",
     start: "top center",
     end: "bottom bottom",
     scrub: 3,
@@ -296,6 +388,83 @@ tl.from(galerieTitle.chars, {
   },
   ease: "power2.inOut",
 });
+tl.from(aboutCaptionB, {
+  x: -50,
+  transformOrigin: "right",
+  opacity: 0,
+  duration: 3,
+  filter: "blur(25px)",
+  stagger: {
+    amount: 1,
+    from: "right",
+  },
+  scrollTrigger: {
+    trigger: "#aboutCaption2",
+    start: "top bottom",
+    end: "50% bottom",
+    scrub: 3,
+    // markers: true,
+  },
+  ease: "power2.inOut",
+});
+//####___EFFECT___ARTICLE-3_____########//
+//####___EFFECT___ARTICLE-4_____########//
+
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+//galerie image
+tl.from(galerieTitle.chars, {
+  x: -50,
+  transformOrigin: "left",
+  scale: 0,
+  opacity: 0,
+  filter: "blur(25px)",
+  duration: 8,
+  stagger: {
+    amount: 4,
+    from: "random",
+  },
+  scrollTrigger: {
+    trigger: "#t5",
+    start: "top 80%",
+    end: "center center", // jusqu’au centre de l’écran
+    scrub: 2.5,
+    // markers: true,
+  },
+  ease: "power2.inOut",
+});
+
+// Animation de sortie (zoom et fade)
+tl.to("#t5", {
+  letterSpacing: "0.4em",
+  transformOrigin: "bottom",
+  rotate: 90,
+  scale: 2.3,
+  opacity: 0.8,
+  duration: 4,
+  mixBlendMode:"difference",
+  x: -1110,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: "#t5",
+    start: "bottom center",
+    end: "+=300",
+    scrub: 3,
+    pin: true,
+    // markers: true,
+  },
+});
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+///////////#######################################################################################/////////
+//slider
 window.addEventListener("load", () => {
   const images = document.querySelectorAll(".image__container__item");
   if (!images.length) return;
@@ -308,7 +477,7 @@ window.addEventListener("load", () => {
       end: "+=" + images.length * 800, // durée du scroll
       scrub: 3,
       pin: true,
-      //markers: true, // pour debug
+      // markers: true, // pour debug
     },
   });
   images.forEach((img, i) => {

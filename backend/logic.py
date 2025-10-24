@@ -2,47 +2,55 @@
 
 FORMALITE = {
     "bonjour": [
-        "Bonjour Je suis Solline, votre assistante virtuelle culinaire !",
+        "Bonjour Je suis votre assistante culinaire virtuelle !",
         "Vous pouvez me poser des questions sur le menu ou les horaires du restaurant"
+    ],
+    "vous proposer quoi ?": [
+        "Par exemple demander moi: <<les entrees>> <<les plats>> etc... sont les mots clé du menu"
+     
+    ],
+    "vous servez quoi ?": [
+        "Par exemple demander moi: <<les entrees>> <<les plats>> etc... sont les mots clé du menu"
+     
     ],
     "merci": [
         "Avec plaisir",
         "Je suis ravie de pouvoir vous aider !"
     ],
     "au revoir": [
-        "Au revoir, à bientôt au restaurant !"
+        "Au revoir,et à bientôt"
     ]
 }
 
 RECETTES = {
-    "entrees": [
+    "entree": [
         "Quel genre d'entree désiré-vous ?",
         "entree viande",
         "entree poisson"
     ],
-    "plats": [
+    "plat": [
         "Quel genre de plat souhaitez-vous ?",
         "Viandes ?",
         "Poissons ?"
     ],
-    "desserts": [
+    "dessert": [
         "Voici la liste des desserts:",
         "Tiramisu maison ",
         "Mousse au chocolat ",
         "Crème brûlée "
     ],
-    "boissons": [
+    "boisson": [
         "Quel genre de boisson souhaitez-vous:",
         "Boissons chaudes ?",
         "Boissons fraîche ?",
     ],
-    "vins": [
+    "vin": [
         "Avez-vous une préférence:",
         "Vin blanc ?",
         "Vin rouge ?",
         "Vin rosé ?"
     ],
-    "champagnes": [
+    "champagne": [
         "Voici la liste de nos champagnes:",
         "Dom Pérignon",
         "Paul Roger",
@@ -51,7 +59,7 @@ RECETTES = {
 }
 
 PLATS = {
-    "viandes": [
+    "viande": [
         "Voici les spécialité du restaurant à base de viande:",
         "Bœuf Bourguignon",
         "Coq au Vin",
@@ -59,7 +67,7 @@ PLATS = {
         "Gigot d’agneau rôti",
         "Blanquette de veau"
     ],
-    "poissons": [
+    "poisson": [
         "Nos spécialité à base de poissons:",
         "Bouillabaisse",
         "Sole meunière",
@@ -69,13 +77,13 @@ PLATS = {
     ],
 }
 BOISSONS = {
-    "boisson chaude": [
+    "boissons chaudes": [
         "Voici la liste de nos boissons chaudes:",
         "Café",
         "Thé a la menthe",
         "Thé au citron"
     ],
-    "boisson fraîche": [
+    "boissons fraîches": [
         "Voici la liste de nos boissons fraîches:",
         "Ice-tea",
         "Perrier",
@@ -84,7 +92,7 @@ BOISSONS = {
         "Limonade"
     ],
 }
-ENTREE = {
+ENTREES = {
     "entree viande": [
         "Voici la liste de nos entree à base de viande:",
         "Terrine de campagne",
@@ -132,7 +140,7 @@ def obtenir_recettes(ingredient: str):
             suggestions.extend(boissons)
    
     # 5Recherche spécifique dans les entree viande/poisson
-    for key, entrees in ENTREE.items():
+    for key, entrees in ENTREES.items():
         if key in texte:
             suggestions.extend(entrees)
 
