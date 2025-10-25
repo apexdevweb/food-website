@@ -1,0 +1,80 @@
+.parent {
+    position: absolute;
+    height: 45vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+.div1,.div4,.div5,.div7,.div8,.div9,.div10,.div14,.div18,.div19, .div20 {
+    overflow: hidden;
+    color: #fff;
+    & img {
+        height: auto;
+        width: 100%;
+    }
+
+}    
+.div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+}
+
+.div4 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.div5 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.div7 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+.div8 {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.div9 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.div10 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 2;
+}
+
+.div14 {
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
+
+.div18 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.div19 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.div20 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+        

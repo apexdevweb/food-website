@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
+  <title>La table de solline</title>
+</head>
+
+<body>
+  <div class="vid__container">
+    <video autoplay loop muted class="vid__container__myvid">
+      <source src="{{ url_for('static', filename='video/space_1920.mp4') }}" type="video/mp4" />
+    </video>
+    <div class="cursor__effect">
+      <small class="cursor__txt"></small>
+    </div>
+    <div class="vid__container__banner">
+      <span
+        class="container__banner__itemA"><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small></span>
+      <span class="container__banner__itemB"><small>H24 7/7</small><small>H24 7/7</small><small>H24
+          7/7</small><small>H24 7/7</small><small>H24 7/7</small><small>H24 7/7</small><small>H24 7/7</small></span>
+      <h2 class="banner__title">La table de solline gastronomie</h2>
+      <span class="container__banner__itemC"><small>Gastronomie & Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie &Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><span
+          class="container__banner__itemD"><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small></span>
+    </div>
+  </div>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <header>
+        <h1 class="primary__title">La table de solline</h1>
+        <div class="primary__separate"></div>
+        <h2 class="secondary__title">Gastronomie</h2>
+        <nav class="navbar">
+          <div class="mobile__container">
+            <p class="mobile__barre lnk" id="btntrigg">menu</p>
+            <div class="timer__container">
+              <span>Bxl-</span><span id="clock"></span>
+            </div>
+          </div>
+          <ul class="navbar__container">
+            <li class="navbar__itemA"><a href="{{ url_for('recettes.home') }}" class="link__item lnk">A propos</a></li>
+            <li class="navbar__itemB"><a href="#" class="link__item lnk">Entree</a></li>
+            <li class="navbar__itemA"><a href="#" class="link__item lnk">Plats</a></li>
+            <li class="navbar__itemB"><a href="#" class="link__item lnk">Dessert</a></li>
+            <li class="navbar__itemA"><a href="#" class="link__item lnk">Boissons</a></li>
+            <li class="navbar__itemB"><a href="#" class="link__item lnk">Vins</a></li>
+            <li class="navbar__itemA"><a href="#" class="link__item lnk">Champagnes</a></li>
+            <div class="mobile__container__sub">
+              <p class="mobile__item__sub lnk">Reservation</p>
+              <p class="mobile__item__sub lnk">Evenement</p>
+              <p class="mobile__item__sub lnk">Avis</p>
+              <p class="mobile__item__sub lnk"><a href="{{ url_for('recettes.index') }}">Exit</a></p>
+            </div>
+            <div class="navbar__papper">
+              <img src="{{ url_for('static', filename='image/Fichier 1hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 2hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 3hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 4hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 5hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 6hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+            </div>
+            <div class="Ai__wrapper">
+              <img src="{{ url_for('static', filename='image/solline.svg') }}" class="Ai__avatar" alt="SollineAvatar">
+              <h2 id="intro_texte" class="Ai__intro__txt"></h2>
+              <ul id="Ai_response" class="Ai__reponse"></ul>
+              <input type="text" id="user_question" placeholder="Ecrire votre question à solline" />
+              <button onclick="envoyerQuestion()" class="Ai__btn__question lnk" id="user_btn">Demander à
+                Solline</button>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="small__banner">
+          <p class="small__banner__item">Merci de votre visite</p>
+          <p class="small__banner__item">2025</p>
+          <p class="small__banner__item"><i class="fa-solid fa-mobile-screen-button"></i>: +320000000</p>
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i>
+            <img src="{{ url_for('static', filename='image/fbIcone.png') }}" alt="fb">-
+          </p>
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i>
+            <img src="{{ url_for('static', filename='image/instaIcone.png') }}" alt="insta">-
+          </p>
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i>
+            <img src="{{ url_for('static', filename='image/xIcone.png') }}" alt="X">-
+          </p>
+          <p class="small__banner__item">solline@gmail.com</p>
+          <p class="small__banner__item">Merci de votre visite</p>
+        </div>
+        <section id="contact">
+            <div class="aside__txt__wrapper">
+              <h5 class="iframe__txt__itemA" id="t9">Nous</h5>
+              <h5 class="iframe__txt__itemB" id="t10">trouver</h5>
+            </div>
+            <aside>
+              <div class="barrets__container">
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+                <div class="barrets__container__item"></div>
+              </div>
+              <div class="parent">
+                <div class="div1 grid_item"><img src="{{ url_for('static', filename='gridimg/huître.jpg') }}" alt="img"></div>
+                <div class="div4 grid_item"><iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80598.46456881132!2d4.293016672354125!3d50.85520206078587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a4ed73c76867%3A0xc18b3a66787302a7!2sBruxelles!5e0!3m2!1sfr!2sbe!4v1760414315019!5m2!1sfr!2sbe"
+                  width="410" height="280" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe></div>
+                <div class="div5 grid_item"><img src="{{ url_for('static', filename='gridimg/recetteD.jpg') }}" alt="img"></div>
+                <div class="div7 grid_item"><img src="{{ url_for('static', filename='gridimg/viande1.jpg') }}" alt="img"></div>
+                <div class="div8 grid_item"><img src="{{ url_for('static', filename='gridimg/dessert2.jpg') }}" alt="img"></div>
+                <div class="div9 grid_item"><img src="{{ url_for('static', filename='gridimg/Champagne2.jpg') }}" alt="img"></div>
+                <div class="div10 grid_item"><video autoplay loop muted class="aside__vid__item">
+                  <source src="{{ url_for('static', filename='video/poissonVid.mp4') }}" type="video/mp4" />
+                </video></div>
+                <div class="div14 grid_item"><img src="{{ url_for('static', filename='gridimg/recetteF.jpg') }}" alt="img"></div>
+                <div class="div18 grid_item"><img src="{{ url_for('static', filename='gridimg/fondecran.jpg') }}" alt="img"></div>
+                <div class="div19 grid_item"><video autoplay loop muted class="aside__vid__item">
+                  <source src="{{ url_for('static', filename='video/steak.mp4') }}" type="video/mp4" />
+                </video></div>
+                <div class="div20 grid_item"><img src="{{ url_for('static', filename='gridimg/dessert1.jpg') }}" alt="img"></div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <footer>
+    <small class="foot__signature">©by Script'enjoyer 2025 all rights reserved</small>
+  </footer>
+  <script src="https://kit.fontawesome.com/268e7a0888.js" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/mobile_menu.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/currentTime.js') }}" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="{{ url_for('static', filename='js/gsapSmoother.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/gsapLetters.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/gsapEffect.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
+</body>
+
+</html>

@@ -3,6 +3,10 @@ from backend.logic import obtenir_recettes
 
 recettes_bp = Blueprint('recettes', __name__)
 
+@recettes_bp.route('/location')
+def location():
+    return render_template('location.html')
+
 @recettes_bp.route('/home')
 def home():
     return render_template('home.html')

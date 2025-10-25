@@ -34,7 +34,7 @@
 %displayed-column-stretch {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: stretch;
 }
 //display row

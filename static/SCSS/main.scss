@@ -75,7 +75,7 @@ body {
       }
 
       & .container__banner__itemC {
-       margin-left: 0;
+        margin-left: 0;
         @include mixins.typo_config_delta;
         word-spacing: 5px;
       }
@@ -334,7 +334,7 @@ body {
         & .Ai__avatar {
           visibility: hidden;
           height: 25vh;
-          width: auto;        
+          width: auto;
         }
         & .Ai__add__anim {
           animation: avatarAnimeAi 5s linear 0.5s forwards;
@@ -525,13 +525,13 @@ body {
         letter-spacing: -15px;
       }
       & .image__container {
+        margin-top: -15vh;
         position: relative;
         @extend %reset-marg-pad, %displayed-row-wrapevenly;
         min-height: 100vh;
         width: 100%;
         z-index: 0;
         overflow: hidden;
-
         & .image__container__item {
           @extend %reset-marg-pad, %displayed-row-center;
           position: absolute;
@@ -714,23 +714,59 @@ body {
           }
         }
       }
-      & aside {
-        @extend %globale-size, %displayed-column-center, %reset-marg-pad;
-        & .barrets__container {
-          @extend %displayed-column-evenly, %reset-marg-pad;
-          min-height: 50vh;
+    }
+    & .aside__txt__wrapper {
+      height: auto;
+      width: 100%;
+      @extend %displayed-column-stretch, %reset-marg-pad;
+      overflow: hidden;
+      & .iframe__txt__itemA {
+        padding: 0;
+        margin-top: 5vh;
+        margin-bottom: 0;
+        margin-left: 2vw;
+        font-size: variables.$typo-size-big;
+        color: variables.$typo-color-white;
+        font-weight: lighter;
+        font-family: variables.$typo-family-primary;
+        width: 8ex;
+        line-height: 50px;
+        letter-spacing: -8px;
+      }
+      & .iframe__txt__itemB {
+        padding: 0;
+        margin-top: 0;
+        margin-left: 2vw;
+        margin-bottom: 0;
+        font-size: variables.$typo-size-big;
+        color: variables.$typo-color-white;
+        font-weight: lighter;
+        font-family: variables.$typo-family-primary;
+        width: 8ex;
+        letter-spacing: -8px;
+      }
+    }
+    & aside {
+      @extend %globale-size, %displayed-row-nowrapevenly, %reset-marg-pad;
+      & .barrets__container {
+        @extend %displayed-column-evenly, %reset-marg-pad;
+        min-height: 50vh;
+        width: 100%;
+        overflow: hidden;
+        & .barrets__container__item {
+        margin: 0;
+        padding: 0;
+          height: 15px;
           width: 100%;
-          overflow: hidden;
-          & .barrets__container__item {
-            height: 15px;
-            width: 100%;
-            background: linear-gradient(to right, #efefbb, #d4d3dd);
-            transform: rotate(50deg);
-          }
+          background: linear-gradient(to right, #efefbb, #d4d3dd);
         }
-        & iframe {
-          position: absolute;
-        }
+      }
+      & .aside__vid__item {
+        height: 25vh;
+        width: auto;
+      }
+      & iframe {
+        position: absolute;
       }
     }
   }

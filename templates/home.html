@@ -23,12 +23,13 @@
       <span class="container__banner__itemB"><small>H24 7/7</small><small>H24 7/7</small><small>H24
           7/7</small><small>H24 7/7</small><small>H24 7/7</small><small>H24 7/7</small><small>H24 7/7</small></span>
       <h2 class="banner__title">La table de solline gastronomie</h2>
-      <span class="container__banner__itemC"><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie &Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><span
+      <span class="container__banner__itemC"><small>Gastronomie & Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie &Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><span
           class="container__banner__itemD"><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small></span>
     </div>
   </div>
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
       <header>
         <h1 class="primary__title">La table de solline</h1>
         <div class="primary__separate"></div>
@@ -55,20 +56,27 @@
               <p class="mobile__item__sub lnk"><a href="{{ url_for('recettes.index') }}">Exit</a></p>
             </div>
             <div class="navbar__papper">
-              <img src="{{ url_for('static', filename='image/Fichier 1hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
-              <img src="{{ url_for('static', filename='image/Fichier 2hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
-              <img src="{{ url_for('static', filename='image/Fichier 3hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
-              <img src="{{ url_for('static', filename='image/Fichier 4hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
-              <img src="{{ url_for('static', filename='image/Fichier 5hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
-              <img src="{{ url_for('static', filename='image/Fichier 6hdpi.png') }}" alt="bgnav" class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 1hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 2hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 3hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 4hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 5hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
+              <img src="{{ url_for('static', filename='image/Fichier 6hdpi.png') }}" alt="bgnav"
+                class="navbar__papper__item">
             </div>
             <div class="Ai__wrapper">
               <img src="{{ url_for('static', filename='image/solline.svg') }}" class="Ai__avatar" alt="SollineAvatar">
               <h2 id="intro_texte" class="Ai__intro__txt"></h2>
               <ul id="Ai_response" class="Ai__reponse"></ul>
-            <input type="text" id="user_question" placeholder="Ecrire votre question à solline"/>
-            <button onclick="envoyerQuestion()" class="Ai__btn__question lnk" id="user_btn">Demander à Solline</button>
-          </div>
+              <input type="text" id="user_question" placeholder="Ecrire votre question à solline" />
+              <button onclick="envoyerQuestion()" class="Ai__btn__question lnk" id="user_btn">Demander à
+                Solline</button>
+            </div>
           </ul>
         </nav>
       </header>
@@ -101,7 +109,8 @@
             <hgroup class="about__title__container">
               <h2 class="title__container__item" id="t2">Entrées</h2>
             </hgroup>
-            <p class="about__description__container" id="letters2"><span class="big__letters" id="big2">P</span>remière promesse de notre table,
+            <p class="about__description__container" id="letters2"><span class="big__letters" id="big2">P</span>remière
+              promesse de notre table,
               les entrées révèlent l’esprit de la maison. Subtiles et délicates, elles ouvrent le bal des saveurs avec
               justesse et élégance.
               Chaque création marie textures et parfums dans un équilibre harmonieux, mettant à l’honneur des produits
@@ -115,7 +124,8 @@
             <hgroup class="about__title__container">
               <h2 class="title__container__item" id="t3">Plats</h2>
             </hgroup>
-            <p class="about__description__container" id="letters3"><span class="big__letters" id="big3">C</span>œur battant de notre carte, les
+            <p class="about__description__container" id="letters3"><span class="big__letters" id="big3">C</span>œur
+              battant de notre carte, les
               plats incarnent toute la maîtrise et la créativité de notre cuisine.
               Chaque assiette est une composition d’équilibre et d’émotion, où la noblesse des produits rencontre la
               précision du geste.
@@ -130,7 +140,8 @@
             <hgroup class="about__title__container">
               <h2 class="title__container__item" id="t4">Desserts</h2>
             </hgroup>
-            <p class="about__description__container" id="letters4"><span class="big__letters" id="big4">D</span>ernière escale d’un voyage
+            <p class="about__description__container" id="letters4"><span class="big__letters" id="big4">D</span>ernière
+              escale d’un voyage
               culinaire, les desserts sont l’expression délicate de notre art pâtissier.
               Chacune de nos créations conjugue texture, douceur et subtilité des saveurs, sublimant des produits
               d’exception dans une composition harmonieuse.</p>
@@ -144,18 +155,18 @@
           <p class="small__banner__item">Merci de votre visite</p>
           <p class="small__banner__item">2025</p>
           <p class="small__banner__item"><i class="fa-solid fa-mobile-screen-button"></i>: +320000000</p>
-          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> 
-              <img src="{{ url_for('static', filename='image/fbIcone.png') }}" alt="fb">-
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i>
+            <img src="{{ url_for('static', filename='image/fbIcone.png') }}" alt="fb">-
           </p>
-          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> 
-              <img src="{{ url_for('static', filename='image/instaIcone.png') }}" alt="insta">-
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i>
+            <img src="{{ url_for('static', filename='image/instaIcone.png') }}" alt="insta">-
           </p>
-          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i> 
-              <img src="{{ url_for('static', filename='image/xIcone.png') }}" alt="X">-
+          <p class="small__banner__item">follow me /<i class="fa-solid fa-arrow-right"></i>
+            <img src="{{ url_for('static', filename='image/xIcone.png') }}" alt="X">-
           </p>
           <p class="small__banner__item">solline@gmail.com</p>
           <p class="small__banner__item">Merci de votre visite</p>
-      </div>
+        </div>
         <section id="galerie">
           <h3 class="galerie__title" id="t5">Un bref aperçus</h3>
           <div class="image__container">
@@ -220,27 +231,12 @@
                     required></textarea>
                   <input class="form__A__item" type="submit" value="Reserver">
                 </form>
+                <a href="{{ url_for('recettes.location') }}" class="lnk">location</a>
               </div>
             </div>
-            <aside>
-              <div class="barrets__container">
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-              </div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80598.46456881132!2d4.293016672354125!3d50.85520206078587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a4ed73c76867%3A0xc18b3a66787302a7!2sBruxelles!5e0!3m2!1sfr!2sbe!4v1760414315019!5m2!1sfr!2sbe"
-                width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </aside>
           </div>
         </section>
       </main>
-    </div>
-  </div>
   <footer>
     <small class="foot__signature">©by Script'enjoyer 2025 all rights reserved</small>
   </footer>
