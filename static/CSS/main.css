@@ -1,20 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Gideon+Roman&family=Lavishly+Yours&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
-body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main aside {
+body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main aside, body main .container__bottom__link {
   height: auto;
   width: 100%;
 }
 
 body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .primary__separate, body header .secondary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
-body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container, body main .aside__txt__wrapper, body main aside, body main aside .barrets__container, body footer {
+body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body header .navbar .Ai__wrapper .Ai__wrapper__sub, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container, body main aside, body main .container__bottom__link, body footer {
   margin: 0;
   padding: 0;
-}
-
-body main aside .barrets__container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub, body footer {
@@ -24,7 +17,7 @@ body .cursor__effect, body .vid__container__banner, body header .navbar .navbar_
   justify-content: center;
 }
 
-body header .navbar .mobile__container, body header .navbar .mobile__container__sub, body main #about .about__container, body main #about .about__container .about__title__container {
+body header .navbar .mobile__container, body header .navbar .mobile__container__sub, body main #about .about__container, body main #about .about__container .about__title__container, body main aside {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -52,7 +45,7 @@ body header .navbar .mobile__container .timer__container, body main #galerie .im
   justify-content: center;
 }
 
-body main .small__banner, body main .small__banner__item {
+body main .small__banner, body main .small__banner__item, body main .container__bottom__link {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -62,13 +55,6 @@ body main .small__banner, body main .small__banner__item {
 body main #about, body main #galerie .image__container {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-body main aside {
-  display: flex;
-  flex-flow: row nowrap;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -90,7 +76,7 @@ body main .contact__container__sub .arrow__container i {
 }
 
 .parent {
-  position: absolute;
+  margin-top: 0;
   height: 45vh;
   width: 100%;
   display: grid;
@@ -99,13 +85,46 @@ body main .contact__container__sub .arrow__container i {
   gap: 8px;
 }
 
-.div1, .div4, .div5, .div7, .div8, .div9, .div10, .div14, .div18, .div19, .div20 {
+.div1,
+.div4,
+.div5,
+.div7,
+.div8,
+.div9,
+.div10,
+.div14,
+.div18,
+.div19,
+.div20 {
   overflow: hidden;
   color: #fff;
 }
-.div1 img, .div4 img, .div5 img, .div7 img, .div8 img, .div9 img, .div10 img, .div14 img, .div18 img, .div19 img, .div20 img {
+.div1 img,
+.div4 img,
+.div5 img,
+.div7 img,
+.div8 img,
+.div9 img,
+.div10 img,
+.div14 img,
+.div18 img,
+.div19 img,
+.div20 img {
   height: auto;
   width: 100%;
+}
+.div1:hover,
+.div4:hover,
+.div5:hover,
+.div7:hover,
+.div8:hover,
+.div9:hover,
+.div10:hover,
+.div14:hover,
+.div18:hover,
+.div19:hover,
+.div20:hover {
+  animation: flashOverEl 0.5s linear forwards;
 }
 
 .div1 {
@@ -123,6 +142,9 @@ body main .contact__container__sub .arrow__container i {
   grid-column-start: 3;
   grid-row-start: 1;
 }
+.div5 img {
+  transform: translateY(-100px);
+}
 
 .div7 {
   grid-column: span 2/span 2;
@@ -130,16 +152,25 @@ body main .contact__container__sub .arrow__container i {
   grid-column-start: 4;
   grid-row-start: 4;
 }
+.div7 img {
+  transform: translateY(-100px);
+}
 
 .div8 {
   grid-column-start: 5;
   grid-row-start: 1;
+}
+.div8 img {
+  transform: translateY(-80px);
 }
 
 .div9 {
   grid-row: span 3/span 3;
   grid-column-start: 4;
   grid-row-start: 1;
+}
+.div9 img {
+  transform: translateY(-300px);
 }
 
 .div10 {
@@ -151,6 +182,9 @@ body main .contact__container__sub .arrow__container i {
 .div14 {
   grid-column-start: 3;
   grid-row-start: 5;
+}
+.div14 img {
+  transform: translateY(-80px);
 }
 
 .div18 {
@@ -168,6 +202,9 @@ body main .contact__container__sub .arrow__container i {
 .div20 {
   grid-column-start: 1;
   grid-row-start: 5;
+}
+.div20 img {
+  transform: translateY(-50px);
 }
 
 @keyframes backdropAnime {
@@ -275,6 +312,14 @@ body main .contact__container__sub .arrow__container i {
     visibility: visible;
   }
 }
+@keyframes bottomLinkAnime {
+  from {
+    background-color: #000;
+  }
+  to {
+    background: transparent;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -287,7 +332,7 @@ body .cursor__effect {
   position: fixed;
   pointer-events: none;
   background: linear-gradient(to right, #ffefba, #ffffff);
-  transform: translate(-50%, -50%);
+  transform: translate(80%, -50%);
   transition: transform 0.3s ease-out;
   mix-blend-mode: difference;
   z-index: 96;
@@ -393,6 +438,7 @@ body header .navbar .mobile__container .mobile__barre {
   font-family: "Cinzel Decorative", serif;
   font-size: 3rem;
   font-weight: lighter;
+  top: 2%;
   position: fixed;
   z-index: 99;
   mix-blend-mode: difference;
@@ -415,11 +461,12 @@ body header .navbar .mobile__container .timer__container span {
   font-weight: lighter;
 }
 body header .navbar .mobile__container__sub {
+  top: -5%;
   height: 20vh;
   width: 15vw;
   position: fixed;
-  top: 23%;
-  left: 81.5vw;
+  top: 13%;
+  left: 81vw;
   z-index: 99;
   transform: rotate(90deg);
 }
@@ -557,17 +604,41 @@ body header .navbar .Ai__wrapper {
   overflow: hidden;
   border-radius: 15px;
 }
-body header .navbar .Ai__wrapper .Ai__avatar {
-  visibility: hidden;
-  height: 25vh;
-  width: auto;
+body header .navbar .Ai__wrapper .Ai__wrapper__sub {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  width: 25vw;
 }
-body header .navbar .Ai__wrapper .Ai__add__anim {
+body header .navbar .Ai__wrapper .Ai__wrapper__sub .Ai__avatar {
+  margin-top: 0;
+  visibility: hidden;
+  height: 30vh;
+  width: auto;
+  float: left;
+  shape-outside: content-box;
+  z-index: 99;
+  mix-blend-mode: difference;
+}
+body header .navbar .Ai__wrapper .Ai__wrapper__sub model-viewer {
+  position: absolute;
+  width: 100%;
+  min-height: 30vh;
+  border: none;
+  border-radius: 8px;
+  filter: drop-shadow(0px 0px 5px #dccd8e);
+  z-index: 0;
+}
+body header .navbar .Ai__wrapper .Ai__wrapper__sub .Ai__add__anim {
   animation: avatarAnimeAi 5s linear 0.5s forwards;
 }
-body header .navbar .Ai__wrapper .Ai__intro__txt {
-  height: 10vh;
-  text-align: center;
+body header .navbar .Ai__wrapper .Ai__wrapper__sub .Ai__intro__txt {
+  height: 20vh;
+  width: 15ch;
   margin-top: 0;
   font-family: "Saira", sans-serif;
   font-weight: lighter;
@@ -593,6 +664,7 @@ body header .navbar .Ai__wrapper .Ai__reponse .Ai__reponse__item {
   letter-spacing: 2px;
 }
 body header .navbar .Ai__wrapper input[type=text] {
+  margin-top: 5vh;
   visibility: hidden;
   height: 4vh;
   width: 80%;
@@ -904,6 +976,9 @@ body main .contact__container__sub .form__container .form__B.deploy__formB {
   animation: formAnimeB 1s ease 0.5s 1 normal forwards;
 }
 body main .aside__txt__wrapper {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   height: auto;
   width: 100%;
   overflow: hidden;
@@ -933,17 +1008,18 @@ body main .aside__txt__wrapper .iframe__txt__itemB {
   width: 8ex;
   letter-spacing: -8px;
 }
-body main aside .barrets__container {
-  min-height: 50vh;
-  width: 100%;
-  overflow: hidden;
-}
-body main aside .barrets__container .barrets__container__item {
-  margin: 0;
+body main aside .iframe__txt__adress {
   padding: 0;
-  height: 15px;
-  width: 100%;
-  background: linear-gradient(to right, #efefbb, #d4d3dd);
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1vw;
+  text-align: left;
+  font-size: 4.8rem;
+  color: #fff;
+  font-weight: lighter;
+  font-family: "Cinzel Decorative", serif;
+  letter-spacing: 1px;
+  line-height: 80px;
 }
 body main aside .aside__vid__item {
   height: 25vh;
@@ -951,6 +1027,23 @@ body main aside .aside__vid__item {
 }
 body main aside iframe {
   position: absolute;
+}
+body main .container__bottom__link .locat__link {
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 6rem;
+  color: #fff;
+  font-weight: lighter;
+  font-family: "Cinzel Decorative", serif;
+  letter-spacing: -10px;
+  border-radius: 5px;
+}
+body main .container__bottom__link .locat__link:hover {
+  transition: 0.5s ease;
+  cursor: pointer;
+  animation: flashOverTxt 0.9s linear forwards;
+  background: transparent;
+  color: #000;
 }
 body footer {
   position: relative;

@@ -30,8 +30,6 @@
           class="container__banner__itemD"><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small></span>
     </div>
   </div>
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
       <header>
         <h1 class="primary__title">La table de solline</h1>
         <div class="primary__separate"></div>
@@ -72,8 +70,10 @@
                 class="navbar__papper__item">
             </div>
             <div class="Ai__wrapper">
-              <img src="{{ url_for('static', filename='image/solline.svg') }}" class="Ai__avatar" alt="SollineAvatar">
-              <h2 id="intro_texte" class="Ai__intro__txt"></h2>
+              <div class="Ai__wrapper__sub">
+                <h2 id="intro_texte" class="Ai__intro__txt"></h2>
+                <img src="{{ url_for('static', filename='image/solline.svg') }}" class="Ai__avatar" alt="SollineAvatar">
+              </div>
               <ul id="Ai_response" class="Ai__reponse"></ul>
               <input type="text" id="user_question" placeholder="Ecrire votre question à solline" />
               <button onclick="envoyerQuestion()" class="Ai__btn__question lnk" id="user_btn">Demander à
@@ -105,41 +105,32 @@
               <h5 class="iframe__txt__itemB" id="t10">trouver</h5>
             </div>
             <aside>
-              <div class="barrets__container">
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-                <div class="barrets__container__item"></div>
-              </div>
+              <p class="iframe__txt__adress" id="t11">Av de la toison d'or 40, 1000 Bruxelles</p>
               <div class="parent">
-                <div class="div1 grid_item"><img src="{{ url_for('static', filename='gridimg/huître.jpg') }}" alt="img"></div>
+                <div class="div1 grid_item"><img src="{{ url_for('static', filename='image/gridimg/huître.jpg') }}" alt="img"></div>
                 <div class="div4 grid_item"><iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80598.46456881132!2d4.293016672354125!3d50.85520206078587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a4ed73c76867%3A0xc18b3a66787302a7!2sBruxelles!5e0!3m2!1sfr!2sbe!4v1760414315019!5m2!1sfr!2sbe"
                   width="410" height="280" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade">
                 </iframe></div>
-                <div class="div5 grid_item"><img src="{{ url_for('static', filename='gridimg/recetteD.jpg') }}" alt="img"></div>
-                <div class="div7 grid_item"><img src="{{ url_for('static', filename='gridimg/viande1.jpg') }}" alt="img"></div>
-                <div class="div8 grid_item"><img src="{{ url_for('static', filename='gridimg/dessert2.jpg') }}" alt="img"></div>
-                <div class="div9 grid_item"><img src="{{ url_for('static', filename='gridimg/Champagne2.jpg') }}" alt="img"></div>
+                <div class="div5 grid_item"><img src="{{ url_for('static', filename='image/gridimg/recetteD.jpg') }}" alt="img"></div>
+                <div class="div7 grid_item"><img src="{{ url_for('static', filename='image/gridimg/viande1.jpg') }}" alt="img"></div>
+                <div class="div8 grid_item"><img src="{{ url_for('static', filename='image/gridimg/dessert2.jpg') }}" alt="img"></div>
+                <div class="div9 grid_item"><img src="{{ url_for('static', filename='image/gridimg/Champagne2.jpg') }}" alt="img"></div>
                 <div class="div10 grid_item"><video autoplay loop muted class="aside__vid__item">
                   <source src="{{ url_for('static', filename='video/poissonVid.mp4') }}" type="video/mp4" />
                 </video></div>
-                <div class="div14 grid_item"><img src="{{ url_for('static', filename='gridimg/recetteF.jpg') }}" alt="img"></div>
-                <div class="div18 grid_item"><img src="{{ url_for('static', filename='gridimg/fondecran.jpg') }}" alt="img"></div>
+                <div class="div14 grid_item"><img src="{{ url_for('static', filename='image/gridimg/recetteF.jpg') }}" alt="img"></div>
+                <div class="div18 grid_item"><img src="{{ url_for('static', filename='image/gridimg/fondecran.jpg') }}" alt="img"></div>
                 <div class="div19 grid_item"><video autoplay loop muted class="aside__vid__item">
                   <source src="{{ url_for('static', filename='video/steak.mp4') }}" type="video/mp4" />
                 </video></div>
-                <div class="div20 grid_item"><img src="{{ url_for('static', filename='gridimg/dessert1.jpg') }}" alt="img"></div>
+                <div class="div20 grid_item"><img src="{{ url_for('static', filename='image/gridimg/dessert1.jpg') }}" alt="img"></div>
               </div>
             </aside>
           </div>
         </section>
       </main>
-    </div>
-  </div>
   <footer>
     <small class="foot__signature">©by Script'enjoyer 2025 all rights reserved</small>
   </footer>

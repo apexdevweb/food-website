@@ -17,7 +17,7 @@ body {
     position: fixed;
     pointer-events: none;
     background: linear-gradient(to right, #ffefba, #ffffff);
-    transform: translate(-50%, -50%);
+    transform: translate(80%, -50%);
     transition: transform 0.3s ease-out;
     mix-blend-mode: difference;
     z-index: 96;
@@ -146,6 +146,7 @@ body {
         & .mobile__barre {
           @include mixins.typo_config_xeta;
           @extend %text-gradient-A, %reset-marg-pad;
+          top: 2%;
           position: fixed;
           z-index: 99;
           mix-blend-mode: difference;
@@ -173,15 +174,15 @@ body {
         }
 
         &__sub {
+          @extend %displayed-column-start, %reset-marg-pad;
+          top: -5%;
           height: 20vh;
           width: 15vw;
-          @extend %displayed-column-start, %reset-marg-pad;
           position: fixed;
-          top: 23%;
-          left: 81.5vw;
+          top: 13%;
+          left: 81vw;
           z-index: 99;
           transform: rotate(90deg);
-
           & .mobile__item__sub {
             font-family: variables.$typo-family-small;
             font-size: variables.$typo-size-small;
@@ -191,12 +192,10 @@ body {
             height: auto;
             width: auto;
             z-index: 99;
-
             & a {
               color: variables.$typo-color-white;
               text-decoration: none;
             }
-
             &:hover {
               color: variables.$typo-color-white;
               text-shadow: 0px 0px 8px #fff;
@@ -331,24 +330,50 @@ body {
         width: 25vw;
         overflow: hidden;
         border-radius: 15px;
-        & .Ai__avatar {
-          visibility: hidden;
-          height: 25vh;
-          width: auto;
-        }
-        & .Ai__add__anim {
-          animation: avatarAnimeAi 5s linear 0.5s forwards;
-        }
-        & .Ai__intro__txt {
-          height: 10vh;
-          text-align: center;
-          margin-top: 0;
-          font-family: variables.$typo-family-small;
-          font-weight: lighter;
-          transition: animation 0.4s ease;
-          animation: txtIntroAi 4s ease;
-          letter-spacing: 3px;
-          text-shadow: 0px 0px 5px #fff;
+        & .Ai__wrapper__sub {
+          @extend %reset-marg-pad;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: center;
+          min-height: 30vh;
+          width: 25vw;
+          // overflow: hidden;
+          & .Ai__avatar {
+            margin-top: 0;
+            visibility: hidden;
+            height: 30vh;
+            width: auto;
+            float: left;
+            shape-outside: content-box;
+            z-index: 99;
+            mix-blend-mode: difference;
+          }
+          & model-viewer {
+            position: absolute;
+            width: 100%;
+            min-height: 30vh;
+            border: none;
+            border-radius: 8px;
+            filter: drop-shadow(0px 0px 5px variables.$typo-color-gold);
+            z-index: 0;
+          }
+          & .Ai__add__anim {
+            animation: avatarAnimeAi 5s linear 0.5s forwards;
+          }
+          & .Ai__intro__txt {
+            height: 20vh;
+            width: 15ch;
+            margin-top: 0;
+            font-family: variables.$typo-family-small;
+            font-weight: lighter;
+            transition: animation 0.4s ease;
+            animation: txtIntroAi 4s ease;
+            letter-spacing: 3px;
+            text-shadow: 0px 0px 5px #fff;
+          }
         }
         & .Ai__reponse {
           margin-top: 0px;
@@ -367,6 +392,7 @@ body {
           }
         }
         & input[type="text"] {
+          margin-top: 5vh;
           visibility: hidden;
           height: 4vh;
           width: 80%;
@@ -716,9 +742,12 @@ body {
       }
     }
     & .aside__txt__wrapper {
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
       height: auto;
       width: 100%;
-      @extend %displayed-column-stretch, %reset-marg-pad;
+      @extend %displayed-column-stretch;
       overflow: hidden;
       & .iframe__txt__itemA {
         padding: 0;
@@ -747,19 +776,19 @@ body {
       }
     }
     & aside {
-      @extend %globale-size, %displayed-row-nowrapevenly, %reset-marg-pad;
-      & .barrets__container {
-        @extend %displayed-column-evenly, %reset-marg-pad;
-        min-height: 50vh;
-        width: 100%;
-        overflow: hidden;
-        & .barrets__container__item {
-        margin: 0;
+      @extend %globale-size, %displayed-column-start, %reset-marg-pad;
+      & .iframe__txt__adress {
         padding: 0;
-          height: 15px;
-          width: 100%;
-          background: linear-gradient(to right, #efefbb, #d4d3dd);
-        }
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 1vw;
+        text-align: left;
+        font-size: 4.8rem;
+        color: variables.$typo-color-white;
+        font-weight: lighter;
+        font-family: variables.$typo-family-primary;
+        letter-spacing: 1px;
+        line-height: 80px;
       }
       & .aside__vid__item {
         height: 25vh;
@@ -767,6 +796,26 @@ body {
       }
       & iframe {
         position: absolute;
+      }
+    }
+    & .container__bottom__link {
+      @extend %globale-size, %displayed-row-around, %reset-marg-pad;
+      & .locat__link {
+        padding-right: 10px;
+        text-decoration: none;
+        font-size: 6rem;
+        color: variables.$typo-color-white;
+        font-weight: lighter;
+        font-family: variables.$typo-family-primary;
+        letter-spacing: -10px;
+        border-radius: 5px;
+        &:hover {
+          transition: 0.5s ease;
+          cursor: pointer;
+          animation: flashOverTxt 0.9s linear forwards;
+          background: transparent;
+          color: #000;
+        }
       }
     }
   }

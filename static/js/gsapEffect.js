@@ -13,7 +13,7 @@ tl.from(asideH5A.chars, {
   },
   scrollTrigger: {
     trigger: "#t9",
-    start: "top center",
+    start: "0% 50%",
     end: "bottom bottom",
     scrub: 4,
     // markers: true,
@@ -40,6 +40,27 @@ tl.from(asideH5B.chars, {
   },
   ease: "power2.inOut",
 });
+const asideAdress = new SplitText("#t11", { type: "words" });
+tl.from(asideAdress.words, {
+  y: 80,
+  scaleY: 0,
+  transformOrigin: "bottom center",
+  opacity: 0,
+  duration: 8,
+  filter: "blur(25px)",
+  stagger: {
+    amount: 5,
+    from: "bottom",
+  },
+  scrollTrigger: {
+    trigger: "#t11",
+    start: "top center",
+    end: "bottom bottom",
+    scrub: 5,
+    // markers: true,
+  },
+  ease: "power2.inOut",
+});
 const gridContainer = document.querySelectorAll(".grid_item");
 tl.from(gridContainer, {
   delay: 8,
@@ -55,32 +76,10 @@ tl.from(gridContainer, {
   },
   scrollTrigger: {
     trigger: "grid_item",
-    start: "center center",
+    start: "71% center",
     end: "bottom bottom",
     scrub: 5,
-    //   markers: true,
+      // markers: true,
   },
   ease: "power2.inOut",
-});
-const barrets = document.querySelectorAll(".barrets__container__item");
-
-gsap.from(barrets, {
-  x: -100, // petit glissement depuis la gauche
-  scaleX: 0, // grandissent horizontalement
-  transformOrigin: "left center", // étirement depuis la gauche
-  opacity: 0,
-  filter: "blur(15px)",
-  duration: 4,
-  stagger: {
-    amount: 2.5,
-    from: "left",
-  },
-  ease: "power2.out", // plus fluide
-  scrollTrigger: {
-    trigger: ".barrets__container",
-    start: "top 80%",
-    end: "bottom 60%",
-    scrub: 2.5,
-    // markers: true,
-  },
 });

@@ -3,6 +3,30 @@ from backend.logic import obtenir_recettes
 
 recettes_bp = Blueprint('recettes', __name__)
 
+@recettes_bp.route('/champagnes')
+def champagne():
+    return render_template('champagne.html')
+
+@recettes_bp.route('/vins')
+def vin():
+    return render_template('vin.html')
+
+@recettes_bp.route('/boissons')
+def boisson():
+    return render_template('boisson.html')
+
+@recettes_bp.route('/dessert')
+def dessert():
+    return render_template('dessert.html')
+
+@recettes_bp.route('/plats')
+def plats():
+    return render_template('plats.html')
+
+@recettes_bp.route('/entree')
+def entree():
+    return render_template('entree.html')
+
 @recettes_bp.route('/location')
 def location():
     return render_template('location.html')

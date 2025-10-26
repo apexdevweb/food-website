@@ -2,7 +2,7 @@
 
 FORMALITE = {
     "bonjour": [
-        "Bonjour Je suis votre assistante culinaire virtuelle !",
+        "Je suis votre assistante culinaire virtuelle !",
         "Vous pouvez me poser des questions sur le menu ou les horaires du restaurant"
     ],
     "vous proposer quoi ?": [

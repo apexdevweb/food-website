@@ -103,3 +103,11 @@
    visibility: visible;
   }
 }
+@keyframes bottomLinkAnime {
+  from {
+    background-color: #000;
+  }
+  to {
+    background: transparent;
+  }
+}
