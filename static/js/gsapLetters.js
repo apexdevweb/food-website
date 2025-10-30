@@ -567,7 +567,7 @@ arrowReserve.addEventListener("click", () => {
 ///////////#######################################################################################/////////
 ///////////#######################################################################################/////////
 ///////////#######################################################################################/////////
-///////////#######################################################################################/////////
+///////////↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓EFFET DE TRANSITION DE PAGE↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓/////////
 ///////////#######################################################################################/////////
 ///////////#######################################################################################/////////
 const partialCtnr = document.querySelectorAll("#about, #galerie, #contact");
@@ -575,16 +575,13 @@ const bottomLink = document.querySelectorAll(".locat__link");
 
 bottomLink.forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.preventDefault(); // empêche le lien de charger la page immédiatement
+    e.preventDefault();
     const targetUrl = link.href; 
-    // Timeline GSAP pour contrôler la séquence
     const tl = gsap.timeline({
       onComplete: () => {
-        // Une fois l’animation terminée → redirection vers location.html
         window.location.href = targetUrl;
       },
     });
-    // Animation des sections en bandes qui se rétractent
     tl.to(partialCtnr, {
       scaleX: 0,
       transformOrigin: "top center",

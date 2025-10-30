@@ -119,32 +119,26 @@ def obtenir_recettes(ingredient: str):
     texte = ingredient.lower().strip()
     suggestions = []
 
-    # 1Vérifie d'abord les formules de politesse
     for mot, reponses in FORMALITE.items():
         if mot in texte:
             suggestions.extend(reponses)
 
-    # 2️Cherche dans les catégories principales du menu
     for key, recettes in RECETTES.items():
         if key in texte:
             suggestions.extend(recettes)
 
-    # 3️Recherche spécifique dans les plats viande/poisson
     for key, plats in PLATS.items():
         if key in texte:
             suggestions.extend(plats)
     
-    # 4Recherche spécifique dans les boissons chaude/fraîche
     for key, boissons in BOISSONS.items():
         if key in texte:
             suggestions.extend(boissons)
    
-    # 5Recherche spécifique dans les entree viande/poisson
     for key, entrees in ENTREES.items():
         if key in texte:
             suggestions.extend(entrees)
 
-    # Si aucune correspondance trouvée
     if not suggestions:
         return [f"Désolé, je n’ai trouvé aucune information pour « {ingredient} »"]
 

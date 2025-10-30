@@ -44,3 +44,4 @@ def recette():
     ingredient = request.form.get('user_question', '')
     suggestions = obtenir_recettes(ingredient)
     return jsonify({'suggestions': suggestions})
+

@@ -43,12 +43,12 @@
           </div>
           <ul class="navbar__container">
             <li class="navbar__itemA"><a href="{{ url_for('recettes.home') }}" class="link__item lnk">A propos</a></li>
-            <li class="navbar__itemB"><a href="#" class="link__item lnk">Entree</a></li>
-            <li class="navbar__itemA"><a href="#" class="link__item lnk">Plats</a></li>
-            <li class="navbar__itemB"><a href="#" class="link__item lnk">Dessert</a></li>
-            <li class="navbar__itemA"><a href="#" class="link__item lnk">Boissons</a></li>
-            <li class="navbar__itemB"><a href="#" class="link__item lnk">Vins</a></li>
-            <li class="navbar__itemA"><a href="#" class="link__item lnk">Champagnes</a></li>
+            <li class="navbar__itemB"><a href="{{ url_for('recettes.entree') }}" class="link__item lnk">Entree</a></li>
+            <li class="navbar__itemA"><a href="{{ url_for('recettes.plats') }}" class="link__item lnk">Plats</a></li>
+            <li class="navbar__itemB"><a href="{{ url_for('recettes.dessert') }}" class="link__item lnk">Dessert</a></li>
+            <li class="navbar__itemA"><a href="{{ url_for('recettes.boisson') }}" class="link__item lnk">Boissons</a></li>
+            <li class="navbar__itemB"><a href="{{ url_for('recettes.vin') }}" class="link__item lnk">Vins</a></li>
+            <li class="navbar__itemA"><a href="{{ url_for('recettes.champagne') }}" class="link__item lnk">Champagnes</a></li>
             <div class="mobile__container__sub">
               <p class="mobile__item__sub lnk">Reservation</p>
               <p class="mobile__item__sub lnk">Evenement</p>
@@ -105,7 +105,7 @@
               <h5 class="iframe__txt__itemB" id="t10">trouver</h5>
             </div>
             <aside>
-              <p class="iframe__txt__adress" id="t11">Av de la toison d'or 40, 1000 Bruxelles</p>
+              <p class="iframe__txt__adress" id="t11">Av de la toison d'or ??, 1000 Bruxelles</p>
               <div class="parent">
                 <div class="div1 grid_item"><img src="{{ url_for('static', filename='image/gridimg/huître.jpg') }}" alt="img"></div>
                 <div class="div4 grid_item"><iframe

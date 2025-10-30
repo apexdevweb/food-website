@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
+  <title>La table de solline</title>
+</head>
+
+<body>
+  <div class="vid__container">
+    <video autoplay loop muted class="vid__container__myvid">
+      <source src="{{ url_for('static', filename='video/space_1920.mp4') }}" type="video/mp4" />
+    </video>
+    <div class="cursor__effect">
+      <small class="cursor__txt"></small>
+    </div>
+    <div class="vid__container__banner">
+      <span
+        class="container__banner__itemA"><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small></span>
+      <span class="container__banner__itemB"><small>H24 7/7</small><small>H24 7/7</small><small>H24
+          7/7</small><small>H24 7/7</small><small>H24 7/7</small><small>H24 7/7</small><small>H24
+          7/7</small></span>
+      <h2 class="banner__title">La table de solline gastronomie</h2>
+      <span class="container__banner__itemC"><small>Gastronomie & Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie &Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie &
+          Prestige</small><small>Gastronomie & Prestige</small><small>Gastronomie & Prestige</small><span
+          class="container__banner__itemD"><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small><small>Incontournable</small></span>
+    </div>
+  </div>
+  <header>
+    <h1 class="primary__title">La table de solline</h1>
+    <div class="primary__separate"></div>
+    <h2 class="secondary__title">Gastronomie</h2>
+    <nav class="navbar">
+      <div class="mobile__container">
+        <p class="mobile__barre lnk" id="btntrigg">menu</p>
+        <div class="timer__container">
+          <span>Bxl-</span><span id="clock"></span>
+        </div>
+      </div>
+      <ul class="navbar__container">
+        <li class="navbar__itemA"><a href="{{ url_for('recettes.home') }}" class="link__item lnk">A propos</a>
+        </li>
+        <li class="navbar__itemB"><a href="{{ url_for('recettes.entree') }}" class="link__item lnk">Entree</a>
+        </li>
+        <li class="navbar__itemA"><a href="{{ url_for('recettes.plats') }}" class="link__item lnk">Plats</a>
+        </li>
+        <li class="navbar__itemB"><a href="{{ url_for('recettes.dessert') }}" class="link__item lnk">Dessert</a>
+        </li>
+        <li class="navbar__itemA"><a href="{{ url_for('recettes.boisson') }}" class="link__item lnk">Boissons</a></li>
+        <li class="navbar__itemB"><a href="{{ url_for('recettes.vin') }}" class="link__item lnk">Vins</a></li>
+        <li class="navbar__itemA"><a href="{{ url_for('recettes.champagne') }}" class="link__item lnk">Champagnes</a>
+        </li>
+        <div class="mobile__container__sub">
+          <p class="mobile__item__sub lnk">Reservation</p>
+          <p class="mobile__item__sub lnk">Evenement</p>
+          <p class="mobile__item__sub lnk">Avis</p>
+          <p class="mobile__item__sub lnk"><a href="{{ url_for('recettes.index') }}">Exit</a></p>
+        </div>
+        <div class="navbar__papper">
+          <img src="{{ url_for('static', filename='image/Fichier 1hdpi.png') }}" alt="bgnav"
+            class="navbar__papper__item">
+          <img src="{{ url_for('static', filename='image/Fichier 2hdpi.png') }}" alt="bgnav"
+            class="navbar__papper__item">
+          <img src="{{ url_for('static', filename='image/Fichier 3hdpi.png') }}" alt="bgnav"
+            class="navbar__papper__item">
+          <img src="{{ url_for('static', filename='image/Fichier 4hdpi.png') }}" alt="bgnav"
+            class="navbar__papper__item">
+          <img src="{{ url_for('static', filename='image/Fichier 5hdpi.png') }}" alt="bgnav"
+            class="navbar__papper__item">
+          <img src="{{ url_for('static', filename='image/Fichier 6hdpi.png') }}" alt="bgnav"
+            class="navbar__papper__item">
+        </div>
+        <div class="Ai__wrapper">
+          <div class="Ai__wrapper__sub">
+            <h2 id="intro_texte" class="Ai__intro__txt"></h2>
+            <img src="{{ url_for('static', filename='image/solline.svg') }}" class="Ai__avatar" alt="SollineAvatar">
+          </div>
+          <ul id="Ai_response" class="Ai__reponse"></ul>
+          <input type="text" id="user_question" placeholder="Ecrire votre question à solline" />
+          <button onclick="envoyerQuestion()" class="Ai__btn__question lnk" id="user_btn">Demander à
+            Solline</button>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="wrapper">
+      <div class="logo">
+        <h3>Nos<br />Entrées<br /></h3>
+      </div>
+      <section class="sect intro">
+        <div class="line"></div>
+      </section>
+      <section class="sect slideA character">
+        <div class="block"></div>
+        <img src="{{ url_for('static', filename='image/gridimg/recetteC.jpg') }}" alt="" /><span
+          class="hugtext">SlideOne</span>
+        <div class="caption">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+            voluptas tempora nesciunt reiciendis deleniti cumque libero dolore
+            aut dolorum nihil ipsam quam vitae debitis architecto aperiam iure
+            accusamus mollitia, laudantium maiores incidunt obcaecati.
+            Asperiores velit ipsam aut ipsum quasi eaque aliquid error laborum!
+            Possimus, nihil at. Tempora nulla explicabo voluptates.
+          </p>
+        </div>
+        <div class="nickname"><span>Nickname</span>Waw</div>
+        <div class="quote">
+          <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum.</small>
+        </div>
+      </section>
+      <section class="sect slideB character">
+        <div class="block"></div>
+        <img src="{{ url_for('static', filename='image/gridimg/recetteC.jpg') }}" alt="" /><span
+          class="hugtext">SlideTwo</span>
+        <div class="caption">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+            voluptas tempora nesciunt reiciendis deleniti cumque libero dolore
+            aut dolorum nihil ipsam quam vitae debitis architecto aperiam iure
+            accusamus mollitia, laudantium maiores incidunt obcaecati.
+            Asperiores velit ipsam aut ipsum quasi eaque aliquid error laborum!
+            Possimus, nihil at. Tempora nulla explicabo voluptates.
+          </p>
+        </div>
+        <div class="nickname"><span>Nickname</span>Waw</div>
+        <div class="quote">
+          <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum.</small>
+        </div>
+      </section>
+      <section class="sect slideC character">
+        <div class="block"></div>
+        <img src="{{ url_for('static', filename='image/gridimg/recetteC.jpg') }}" alt="" /><span
+          class="hugtext">SlideTree</span>
+        <div class="caption">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+            voluptas tempora nesciunt reiciendis deleniti cumque libero dolore
+            aut dolorum nihil ipsam quam vitae debitis architecto aperiam iure
+            accusamus mollitia, laudantium maiores incidunt obcaecati.
+            Asperiores velit ipsam aut ipsum quasi eaque aliquid error laborum!
+            Possimus, nihil at. Tempora nulla explicabo voluptates.
+          </p>
+        </div>
+        <div class="nickname"><span>Nickname</span>Waw</div>
+        <div class="quote">
+          <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum.</small>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <small class="foot__signature">©by Script'enjoyer 2025 all rights reserved</small>
+  </footer>
+  <script src="https://kit.fontawesome.com/268e7a0888.js" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/mobile_menu.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/currentTime.js') }}" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="{{ url_for('static', filename='js/gsapSmoother.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/gsapEffect2.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
+</body>
+
+</html>
