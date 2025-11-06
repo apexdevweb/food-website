@@ -91,7 +91,21 @@
     </nav>
   </header>
   <main>
-    <div class="wrapper">
+    <div class="mini__grid">
+      <figure class="mini__fig">
+        <img src="{{ url_for('static', filename='image/entreeimg/carpaccio-de-boeuf.webp') }}" alt="" />
+        <figcaption class="mini__fig__title"><span class="first__letter__mini--fig">Carpaccio</span> de boeuf au cantal</figcaption>
+      </figure>
+      <figure class="mini__fig">
+        <img src="{{ url_for('static', filename='image/entreeimg/tartar-saumon.jpg') }}" alt="" />
+        <figcaption class="mini__fig__title"><span class="first__letter__mini--fig">Tartar</span> de saumon</figcaption>
+      </figure>
+      <figure class="mini__fig">
+        <img src="{{ url_for('static', filename='image/entreeimg/salade-landaise.jpg') }}" alt="" />
+        <figcaption class="mini__fig__title"><span class="first__letter__mini--fig">Salade</span> landaise</figcaption>
+      </figure>
+    </div>
+    <div class="grid__wrapper">
       <div class="logo">
         <h3>Nos<br />Entrées<br /></h3>
       </div>
@@ -100,59 +114,56 @@
       </section>
       <section class="sect slideA character">
         <div class="block"></div>
-        <img src="{{ url_for('static', filename='image/gridimg/recetteC.jpg') }}" alt="" /><span
-          class="hugtext">SlideOne</span>
+        <img src="{{ url_for('static', filename='image/entreeimg/carpaccio-de-boeuf.webp') }}" alt="" /><span
+          class="hugtext">Solline</span>
         <div class="caption">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
-            voluptas tempora nesciunt reiciendis deleniti cumque libero dolore
-            aut dolorum nihil ipsam quam vitae debitis architecto aperiam iure
-            accusamus mollitia, laudantium maiores incidunt obcaecati.
-            Asperiores velit ipsam aut ipsum quasi eaque aliquid error laborum!
-            Possimus, nihil at. Tempora nulla explicabo voluptates.
+            Découvrez l’élégance d’un carpaccio de bœuf tendre, finement tranché et sublimé par la richesse du Cantal.
+            Ce mariage subtil entre la finesse de la viande crue et le caractère du fromage offre une expérience
+            gustative unique. Agrémenté d’un filet d’huile d’olive, de quelques copeaux de Cantal, d’une pointe de
+            poivre et de touches fraîches d’herbes aromatiques, ce plat allie simplicité, authenticité et raffinement.
+            Une invitation à savourer la gastronomie française dans toute sa délicatesse.
           </p>
         </div>
-        <div class="nickname"><span>Nickname</span>Waw</div>
+        <div class="nickname"><span>Carpaccio de boeuf</span>Au cantal</div>
         <div class="quote">
-          <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum.</small>
+          <small>25,00 €</small>
         </div>
       </section>
       <section class="sect slideB character">
         <div class="block"></div>
-        <img src="{{ url_for('static', filename='image/gridimg/recetteC.jpg') }}" alt="" /><span
-          class="hugtext">SlideTwo</span>
+        <img src="{{ url_for('static', filename='image/entreeimg/tartar-saumon.jpg') }}" alt="" /><span
+          class="hugtext">Solline</span>
         <div class="caption">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
-            voluptas tempora nesciunt reiciendis deleniti cumque libero dolore
-            aut dolorum nihil ipsam quam vitae debitis architecto aperiam iure
-            accusamus mollitia, laudantium maiores incidunt obcaecati.
-            Asperiores velit ipsam aut ipsum quasi eaque aliquid error laborum!
-            Possimus, nihil at. Tempora nulla explicabo voluptates.
+            Plongez dans la fraîcheur d’un tartare de saumon délicatement coupé au couteau et relevé de notes
+            citronnées. La douceur fondante du poisson s’harmonise avec des touches d’herbes fraîches, d’épices subtiles
+            et d’un filet d’huile parfumée, créant un équilibre parfait entre finesse et vivacité. Léger, élégant et
+            intensément savoureux, ce tartare met en valeur la pureté des saveurs marines pour une entrée raffinée et
+            pleine de fraîcheur.
           </p>
         </div>
-        <div class="nickname"><span>Nickname</span>Waw</div>
+        <div class="nickname"><span>Tartar</span>De saumon</div>
         <div class="quote">
-          <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum.</small>
+          <small>28,00 €</small>
         </div>
       </section>
       <section class="sect slideC character">
         <div class="block"></div>
-        <img src="{{ url_for('static', filename='image/gridimg/recetteC.jpg') }}" alt="" /><span
-          class="hugtext">SlideTree</span>
+        <img src="{{ url_for('static', filename='image/entreeimg/salade-landaise.jpg') }}" alt="" /><span
+          class="hugtext">Solline</span>
         <div class="caption">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
-            voluptas tempora nesciunt reiciendis deleniti cumque libero dolore
-            aut dolorum nihil ipsam quam vitae debitis architecto aperiam iure
-            accusamus mollitia, laudantium maiores incidunt obcaecati.
-            Asperiores velit ipsam aut ipsum quasi eaque aliquid error laborum!
-            Possimus, nihil at. Tempora nulla explicabo voluptates.
+            Savourez la générosité du Sud-Ouest avec cette salade landaise, alliance parfaite de fraîcheur et de
+            gourmandise. Mélange croquant de jeunes pousses, accompagné de gésiers confits, magret de canard fumé et
+            foie gras délicatement posé, le tout relevé d’une vinaigrette légèrement acidulée. Chaque bouchée offre une
+            palette de saveurs authentiques, mariant tendreté, caractère et raffinement. Une entrée emblématique, riche
+            et irrésistiblement savoureuse.
           </p>
         </div>
-        <div class="nickname"><span>Nickname</span>Waw</div>
+        <div class="nickname"><span>Salade</span>Landaise</div>
         <div class="quote">
-          <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eum.</small>
+          <small>18,00 €</small>
         </div>
       </section>
     </div>
@@ -169,6 +180,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
   <script src="{{ url_for('static', filename='js/gsapSmoother.js') }}"></script>
   <script src="{{ url_for('static', filename='js/gsapEffect2.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/gsapLetters.js') }}"></script>
   <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
 </body>
 

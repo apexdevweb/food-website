@@ -1,4 +1,20 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
+let tlD = gsap.timeline();
+let miniTitle = new SplitText(".mini__fig__title", {
+  type: "words",
+});
+tlD.from(miniTitle.words, {
+  y: 50,
+  scale: 0,
+  autoAlpha: 0,
+  duration: 0.8,
+  opacity: 0,
+  stagger: {
+    amount: 2,
+    from: "bottom",
+  },
+  ease: "power2.inOut",
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const sections = gsap.utils.toArray(".sect");
@@ -8,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     xPercent: -100 * (sections.length - 1),
     ease: "none",
     scrollTrigger: {
-      trigger: ".wrapper",
+      trigger: ".grid__wrapper",
       pin: true,
       scrub: 0.5,
       snap: 1 / (sections.length - 1),

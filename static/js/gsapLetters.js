@@ -196,7 +196,7 @@ tl.from(mainCtnrA, {
   duration: 2,
   scrollTrigger: {
     trigger: "#ctnr1",
-    start: "0% center",
+    start: "10% center",
     end: "30% bottom",
     scrub: 4,
     // markers: true,
@@ -215,7 +215,7 @@ tl.from(artclTitleA.chars, {
   },
   scrollTrigger: {
     trigger: "#t1",
-    start: "10% center",
+    start: "90% center",
     end: "35% bottom",
     scrub: 4,
     // markers: true,

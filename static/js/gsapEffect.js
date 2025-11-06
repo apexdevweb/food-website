@@ -13,7 +13,7 @@ tl.from(asideH5A.chars, {
   },
   scrollTrigger: {
     trigger: "#t9",
-    start: "0% 50%",
+    start: "80% 50%",
     end: "bottom bottom",
     scrub: 4,
     // markers: true,
@@ -76,7 +76,7 @@ tl.from(gridContainer, {
   },
   scrollTrigger: {
     trigger: "grid_item",
-    start: "71% center",
+    start: "61% center",
     end: "bottom bottom",
     scrub: 5,
       // markers: true,

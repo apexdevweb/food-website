@@ -96,7 +96,7 @@ body {
   }
 
   & header {
-    min-height: 80vh;
+    min-height: 35vh;
     width: 100%;
     color: variables.$typo-color-white;
 
@@ -824,7 +824,42 @@ body {
       }
     }
     //slider entree,plats,boisson etc...
-    .wrapper {
+    & .mini__grid {
+      @extend %displayed-row-nowrapevenly;
+      padding: 0;
+      margin: auto;
+      height: 30vh;
+      width: 70%;
+      & .mini__fig {
+        width: auto;
+        height: 25vh;
+        background-color: red;
+        overflow: hidden;
+        & img {
+          width: 100%;
+          height: 25vh;
+        }
+        & .mini__fig__title {
+          top: 35%;
+          position: absolute;
+          font-size: variables.$typo-size-medium;
+          font-family: variables.$typo-family-small;
+          color: variables.$typo-color-white;
+          font-weight: lighter;
+          width: 8ex;
+          line-height: 40px;
+          color: variables.$typo-color-black;
+          & .first__letter__mini--fig {
+            font-weight: 700;
+            letter-spacing: 15px;
+            font-size: 4rem;
+            color: variables.$typo-color-white;
+          }
+        }
+      }
+    }
+    .grid__wrapper {
+      margin-top: 0;
       width: 350%;
       height: 100%;
       display: flex;
@@ -837,7 +872,6 @@ body {
       top: 37%;
       left: 4rem;
       line-height: 0.9;
-      mix-blend-mode: overlay;
       filter: drop-shadow(0px 0px 5px #000);
       & h3 {
         margin-top: 0;
@@ -846,9 +880,10 @@ body {
         letter-spacing: 1px;
         line-height: 140px;
         font-weight: lighter;
+        mix-blend-mode: overlay;
       }
     }
-   
+
     .line {
       background-color: #000;
       height: 1rem;
@@ -885,17 +920,17 @@ body {
     }
     .slideA::before,
     .slideA .block {
-      background-color: #444;
+      background-color: #000;
     }
     .slideB::before,
     .slideB .block {
-      background-color: crimson;
+      background-color: #000;
     }
     .slideC::before,
     .slideC .block {
-      background-color: burlywood;
+      background-color: #000;
     }
-    
+
     .caption {
       position: absolute;
       bottom: 4rem;
@@ -922,11 +957,9 @@ body {
       top: 20%;
       left: 0;
       transform: translateY(100%);
-      font-weight: 700;
-      background: #000 url("image/peakpx.jpg") no-repeat 34% 50%;
-      background-size: 15%;
-      color: transparent;
-      background-clip: text;
+      font-weight: lighter;
+      font-family: variables.$typo-family-secondary;
+      color: variables.$typo-color-gold;
     }
     .nickname {
       position: absolute;
@@ -935,27 +968,32 @@ body {
       font-size: 3rem;
       text-align: right;
       transform: translateY(-200%);
+      font-family: variables.$typo-family-secondary;
+      color: variables.$typo-color-gold;
     }
     .nickname span {
       display: block;
       font-size: 70%;
-      color: #fff;
+      color: variables.$typo-color-white;
+      font-family: variables.$typo-family-small;
     }
     .quote {
       position: absolute;
       bottom: 4rem;
       right: 4rem;
-      font-size: 3rem;
+      font-size: 2.3rem;
       width: 30%;
       text-align: right;
       transform: translateY(200%);
+      color: variables.$typo-color-white;
+      font-family: variables.$typo-family-small;
     }
     .quote::before,
     .quote::after {
       content: "";
       color: #fff;
     }
-     //slider entree,plats,boisson etc...FIN
+    //slider entree,plats,boisson etc...FIN
   }
   footer {
     @extend %displayed-column-center, %reset-marg-pad;

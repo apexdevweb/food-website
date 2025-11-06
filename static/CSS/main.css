@@ -60,6 +60,13 @@ body main #about, body main #galerie .image__container {
   justify-content: space-evenly;
 }
 
+body main .mini__grid {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 body header .navbar .mobile__container .mobile__barre {
   background: linear-gradient(to right, #ffefba, #ffffff);
   -webkit-background-clip: text;
@@ -400,7 +407,7 @@ body .vid__container__banner .banner__title {
   color: #dccd8e;
 }
 body header {
-  min-height: 80vh;
+  min-height: 35vh;
   width: 100%;
   color: #fff;
 }
@@ -1052,7 +1059,41 @@ body main .container__bottom__link .locat__link:hover {
   background: transparent;
   color: #000;
 }
-body main .wrapper {
+body main .mini__grid {
+  padding: 0;
+  margin: auto;
+  height: 30vh;
+  width: 70%;
+}
+body main .mini__grid .mini__fig {
+  width: auto;
+  height: 25vh;
+  background-color: red;
+  overflow: hidden;
+}
+body main .mini__grid .mini__fig img {
+  width: 100%;
+  height: 25vh;
+}
+body main .mini__grid .mini__fig .mini__fig__title {
+  top: 35%;
+  position: absolute;
+  font-size: 3rem;
+  font-family: "Saira", sans-serif;
+  color: #fff;
+  font-weight: lighter;
+  width: 8ex;
+  line-height: 40px;
+  color: #000;
+}
+body main .mini__grid .mini__fig .mini__fig__title .first__letter__mini--fig {
+  font-weight: 700;
+  letter-spacing: 15px;
+  font-size: 4rem;
+  color: #fff;
+}
+body main .grid__wrapper {
+  margin-top: 0;
   width: 350%;
   height: 100%;
   display: flex;
@@ -1065,7 +1106,6 @@ body main .logo {
   top: 37%;
   left: 4rem;
   line-height: 0.9;
-  mix-blend-mode: overlay;
   filter: drop-shadow(0px 0px 5px #000);
 }
 body main .logo h3 {
@@ -1075,6 +1115,7 @@ body main .logo h3 {
   letter-spacing: 1px;
   line-height: 140px;
   font-weight: lighter;
+  mix-blend-mode: overlay;
 }
 body main .line {
   background-color: #000;
@@ -1112,15 +1153,15 @@ body main .block {
 }
 body main .slideA::before,
 body main .slideA .block {
-  background-color: #444;
+  background-color: #000;
 }
 body main .slideB::before,
 body main .slideB .block {
-  background-color: crimson;
+  background-color: #000;
 }
 body main .slideC::before,
 body main .slideC .block {
-  background-color: burlywood;
+  background-color: #000;
 }
 body main .caption {
   position: absolute;
@@ -1148,11 +1189,9 @@ body main .hugtext {
   top: 20%;
   left: 0;
   transform: translateY(100%);
-  font-weight: 700;
-  background: #000 url("image/peakpx.jpg") no-repeat 34% 50%;
-  background-size: 15%;
-  color: transparent;
-  background-clip: text;
+  font-weight: lighter;
+  font-family: "Lavishly Yours", cursive;
+  color: #dccd8e;
 }
 body main .nickname {
   position: absolute;
@@ -1161,20 +1200,25 @@ body main .nickname {
   font-size: 3rem;
   text-align: right;
   transform: translateY(-200%);
+  font-family: "Lavishly Yours", cursive;
+  color: #dccd8e;
 }
 body main .nickname span {
   display: block;
   font-size: 70%;
   color: #fff;
+  font-family: "Saira", sans-serif;
 }
 body main .quote {
   position: absolute;
   bottom: 4rem;
   right: 4rem;
-  font-size: 3rem;
+  font-size: 2.3rem;
   width: 30%;
   text-align: right;
   transform: translateY(200%);
+  color: #fff;
+  font-family: "Saira", sans-serif;
 }
 body main .quote::before,
 body main .quote::after {
