@@ -827,27 +827,31 @@ body {
     & .mini__grid {
       @extend %displayed-row-nowrapevenly;
       padding: 0;
-      margin: auto;
-      height: 30vh;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 35vh;
       width: 70%;
       & .mini__fig {
         width: auto;
         height: 25vh;
-        background-color: red;
         overflow: hidden;
         & img {
           width: 100%;
           height: 25vh;
+          &:hover{
+            animation: flashOverEl 0.5s linear forwards;
+          }
         }
         & .mini__fig__title {
-          top: 35%;
+          top: 41%;
           position: absolute;
           font-size: variables.$typo-size-medium;
           font-family: variables.$typo-family-small;
           color: variables.$typo-color-white;
-          font-weight: lighter;
-          width: 8ex;
-          line-height: 40px;
+          font-weight: 300;
+          width: 9ex;
+          line-height: 50px;
           color: variables.$typo-color-black;
           & .first__letter__mini--fig {
             font-weight: 700;

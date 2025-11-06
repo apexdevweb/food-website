@@ -15,6 +15,25 @@ tlD.from(miniTitle.words, {
   },
   ease: "power2.inOut",
 });
+const miniFigFirstStep = document.querySelectorAll(".mini__fig");
+tlD.from(miniFigFirstStep, {
+  opacity: 0,
+  duration: 4,
+  stagger: 0.3,
+});
+const miniFig = document.querySelectorAll(".mini__fig");
+tlD.to(miniFig, {
+  opacity: 0,
+  duration: 5,
+  stagger: 0.8,
+  scrollTrigger: {
+    trigger: ".mini__fig",
+    start: "top 18%",
+    end: "bottom bottom",
+    scrub: 3,
+    // markers: true,
+  },
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const sections = gsap.utils.toArray(".sect");
@@ -168,6 +187,3 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 
 // gsap.ticker.lagSmoothing(0);
-
-
-
