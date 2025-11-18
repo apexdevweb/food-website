@@ -28,10 +28,9 @@ tlD.to(miniFig, {
   stagger: 0.8,
   scrollTrigger: {
     trigger: ".mini__fig",
-    start: "top 18%",
+    start: "top 15%",
     end: "bottom bottom",
     scrub: 3,
-    // markers: true,
   },
 });
 
