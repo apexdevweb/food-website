@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Gideon+Roman&family=Lavishly+Yours&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
-body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main aside, body main .container__bottom__link {
+body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #smooth-wrapper, body main #smooth-wrapper #smooth-content, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main aside, body main .container__bottom__link {
   height: auto;
   width: 100%;
 }
@@ -716,7 +716,8 @@ body main #about {
   padding: 0;
 }
 body main #about .about__container {
-  margin: 15px;
+  margin-top: 15vh;
+  margin-left: 10px;
   min-height: 55vh;
   max-width: 38vw;
   background: url("../image/") no-repeat 50% 50%, linear-gradient(to right, #efefbb, #d4d3dd);
