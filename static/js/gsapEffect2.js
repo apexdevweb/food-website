@@ -15,17 +15,18 @@ tlD.from(miniTitle.words, {
   },
   ease: "power2.inOut",
 });
-const miniFigFirstStep = document.querySelectorAll(".mini__fig");
-tlD.from(miniFigFirstStep, {
-  opacity: 0,
-  duration: 4,
-  stagger: 0.3,
-});
 const miniFig = document.querySelectorAll(".mini__fig");
+tlD.from(miniFig, {
+  opacity: 0,
+  duration: 0.3,
+  stagger: 0.3,
+  ease: "power2.inOut",
+});
 tlD.to(miniFig, {
   opacity: 0,
   duration: 5,
   stagger: 0.8,
+  ease: "power2.inOut",
   scrollTrigger: {
     trigger: ".mini__fig",
     start: "top 15%",
@@ -33,6 +34,7 @@ tlD.to(miniFig, {
     scrub: 3,
   },
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const sections = gsap.utils.toArray(".sect");

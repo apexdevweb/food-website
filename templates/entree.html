@@ -82,6 +82,8 @@
           <div class="Ai__wrapper__sub">
             <h2 id="intro_texte" class="Ai__intro__txt"></h2>
             <img src="{{ url_for('static', filename='image/solline.svg') }}" class="Ai__avatar" alt="SollineAvatar">
+            <model-viewer src="{{ url_for('static', filename='3D/sceneA.glb') }}" alt="web 3D" auto-rotate
+            rotation-per-second="30deg" camera-controls ar></model-viewer>
           </div>
           <ul id="Ai_response" class="Ai__reponse"></ul>
           <input type="text" id="user_question" placeholder="Ecrire votre question à solline" />
@@ -95,7 +97,8 @@
     <div class="mini__grid">
       <figure class="mini__fig">
         <img src="{{ url_for('static', filename='image/entreeimg/carpaccio-de-boeuf.webp') }}" alt="" />
-        <figcaption class="mini__fig__title"><span class="first__letter__mini--fig">Carpaccio</span> de boeuf au cantal</figcaption>
+        <figcaption class="mini__fig__title"><span class="first__letter__mini--fig">Carpaccio</span> de boeuf au cantal
+        </figcaption>
       </figure>
       <figure class="mini__fig">
         <img src="{{ url_for('static', filename='image/entreeimg/tartar-saumon.jpg') }}" alt="" />
@@ -119,10 +122,12 @@
           class="hugtext">Solline</span>
         <div class="caption">
           <p>
-            Découvrez l’élégance d’un carpaccio de bœuf tendre, finement tranché et sublimé par la richesse du Cantal.
+            Découvrez l’élégance d’un carpaccio de bœuf tendre, finement tranché et sublimé par la richesse du
+            Cantal.
             Ce mariage subtil entre la finesse de la viande crue et le caractère du fromage offre une expérience
             gustative unique. Agrémenté d’un filet d’huile d’olive, de quelques copeaux de Cantal, d’une pointe de
-            poivre et de touches fraîches d’herbes aromatiques, ce plat allie simplicité, authenticité et raffinement.
+            poivre et de touches fraîches d’herbes aromatiques, ce plat allie simplicité, authenticité et
+            raffinement.
             Une invitation à savourer la gastronomie française dans toute sa délicatesse.
           </p>
         </div>
@@ -138,9 +143,11 @@
         <div class="caption">
           <p>
             Plongez dans la fraîcheur d’un tartare de saumon délicatement coupé au couteau et relevé de notes
-            citronnées. La douceur fondante du poisson s’harmonise avec des touches d’herbes fraîches, d’épices subtiles
+            citronnées. La douceur fondante du poisson s’harmonise avec des touches d’herbes fraîches, d’épices
+            subtiles
             et d’un filet d’huile parfumée, créant un équilibre parfait entre finesse et vivacité. Léger, élégant et
-            intensément savoureux, ce tartare met en valeur la pureté des saveurs marines pour une entrée raffinée et
+            intensément savoureux, ce tartare met en valeur la pureté des saveurs marines pour une entrée raffinée
+            et
             pleine de fraîcheur.
           </p>
         </div>
@@ -157,8 +164,10 @@
           <p>
             Savourez la générosité du Sud-Ouest avec cette salade landaise, alliance parfaite de fraîcheur et de
             gourmandise. Mélange croquant de jeunes pousses, accompagné de gésiers confits, magret de canard fumé et
-            foie gras délicatement posé, le tout relevé d’une vinaigrette légèrement acidulée. Chaque bouchée offre une
-            palette de saveurs authentiques, mariant tendreté, caractère et raffinement. Une entrée emblématique, riche
+            foie gras délicatement posé, le tout relevé d’une vinaigrette légèrement acidulée. Chaque bouchée offre
+            une
+            palette de saveurs authentiques, mariant tendreté, caractère et raffinement. Une entrée emblématique,
+            riche
             et irrésistiblement savoureuse.
           </p>
         </div>
@@ -173,15 +182,16 @@
     <small class="foot__signature">©by Script'enjoyer 2025 all rights reserved</small>
   </footer>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="https://kit.fontawesome.com/268e7a0888.js" crossorigin="anonymous"></script>
   <script src="{{ url_for('static', filename='js/mobile_menu.js') }}"></script>
   <script src="{{ url_for('static', filename='js/currentTime.js') }}" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="{{ url_for('static', filename='js/lenisSmooth.js') }}"></script>
   <script src="{{ url_for('static', filename='js/gsapEffect2.js') }}"></script>
   <script src="{{ url_for('static', filename='js/gsapLetters.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/lenisSmooth.js') }}"></script>
   <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
 </body>
 

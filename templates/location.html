@@ -73,6 +73,8 @@
               <div class="Ai__wrapper__sub">
                 <h2 id="intro_texte" class="Ai__intro__txt"></h2>
                 <img src="{{ url_for('static', filename='image/solline.svg') }}" class="Ai__avatar" alt="SollineAvatar">
+                <model-viewer src="{{ url_for('static', filename='3D/sceneA.glb') }}" alt="web 3D" auto-rotate
+                rotation-per-second="30deg" camera-controls ar></model-viewer>
               </div>
               <ul id="Ai_response" class="Ai__reponse"></ul>
               <input type="text" id="user_question" placeholder="Ecrire votre question à solline" />
@@ -135,6 +137,7 @@
     <small class="foot__signature">©by Script'enjoyer 2025 all rights reserved</small>
   </footer>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script src="https://kit.fontawesome.com/268e7a0888.js" crossorigin="anonymous"></script>
   <script src="{{ url_for('static', filename='js/mobile_menu.js') }}"></script>
   <script src="{{ url_for('static', filename='js/currentTime.js') }}" defer></script>

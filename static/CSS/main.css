@@ -446,7 +446,7 @@ body header .navbar .mobile__container .mobile__barre {
   font-family: "Cinzel Decorative", serif;
   font-size: 3rem;
   font-weight: lighter;
-  top: 2%;
+  top: 0;
   position: fixed;
   z-index: 99;
   mix-blend-mode: difference;
@@ -506,6 +506,7 @@ body header .navbar__container {
   height: 100vh;
   width: 100%;
   z-index: 95;
+  overflow: hidden;
 }
 @media (min-width: 600px) {
   body header .navbar__container {
