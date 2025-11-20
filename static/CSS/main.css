@@ -5,13 +5,13 @@ body .cursor__effect, body .cursor__effect small, body .vid__container, body .vi
   width: 100%;
 }
 
-body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .primary__separate, body header .secondary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
+body .access__container, body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .primary__separate, body header .secondary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
 body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body header .navbar .Ai__wrapper .Ai__wrapper__sub, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container, body main aside, body main .container__bottom__link, body footer {
   margin: 0;
   padding: 0;
 }
 
-body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub, body footer {
+body .access__container, body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub, body footer {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -75,7 +75,7 @@ body header .navbar .mobile__container .mobile__barre {
   color: transparent;
 }
 
-body main .contact__container__sub .arrow__container i {
+body .access__container .access__item:hover, body main .contact__container__sub .arrow__container i {
   background: linear-gradient(to right, #efefbb, #d4d3dd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -328,11 +328,52 @@ body main .contact__container__sub .arrow__container i {
     background: transparent;
   }
 }
+@keyframes accessAnimEnter {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+body .access__container {
+  min-height: 100vh;
+  width: 100%;
+}
+body .access__container .access__item {
+  text-decoration: none;
+  color: #000;
+  font-family: "Lavishly Yours", cursive;
+  font-size: 9rem;
+  font-weight: lighter;
+  position: relative;
+  display: inline-block;
+  padding: 25px;
+  border-radius: 15px;
+}
+body .access__container .access__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 8px;
+  width: 100%;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+body .access__container .access__item:hover::after {
+  animation: accessAnimEnter 0.5s ease 0.3s forwards;
+}
+body .access__container .access__item:hover {
+  color: #ffefba;
+  animation: flashOverTxt 1.5s ease 0.3s forwards;
 }
 body .cursor__effect {
   height: 4vh;

@@ -10,6 +10,41 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  //PAGE INDEX //
+  & .access__container {
+    @extend %reset-marg-pad, %displayed-column-center;
+    min-height: 100vh;
+    width: 100%;
+    .access__item {
+      text-decoration: none;
+      color: variables.$typo-color-black;
+      @include mixins.typo_config_beta;
+      position: relative;
+      display: inline-block;
+      padding: 25px;
+      border-radius: 15px;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 8px;
+        width: 100%;
+        background: variables.$typo-color-black;
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+      &:hover::after {
+        animation: accessAnimEnter 0.5s ease 0.3s forwards;
+      }
+      &:hover {
+       @extend %text-gradient-B;
+        color: #ffefba;
+        animation: flashOverTxt 1.5s ease 0.3s forwards;
+      }
+    }
+  }
+  //PAGE INDEX FIN//
   & .cursor__effect {
     @extend %globale-size, %reset-marg-pad, %displayed-column-center;
     height: 4vh;
@@ -33,16 +68,13 @@ body {
       font-weight: lighter;
     }
   }
-
   & .vid__container {
     @extend %globale-size, %reset-marg-pad;
-
     &__myvid {
       @extend %globale-size, %reset-marg-pad;
       position: fixed;
       z-index: -99;
     }
-
     &__banner {
       @extend %displayed-column-center, %reset-marg-pad;
       height: 25vh;
@@ -54,8 +86,6 @@ body {
       opacity: 0.4;
       z-index: -98;
       transform: rotate(-8deg);
-
-      // background-color: red;
       & .container__banner__itemA,
       & .container__banner__itemB,
       & .container__banner__itemC,
@@ -64,27 +94,22 @@ body {
         line-height: 27px;
         color: variables.$typo-color-gold;
       }
-
       & .container__banner__itemA {
         @include mixins.typo_config_xeta;
       }
-
       & .container__banner__itemB {
         @include mixins.typo_config_omega;
         letter-spacing: 10px;
       }
-
       & .container__banner__itemC {
         margin-left: 0;
         @include mixins.typo_config_delta;
         word-spacing: 5px;
       }
-
       & .container__banner__itemD {
         @include mixins.typo_config_delta;
         letter-spacing: 4px;
       }
-
       & .banner__title {
         @extend %reset-marg-pad;
         @include mixins.typo_config_beta;
