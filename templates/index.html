@@ -2,20 +2,55 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}" />
   <title>La table de solline</title>
 </head>
 
 <body>
   <main>
     <div class="access__container">
-      <a href="{{ url_for('recettes.home') }}" class="access__item">Enter</a>
+      <a href="#" class="access__item" onclick="timerTrigg()">Enter</a>
+    </div>
+    <div class="transition__ctnr">
+      <div class="transition__sub__ctnr">
+        <p id="timer__el" class="timer__item"></p>
+        <span class="timer__item"> %</span>
+      </div>
     </div>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script type="text/javascript">
+    function timerTrigg() {
+      let timer = 0;
+      const timerCtnr = document.querySelector(".transition__ctnr");
+      const timerEL = document.getElementById("timer__el");
+      const circle = document.querySelector(".transition__sub__ctnr");
+      timerCtnr.classList.add("transition__view");
+      function startInterval(speed) {
+        return setInterval(() => {
+          timer++;
+          timerEL.textContent = timer;
+          circle.style.setProperty("--progress", `${timer}%`);
+          if (timer === 60) {
+            clearInterval(increment);
+            increment = startInterval(300);
+          }
+          if (timer === 70) {
+            clearInterval(increment);
+            increment = startInterval(80);
+          }
+          if (timer >= 100) {
+            clearInterval(increment);
+            window.location.href = "{{ url_for('recettes.home') }}";
+          }
+        }, speed);
+      }
+      let increment = startInterval(50);
+    }
+  </script>
 </body>
 
 </html>
