@@ -21,7 +21,8 @@
       </div>
     </div>
   </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="{{ url_for('static', filename='js/gsapLetters.js') }}"></script>
   <script type="text/javascript">
     function timerTrigg() {
       let timer = 0;
@@ -42,9 +43,13 @@
             clearInterval(increment);
             increment = startInterval(80);
           }
+          if (timer === 80) {
+            clearInterval(increment);
+            increment = startInterval(40);
+          }
           if (timer >= 100) {
             clearInterval(increment);
-            window.location.href = "{{ url_for('recettes.home') }}";
+              window.location.href = "{{ url_for('recettes.home') }}";      
           }
         }, speed);
       }

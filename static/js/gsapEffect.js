@@ -79,7 +79,7 @@ tl.from(gridContainer, {
     start: "61% center",
     end: "bottom bottom",
     scrub: 5,
-      // markers: true,
+    // markers: true,
   },
   ease: "power2.inOut",
 });
