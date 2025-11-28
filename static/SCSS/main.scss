@@ -10,11 +10,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+
   //PAGE INDEX //
   & .access__container {
     @extend %reset-marg-pad, %displayed-column-center;
     min-height: 100vh;
     width: 100%;
+
     .access__item {
       text-decoration: none;
       color: variables.$typo-color-black;
@@ -23,6 +25,7 @@ body {
       display: inline-block;
       padding: 0;
       border-radius: 15px;
+
       &::after {
         content: "";
         position: absolute;
@@ -35,9 +38,11 @@ body {
         transform: scaleX(0);
         transform-origin: left;
       }
+
       &:hover::after {
         animation: accessAnimEnter 0.5s ease 0.3s forwards;
       }
+
       &:hover {
         @extend %text-gradient-B;
         color: #ffefba;
@@ -45,6 +50,7 @@ body {
       }
     }
   }
+
   & .transition__ctnr {
     @extend %displayed-row-center;
     top: 0;
@@ -55,6 +61,7 @@ body {
     width: 100%;
     background-color: variables.$typo-color-black;
     text-align: center;
+
     & .transition__sub__ctnr {
       position: relative;
       @extend %displayed-row-center;
@@ -66,6 +73,7 @@ body {
       align-items: center;
       overflow: hidden;
       filter: drop-shadow(0px 0px 8px #ffffff);
+
       &::before {
         content: "";
         position: absolute;
@@ -83,6 +91,7 @@ body {
           black 0
         );
       }
+
       & .timer__item {
         font-size: variables.$typo-size-big;
         color: variables.$typo-color-white;
@@ -93,9 +102,11 @@ body {
       }
     }
   }
+
   & .transition__view {
     visibility: visible;
   }
+
   //PAGE INDEX FIN//
   & .cursor__effect {
     @extend %globale-size, %reset-marg-pad, %displayed-column-center;
@@ -110,6 +121,7 @@ body {
     z-index: 96;
     text-align: center;
     border-radius: 15px;
+
     & small {
       @extend %globale-size, %reset-marg-pad;
       transition: 0.3s ease-in-out;
@@ -120,13 +132,16 @@ body {
       font-weight: lighter;
     }
   }
+
   & .vid__container {
     @extend %globale-size, %reset-marg-pad;
+
     &__myvid {
       @extend %globale-size, %reset-marg-pad;
       position: fixed;
       z-index: -99;
     }
+
     &__banner {
       @extend %displayed-column-center, %reset-marg-pad;
       height: 25vh;
@@ -138,6 +153,7 @@ body {
       opacity: 0.4;
       z-index: -98;
       transform: rotate(-8deg);
+
       & .container__banner__itemA,
       & .container__banner__itemB,
       & .container__banner__itemC,
@@ -146,22 +162,27 @@ body {
         line-height: 27px;
         color: variables.$typo-color-gold;
       }
+
       & .container__banner__itemA {
         @include mixins.typo_config_xeta;
       }
+
       & .container__banner__itemB {
         @include mixins.typo_config_omega;
         letter-spacing: 10px;
       }
+
       & .container__banner__itemC {
         margin-left: 0;
         @include mixins.typo_config_delta;
         word-spacing: 5px;
       }
+
       & .container__banner__itemD {
         @include mixins.typo_config_delta;
         letter-spacing: 4px;
       }
+
       & .banner__title {
         @extend %reset-marg-pad;
         @include mixins.typo_config_beta;
@@ -204,6 +225,7 @@ body {
 
     & .navbar {
       @extend %globale-size;
+
       & .mobile__container {
         @extend %displayed-column-start, %reset-marg-pad;
         position: absolute;
@@ -212,10 +234,13 @@ body {
         right: 0;
         min-height: 30vh;
         width: 15vw;
+
         @include mixins.breakpoint(medium) {
         }
+
         @include mixins.breakpoint(large) {
         }
+
         & .mobile__barre {
           @include mixins.typo_config_xeta;
           @extend %text-gradient-A, %reset-marg-pad;
@@ -256,6 +281,7 @@ body {
           left: 81vw;
           z-index: 99;
           transform: rotate(90deg);
+
           & .mobile__item__sub {
             font-family: variables.$typo-family-small;
             font-size: variables.$typo-size-small;
@@ -265,10 +291,12 @@ body {
             height: auto;
             width: auto;
             z-index: 99;
+
             & a {
               color: variables.$typo-color-white;
               text-decoration: none;
             }
+
             &:hover {
               color: variables.$typo-color-white;
               text-shadow: 0px 0px 8px #fff;
@@ -279,6 +307,7 @@ body {
           }
         }
       }
+
       &__container {
         @extend %reset-marg-pad;
         top: 0;
@@ -394,6 +423,7 @@ body {
           animation: flashOverEl 0.5s linear forwards;
         }
       }
+
       & .Ai__wrapper {
         @extend %reset-marg-pad, %displayed-column-center;
         position: absolute;
@@ -403,12 +433,14 @@ body {
         width: 25vw;
         overflow: hidden;
         border-radius: 15px;
+
         & .Ai__creator {
           font-family: variables.$typo-family-code;
           font-optical-sizing: auto;
           font-style: normal;
           font-weight: 300;
         }
+
         & .Ai__wrapper__sub {
           @extend %reset-marg-pad;
           margin: 0;
@@ -419,6 +451,7 @@ body {
           justify-content: center;
           min-height: 30vh;
           width: 25vw;
+
           & .Ai__avatar {
             margin-top: 0;
             visibility: hidden;
@@ -429,6 +462,7 @@ body {
             z-index: 99;
             mix-blend-mode: difference;
           }
+
           & model-viewer {
             position: absolute;
             width: 100%;
@@ -438,9 +472,11 @@ body {
             filter: drop-shadow(0px 0px 5px variables.$typo-color-gold);
             z-index: 0;
           }
+
           & .Ai__add__anim {
             animation: avatarAnimeAi 5s linear 0.5s forwards;
           }
+
           & .Ai__intro__txt {
             height: 20vh;
             width: 15ch;
@@ -453,8 +489,10 @@ body {
             text-shadow: 0px 0px 5px #fff;
           }
         }
+
         & .Ai__reponse {
           margin-top: 0px;
+
           & .Ai__reponse__item {
             font-family: variables.$typo-family-small;
             padding: 5px;
@@ -469,6 +507,7 @@ body {
             letter-spacing: 2px;
           }
         }
+
         & input[type="text"] {
           margin-top: 5vh;
           visibility: hidden;
@@ -480,6 +519,7 @@ body {
           color: variables.$typo-color-white;
           font-size: variables.$typo-size-small;
         }
+
         & .Ai__btn__question {
           visibility: hidden;
           margin-top: 5vh;
@@ -492,31 +532,37 @@ body {
           font-size: variables.$typo-size-small;
           font-weight: lighter;
           letter-spacing: 3px;
+
           &:hover {
             cursor: pointer;
             transition: 0.3s ease;
             box-shadow: 0px 0px 8px #fff;
           }
         }
+
         & .Ai__input__anime {
           animation: inputAnimeAi 3s linear 8s forwards;
         }
       }
     }
   }
+
   main {
     #smooth-wrapper {
       @extend %globale-size;
+
       & #smooth-content {
         @extend %globale-size;
       }
     }
+
     #about {
       height: auto;
       width: 95vw;
       margin: auto;
       padding: 0;
       @extend %displayed-row-wrapevenly;
+
       & .about__container {
         @extend %displayed-column-start;
         margin-top: 15vh;
@@ -569,6 +615,7 @@ body {
 
         & .about__img__container {
           @extend %globale-size, %displayed-column-center, %reset-marg-pad;
+
           & img {
             height: 30vh;
             width: auto;
@@ -625,6 +672,7 @@ body {
 
     #galerie {
       @extend %globale-size, %reset-marg-pad;
+
       & .galerie__title {
         white-space: nowrap;
         text-align: center;
@@ -634,6 +682,7 @@ body {
         @include mixins.typo_config_alpha;
         letter-spacing: -15px;
       }
+
       & .image__container {
         margin-top: -15vh;
         position: relative;
@@ -642,6 +691,7 @@ body {
         width: 100%;
         z-index: 0;
         overflow: hidden;
+
         & .image__container__item {
           @extend %reset-marg-pad, %displayed-row-center;
           position: absolute;
@@ -651,6 +701,7 @@ body {
           opacity: 0;
           transform: scale(0.95);
           z-index: 0;
+
           & .descript__img {
             margin-left: 8vw;
             width: 10ch;
@@ -659,11 +710,13 @@ body {
             font-family: variables.$typo-family-small;
             font-weight: lighter;
           }
+
           & img {
             width: 80vw;
             height: 80vh;
             margin-top: 120px;
             margin-left: 0;
+
             &:hover {
               transition: animation 0.3s ease;
               animation: flashOverEl 0.5s linear forwards;
@@ -677,8 +730,10 @@ body {
       min-height: 100vh;
       width: 100%;
       @extend %displayed-column-center, %reset-marg-pad;
+
       & .contact__title__container {
         @extend %globale-size, %displayed-row-center, %reset-marg-pad;
+
         & .contact__container__separate {
           margin: 15px;
           height: 20vh;
@@ -686,31 +741,39 @@ body {
           border: none;
           background-color: variables.$typo-color-white;
         }
+
         & .contact__title {
           @extend %displayed-column-center;
           color: variables.$typo-color-white;
           @include mixins.typo_config_xeta;
+
           & span {
             font-size: variables.$typo-size-big;
           }
         }
       }
+
       &__sub {
         @extend %globale-size, %displayed-column-center, %reset-marg-pad;
+
         & .arrow__container {
           @extend %globale-size, %displayed-row-center, %reset-marg-pad;
+
           & i {
             text-align: center;
             font-size: 12rem;
             @extend %text-gradient-B;
+
             &:hover {
               cursor: pointer;
             }
+
             &.arrow__mov__A {
               transform: translateX(-29vw) rotate(-90deg);
               transition: transform 0.4s ease-out;
               animation: flashOverTxt 0.6s linear 0.6s forwards;
             }
+
             &.arrow__mov__B {
               transform: translateX(29vw) rotate(90deg);
               transition: transform 0.4s ease-out;
@@ -718,10 +781,12 @@ body {
             }
           }
         }
+
         & .form__container {
           @extend %displayed-row-center, %reset-marg-pad;
           min-height: 60vh;
           width: 50vw;
+
           & .form__A {
             margin-top: -500px;
             background-color: rgba(0, 0, 0, 0.834);
@@ -729,6 +794,7 @@ body {
             visibility: hidden;
             min-height: 60vh;
             width: 100%;
+
             & input[type="text"],
             input[type="email"],
             input[type="tel"] {
@@ -741,6 +807,7 @@ body {
               font-size: variables.$typo-size-small;
               color: variables.$typo-color-white;
             }
+
             & textarea {
               height: 10vh;
               resize: none;
@@ -751,6 +818,7 @@ body {
               font-size: variables.$typo-size-small;
               color: variables.$typo-color-white;
             }
+
             & input[type="submit"] {
               height: 4vh;
               width: 8vw;
@@ -759,14 +827,17 @@ body {
               background: linear-gradient(to right, #efefbb, #d4d3dd);
               border: none;
               border-radius: 5px;
+
               &:hover {
                 animation: flashOverEl 0.6s linear 0.6s forwards;
               }
             }
+
             &.deploy__formA {
               animation: formAnimeA 1s ease 0.5s 1 normal forwards;
             }
           }
+
           & .form__B {
             margin-top: -500px;
             background-color: rgba(0, 0, 0, 0.834);
@@ -774,6 +845,7 @@ body {
             visibility: hidden;
             min-height: 60vh;
             width: 100%;
+
             & input[type="text"],
             input[type="email"],
             input[type="tel"],
@@ -789,6 +861,7 @@ body {
               font-family: variables.$typo-family-small;
               font-size: variables.$typo-size-small;
             }
+
             & textarea {
               height: 10vh;
               resize: none;
@@ -799,6 +872,7 @@ body {
               font-size: variables.$typo-size-small;
               color: variables.$typo-color-white;
             }
+
             & label {
               letter-spacing: 3px;
               font-family: variables.$typo-family-small;
@@ -806,6 +880,7 @@ body {
               color: variables.$typo-color-white;
               font-weight: lighter;
             }
+
             & input[type="submit"] {
               height: 4vh;
               width: 8vw;
@@ -814,10 +889,12 @@ body {
               background: linear-gradient(to right, #efefbb, #d4d3dd);
               border: none;
               border-radius: 5px;
+
               &:hover {
                 animation: flashOverEl 0.6s linear 0.6s forwards;
               }
             }
+
             &.deploy__formB {
               animation: formAnimeB 1s ease 0.5s 1 normal forwards;
             }
@@ -825,6 +902,7 @@ body {
         }
       }
     }
+
     & .aside__txt__wrapper {
       padding: 0;
       margin-top: 0;
@@ -833,6 +911,7 @@ body {
       width: 100%;
       @extend %displayed-column-stretch;
       overflow: hidden;
+
       & .iframe__txt__itemA {
         padding: 0;
         margin-top: 5vh;
@@ -846,6 +925,7 @@ body {
         line-height: 50px;
         letter-spacing: -8px;
       }
+
       & .iframe__txt__itemB {
         padding: 0;
         margin-top: 0;
@@ -859,8 +939,10 @@ body {
         letter-spacing: -8px;
       }
     }
+
     & aside {
       @extend %globale-size, %displayed-column-start, %reset-marg-pad;
+
       & .iframe__txt__adress {
         padding: 0;
         margin-top: 0;
@@ -874,16 +956,20 @@ body {
         letter-spacing: 1px;
         line-height: 80px;
       }
+
       & .aside__vid__item {
         height: 25vh;
         width: auto;
       }
+
       & iframe {
         position: absolute;
       }
     }
+
     & .container__bottom__link {
       @extend %globale-size, %displayed-row-around, %reset-marg-pad;
+
       & .locat__link {
         padding-right: 10px;
         text-decoration: none;
@@ -893,6 +979,7 @@ body {
         font-family: variables.$typo-family-primary;
         letter-spacing: -10px;
         border-radius: 5px;
+
         &:hover {
           transition: 0.5s ease;
           cursor: pointer;
@@ -902,6 +989,7 @@ body {
         }
       }
     }
+
     //slider entree,plats,boisson etc...
     & .mini__grid {
       @extend %displayed-row-nowrapevenly;
@@ -911,19 +999,23 @@ body {
       margin-right: auto;
       height: 35vh;
       width: 70%;
+
       & .mini__fig {
         width: auto;
         height: 25vh;
         overflow: hidden;
+
         & img {
           width: 100%;
           height: 25vh;
+
           &:hover {
             animation: flashOverEl 0.5s linear forwards;
           }
         }
+
         & .mini__fig__title {
-          top: 61.3%;
+          top: 60.3%;
           position: absolute;
           font-size: variables.$typo-size-medium;
           font-family: variables.$typo-family-small;
@@ -933,6 +1025,7 @@ body {
           line-height: 50px;
           color: variables.$typo-color-black;
           text-shadow: 0px 0px 3px #fff;
+
           & .first__letter__mini--fig {
             font-weight: 700;
             letter-spacing: 15px;
@@ -943,6 +1036,7 @@ body {
         }
       }
     }
+
     .grid__wrapper {
       margin-top: 0;
       width: 350%;
@@ -950,6 +1044,7 @@ body {
       display: flex;
       flex-wrap: nowrap;
     }
+
     .logo {
       font-size: 7rem;
       position: fixed;
@@ -958,6 +1053,7 @@ body {
       left: 4rem;
       line-height: 0.9;
       filter: drop-shadow(0px 0px 5px #000);
+
       & h3 {
         margin-top: 0;
         font-family: variables.$typo-family-secondary;
@@ -977,6 +1073,7 @@ body {
       width: 100%;
       transform: translateY(-50%);
     }
+
     .sect {
       position: relative;
       display: flex;
@@ -986,6 +1083,7 @@ body {
       height: 100vh;
       overflow: hidden;
     }
+
     .sect.character::before {
       content: "";
       width: 2rem;
@@ -994,6 +1092,7 @@ body {
       left: 0;
       bottom: 0;
     }
+
     .block {
       width: 50%;
       position: absolute;
@@ -1003,14 +1102,17 @@ body {
       z-index: -1;
       transform: translateX(-100%);
     }
+
     .slideA::before,
     .slideA .block {
       background-color: #000;
     }
+
     .slideB::before,
     .slideB .block {
       background-color: #000;
     }
+
     .slideC::before,
     .slideC .block {
       background-color: #000;
@@ -1026,6 +1128,7 @@ body {
       font-family: variables.$typo-family-small;
       transform: translate(100%, 100%);
     }
+
     .character img {
       position: relative;
       z-index: 10;
@@ -1034,6 +1137,7 @@ body {
       transform: translateY(-100%);
       filter: drop-shadow(0px 0px 5px #000);
     }
+
     .hugtext {
       font-size: 25rem;
       width: 100%;
@@ -1046,6 +1150,7 @@ body {
       font-family: variables.$typo-family-secondary;
       color: variables.$typo-color-gold;
     }
+
     .nickname {
       position: absolute;
       top: 4rem;
@@ -1056,12 +1161,14 @@ body {
       font-family: variables.$typo-family-secondary;
       color: variables.$typo-color-gold;
     }
+
     .nickname span {
       display: block;
       font-size: 70%;
       color: variables.$typo-color-white;
       font-family: variables.$typo-family-small;
     }
+
     .quote {
       position: absolute;
       bottom: 4rem;
@@ -1073,19 +1180,88 @@ body {
       color: variables.$typo-color-white;
       font-family: variables.$typo-family-small;
     }
+
     .quote::before,
     .quote::after {
       content: "";
       color: #fff;
     }
+
     //slider entree,plats,boisson etc...FIN
+    & .chmpgne__container {
+      @extend %globale-size, %displayed-row-around, %reset-marg-pad;
+      background-color: red;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      & .chmpgne__item {
+        @extend %displayed-column-evenly;
+        height: auto;
+        width: 35vw;
+        background-color: cornflowerblue;
+        & .chmpgne__title__container {
+          @extend %globale-size, %displayed-column-start, %reset-marg-pad;
+          & .chmpgne__title__first {
+            margin: 0;
+            width: 3ex;
+            font-family: variables.$typo-family-small;
+            font-weight: 700;
+            letter-spacing: 3px;
+            font-size: 6rem;
+            color: variables.$typo-color-white;
+            text-shadow: none;
+            line-height: 90px;
+          }
+          & .chmpgne__title__second {
+            line-height: 30px;
+            margin-top: 30px;
+            margin-left: 5.5vw;
+            width: 4ex;
+            font-family: variables.$typo-family-primary;
+            font-weight: 400;
+            letter-spacing: 3px;
+            font-size: 2rem;
+            color: variables.$typo-color-white;
+            text-shadow: none;
+          }
+        }
+        & .chmpgne__sub__ctnr {
+          @extend %displayed-row-nowrapevenly, %reset-marg-pad;
+          & .chmpgne__descript {
+            font-family: variables.$typo-family-small;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            color: variables.$typo-color-white;
+            text-shadow: none;
+            width: 80ch;
+          }
+          & .chmpgne__img__ctnr {
+            @extend %globale-size, %displayed-column-center, %reset-marg-pad;
+            & .chmpgne__img__item {
+              height: auto;
+              width: auto;
+            }
+            & .chmpgne__price {
+              font-family: variables.$typo-family-small;
+              font-weight: 400;
+              letter-spacing: 2px;
+              font-size: 2rem;
+              color: variables.$typo-color-white;
+              text-shadow: none;
+            }
+          }
+        }
+      }
+    }
   }
+
   footer {
     @extend %displayed-column-center, %reset-marg-pad;
     position: relative;
     min-height: 15vh;
     width: 100%;
     bottom: 0;
+
     & .foot__signature {
       font-family: variables.$typo-family-small;
       font-size: variables.$typo-size-small;

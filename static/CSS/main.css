@@ -1,24 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Gideon+Roman&family=Lavishly+Yours&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
-body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #smooth-wrapper, body main #smooth-wrapper #smooth-content, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main aside, body main .container__bottom__link {
+body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #smooth-wrapper, body main #smooth-wrapper #smooth-content, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main aside, body main .container__bottom__link, body main .chmpgne__container, body main .chmpgne__container .chmpgne__item .chmpgne__title__container, body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr .chmpgne__img__ctnr {
   height: auto;
   width: 100%;
 }
 
 body .access__container, body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body .vid__container__banner, body .vid__container__banner .container__banner__itemA, body .vid__container__banner .container__banner__itemB, body .vid__container__banner .container__banner__itemC, body .vid__container__banner .container__banner__itemD, body .vid__container__banner .banner__title, body header .primary__title, body header .primary__separate, body header .secondary__title, body header .navbar .mobile__container, body header .navbar .mobile__container .mobile__barre, body header .navbar .mobile__container__sub, body header .navbar__container, body header .navbar .navbar__itemA,
-body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body header .navbar .Ai__wrapper .Ai__wrapper__sub, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container, body main aside, body main .container__bottom__link, body footer {
+body header .navbar .navbar__itemB, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body header .navbar .Ai__wrapper .Ai__wrapper__sub, body main #about .about__container .about__title__container, body main #about .about__container .about__description__container, body main #about .about__container .about__img__container, body main #about .about__container .about__img__container figcaption, body main .small__banner, body main #galerie, body main #galerie .image__container, body main #galerie .image__container .image__container__item, body main .contact__container, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main .contact__container__sub .form__container, body main aside, body main .container__bottom__link, body main .chmpgne__container, body main .chmpgne__container .chmpgne__item .chmpgne__title__container, body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr, body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr .chmpgne__img__ctnr, body footer {
   margin: 0;
   padding: 0;
 }
 
-body .access__container, body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub, body footer {
+body main .chmpgne__container .chmpgne__item {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+body .access__container, body .cursor__effect, body .vid__container__banner, body header .navbar .navbar__papper, body header .navbar .Ai__wrapper, body main #about .about__container .about__img__container, body main .contact__container, body main .contact__container .contact__title__container .contact__title, body main .contact__container__sub, body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr .chmpgne__img__ctnr, body footer {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
 }
 
-body header .navbar .mobile__container, body header .navbar .mobile__container__sub, body main #about .about__container, body main #about .about__container .about__title__container, body main aside {
+body header .navbar .mobile__container, body header .navbar .mobile__container__sub, body main #about .about__container, body main #about .about__container .about__title__container, body main aside, body main .chmpgne__container .chmpgne__item .chmpgne__title__container {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -46,7 +53,7 @@ body .transition__ctnr, body .transition__ctnr .transition__sub__ctnr, body head
   justify-content: center;
 }
 
-body main .small__banner, body main .small__banner__item, body main .container__bottom__link {
+body main .small__banner, body main .small__banner__item, body main .container__bottom__link, body main .chmpgne__container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -60,7 +67,7 @@ body main #about, body main #galerie .image__container {
   justify-content: space-evenly;
 }
 
-body main .mini__grid {
+body main .mini__grid, body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -1166,7 +1173,7 @@ body main .mini__grid .mini__fig img:hover {
   animation: flashOverEl 0.5s linear forwards;
 }
 body main .mini__grid .mini__fig .mini__fig__title {
-  top: 61.3%;
+  top: 60.3%;
   position: absolute;
   font-size: 3rem;
   font-family: "Saira", sans-serif;
@@ -1316,6 +1323,60 @@ body main .quote::before,
 body main .quote::after {
   content: "";
   color: #fff;
+}
+body main .chmpgne__container {
+  background-color: red;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+body main .chmpgne__container .chmpgne__item {
+  height: auto;
+  width: 35vw;
+  background-color: cornflowerblue;
+}
+body main .chmpgne__container .chmpgne__item .chmpgne__title__container .chmpgne__title__first {
+  margin: 0;
+  width: 3ex;
+  font-family: "Saira", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 6rem;
+  color: #fff;
+  text-shadow: none;
+  line-height: 90px;
+}
+body main .chmpgne__container .chmpgne__item .chmpgne__title__container .chmpgne__title__second {
+  line-height: 30px;
+  margin-top: 30px;
+  margin-left: 5.5vw;
+  width: 4ex;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: none;
+}
+body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr .chmpgne__descript {
+  font-family: "Saira", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: none;
+  width: 80ch;
+}
+body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr .chmpgne__img__ctnr .chmpgne__img__item {
+  height: auto;
+  width: auto;
+}
+body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr .chmpgne__img__ctnr .chmpgne__price {
+  font-family: "Saira", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: none;
 }
 body footer {
   position: relative;
