@@ -1044,7 +1044,6 @@ body {
       display: flex;
       flex-wrap: nowrap;
     }
-
     .logo {
       font-size: 7rem;
       position: fixed;
@@ -1189,20 +1188,18 @@ body {
 
     //slider entree,plats,boisson etc...FIN
     & .chmpgne__container {
-      @extend %globale-size, %displayed-row-around, %reset-marg-pad;
-      background-color: red;
-      overflow-y: hidden;
-      overflow-x: scroll;
+      @extend %displayed-row-around, %reset-marg-pad;
+      width: 350%;
       & .chmpgne__item {
+        position: relative;
         @extend %displayed-column-evenly;
-        height: auto;
-        width: 35vw;
-        background-color: cornflowerblue;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
         & .chmpgne__title__container {
           @extend %globale-size, %displayed-column-start, %reset-marg-pad;
           & .chmpgne__title__first {
             margin: 0;
-            width: 3ex;
             font-family: variables.$typo-family-small;
             font-weight: 700;
             letter-spacing: 3px;
@@ -1215,7 +1212,6 @@ body {
             line-height: 30px;
             margin-top: 30px;
             margin-left: 5.5vw;
-            width: 4ex;
             font-family: variables.$typo-family-primary;
             font-weight: 400;
             letter-spacing: 3px;

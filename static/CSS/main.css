@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Gideon+Roman&family=Lavishly+Yours&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
-body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #smooth-wrapper, body main #smooth-wrapper #smooth-content, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main aside, body main .container__bottom__link, body main .chmpgne__container, body main .chmpgne__container .chmpgne__item .chmpgne__title__container, body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr .chmpgne__img__ctnr {
+body .cursor__effect, body .cursor__effect small, body .vid__container, body .vid__container__myvid, body header .navbar, body header .navbar .mobile__container .timer__container, body main #smooth-wrapper, body main #smooth-wrapper #smooth-content, body main #about .about__container .about__img__container, body main #galerie, body main .contact__container .contact__title__container, body main .contact__container__sub, body main .contact__container__sub .arrow__container, body main aside, body main .container__bottom__link, body main .chmpgne__container .chmpgne__item .chmpgne__title__container, body main .chmpgne__container .chmpgne__item .chmpgne__sub__ctnr .chmpgne__img__ctnr {
   height: auto;
   width: 100%;
 }
@@ -1325,18 +1325,16 @@ body main .quote::after {
   color: #fff;
 }
 body main .chmpgne__container {
-  background-color: red;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  width: 350%;
 }
 body main .chmpgne__container .chmpgne__item {
-  height: auto;
-  width: 35vw;
-  background-color: cornflowerblue;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 body main .chmpgne__container .chmpgne__item .chmpgne__title__container .chmpgne__title__first {
   margin: 0;
-  width: 3ex;
   font-family: "Saira", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
@@ -1349,7 +1347,6 @@ body main .chmpgne__container .chmpgne__item .chmpgne__title__container .chmpgne
   line-height: 30px;
   margin-top: 30px;
   margin-left: 5.5vw;
-  width: 4ex;
   font-family: "Cinzel Decorative", serif;
   font-weight: 400;
   letter-spacing: 3px;

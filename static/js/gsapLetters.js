@@ -613,34 +613,3 @@ btnTransit.addEventListener("click", () => {
     ease: "power2.inOut",
   });
 });
-///////////#######################################################################################/////////
-///////////#######################################################################################/////////
-///////////#######################################################################################/////////
-///////////#######################################################################################/////////
-///////////#######################################################################################/////////
-///////////#######################################################################################/////////
-//champagne
-const champCtnr = document.querySelector(".chmpgne__container");
-const champFirstTitle = document.getElementById("T12");
-// const champSecondTitle = document.getElementById("T13");
-// const champTxt = document.getElementById("T14");
-
-tl.from(champFirstTitle.chars, {
-  x: 50,
-  scale: 0,
-  autoAlpha: 0,
-  duration: 0.6,
-  opacity: 0,
-  stagger: {
-    amount: 2,
-    from: "bottom",
-  },
-  scrollTrigger: {
-    trigger: "#T12",
-    start: "center center",
-    end: "bottom bottom",
-    scrub: 4,
-    markers: true,
-  },
-  ease: "power2.inOut",
-});
