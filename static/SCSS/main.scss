@@ -25,7 +25,7 @@ body {
       display: inline-block;
       padding: 0;
       border-radius: 15px;
-
+    
       &::after {
         content: "";
         position: absolute;
@@ -47,6 +47,7 @@ body {
         @extend %text-gradient-B;
         color: #ffefba;
         animation: flashOverTxt 1.5s ease 0.3s forwards;
+        filter: drop-shadow(0px 0px 3px #000);
       }
     }
   }
